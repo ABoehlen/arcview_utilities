@@ -1,0 +1,1120 @@
+/3.2
+(Extension.1
+	Name:	"Utilities"
+	Dependencies:	"$AVBIN/avdlog.dll\n"
+	FirstRootClassName:	"Butn"
+	Roots:	2
+	Roots:	4
+	Roots:	54
+	Roots:	55
+	Roots:	56
+	Roots:	57
+	Roots:	58
+	Roots:	59
+	Roots:	60
+	Roots:	61
+	Roots:	62
+	Roots:	63
+	Roots:	64
+	Roots:	65
+	Roots:	66
+	Version:	32
+	About:	"Utilities toolbar (v0.3)"
+	UnloadScript:	67
+	InstallScript:	68
+	UninstallScript:	69
+	ExtVersion:	1
+)
+
+(Butn.2
+	Help:	"Utilities toolbar//"
+	Icon:	3
+	Click:	"Util.start"
+)
+
+(AVIcon.3
+	Name:	"U"
+	Res:	"Icons.U"
+
+)
+
+(AVDLog.4
+	Name:	"Utilities"
+	X:	83
+	Y:	53
+	W:	270
+	H:	40
+	ConstrainedControlNames:	5
+	ConstrainedControlNames:	6
+	ConstrainedControlNames:	7
+	ConstrainedControlNames:	8
+	ConstrainedControlNames:	9
+	ConstrainedControlNames:	10
+	ConstrainedControlNames:	11
+	ConstrainedControlNames:	12
+	ConstrainedControlNames:	13
+	Constraints:	14
+	Constraints:	15
+	Constraints:	16
+	Constraints:	17
+	Constraints:	18
+	Constraints:	19
+	Constraints:	20
+	Constraints:	21
+	Constraints:	22
+	Server:	23
+	ControlPanel:	24
+	Title:	"Utilities"
+	EscapeEnabled:	1
+	AlwaysOnTop:	1
+	HasTitleBar:	1
+	Closeable:	1
+	DefaultButton:	53
+)
+
+(AVStr.5
+	S:	"Close"
+)
+
+(AVStr.6
+	S:	"CopyView"
+)
+
+(AVStr.7
+	S:	"Linesquarebuffer"
+)
+
+(AVStr.8
+	S:	"BearingAngle"
+)
+
+(AVStr.9
+	S:	"points2ascii"
+)
+
+(AVStr.10
+	S:	"WorldFile"
+)
+
+(AVStr.11
+	S:	"Gridmkr"
+)
+
+(AVStr.12
+	S:	"XYPan"
+)
+
+(AVStr.13
+	S:	"GeoRefImage"
+)
+
+(Numb.14
+	N:	85.00000000000000
+)
+
+(Numb.15
+	N:	85.00000000000000
+)
+
+(Numb.16
+	N:	85.00000000000000
+)
+
+(Numb.17
+	N:	85.00000000000000
+)
+
+(Numb.18
+	N:	85.00000000000000
+)
+
+(Numb.19
+	N:	85.00000000000000
+)
+
+(Numb.20
+	N:	85.00000000000000
+)
+
+(Numb.21
+	N:	85.00000000000000
+)
+
+(Numb.22
+	N:	85.00000000000000
+)
+
+(Nil.23
+)
+
+(CPanel.24
+	Child:	25
+	ResBox:	52
+	Listening:	1
+)
+
+(CPanel.25
+	InternalName:	"aControlPanel5"
+	Child:	26
+	Child:	28
+	Child:	30
+	Child:	32
+	Child:	34
+	Child:	36
+	Child:	38
+	Child:	39
+	Child:	41
+	Constraints:	0x55
+	ResBox:	43
+	ResBox:	44
+	ResBox:	45
+	ResBox:	46
+	ResBox:	47
+	ResBox:	48
+	ResBox:	49
+	ResBox:	50
+	ResBox:	51
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(Butn.26
+	InternalName:	"CopyView"
+	Help:	"Copy View//"
+	Icon:	27
+	Click:	"Util.CopyView"
+)
+
+(AVIcon.27
+	Name:	"Copy"
+	Res:	"Icons.Copy"
+
+)
+
+(Tool.28
+	InternalName:	"GeoRefImage"
+	Help:	"Georeference Image//Georeference Image"
+	Update:	"Util.ImageThemesUpdate"
+	Icon:	29
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Util.GeoRefImage"
+)
+
+(AVIcon.29
+	Name:	"gr_ico.bmp"
+	Data:	4e442049 6d616765 00010020 00200000 
+	Data:	0c0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff00ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff00ff00 
+	Data:	00ff0000 ff000000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 ff0000ff 000000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff00ff 000000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff00ff 0000ff00 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff00ff00 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 00ff0000 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	ff000000 ff0000ff 0000ff00 00ff0000 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	ff0000ff 000000ff 0000ff00 00ff0000 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff00ff 000000ff 0000ff00 00ff0000 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff00ff00 0000ff00 00ff0000 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff00ff00 0000ff00 00ff0000 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff00ff00 0000ff00 00ff0000 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff00ff00 0000ff00 00ff0000 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 00ff0000 00ff0000 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 00ff0000 ff000000 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff000000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff00ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff00ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff00ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff00ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff00ff 0000ff00 00ff0000 ff0000ff 
+	Data:	000000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff0000ff 0000ff00 00ff0000 
+	Data:	ff0000ff 0000ff00 00ff0000 ff0000ff 
+	Data:	0000ff00 00ff0000 ff0000ff 0000ff00 
+	Data:	00ff0000 ff00ff00 00ff0000 ff0000ff 
+	Data:	00000000 00000001 00180007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(Butn.30
+	InternalName:	"Linesquarebuffer"
+	Help:	"Buffers a PolyLine theme and squares the buffer//"
+	Icon:	31
+	Click:	"Util.LineSquareBuffer"
+)
+
+(AVIcon.31
+	Name:	"linesquarebuffer.bmp"
+	Data:	4e442049 6d616765 00010016 00170000 
+	Data:	0228ffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff 0000ffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	0000ffff b7ffffff ffffffff ffffffff 
+	Data:	ffffff77 7fbfffff 0000ffff 6fffffff 
+	Data:	ffffffff ffffffff ffffff00 007fffff 
+	Data:	0000ffff 6fffffff ffffffff ffffffff 
+	Data:	ffffff00 007fffff 0000ffff 6fffffff 
+	Data:	ffffffff ffffffff ffffff00 007fffff 
+	Data:	0000ffff 6fffffff ffffffff ffffffff 
+	Data:	ffffff00 007fffff 0000ffff 6fffffff 
+	Data:	ffffffff ffffffff ffffff00 007fffff 
+	Data:	0000ffff 6fffffff ffffffff ffffffff 
+	Data:	ffffff00 007fffff 0000ffff 6fffffff 
+	Data:	ffffffff fffefffe ffffff00 007fffff 
+	Data:	0000ffff 6fffffff ffffffff ffff007f 
+	Data:	fffeff00 007fffff 0000ffff 6fff666f 
+	Data:	6f6f6f6f 6f760000 006eff00 007fffff 
+	Data:	0000ffff 6fffffff ffffffff ffff0000 
+	Data:	7fffff00 007fffff 0000ffff 6fffffff 
+	Data:	ffffffff ffff6eff feffff00 007fffff 
+	Data:	0000ffff 6fffffff ffffffff ffffffff 
+	Data:	ffffff00 007fffff 0000ffff 6fffffff 
+	Data:	ffffffff ffffffff ffffff00 007fffff 
+	Data:	0000ffff 6fffffff ffffffff ffffffff 
+	Data:	ffffff00 007fffff 0000ffff 6fffffff 
+	Data:	ffffffff ffffffff ffffff00 007fffff 
+	Data:	0000ffff 6fffffff ffffffff ffffffff 
+	Data:	ffffff00 007fffff 0000ffff 6fffffff 
+	Data:	ffffffff ffffffff ffffff00 007fffff 
+	Data:	0000ffff b7ffffff ffffffff ffffffff 
+	Data:	ffffff77 7fbfffff 0000ffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	0000ffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Butn.32
+	InternalName:	"BearingAngle"
+	Help:	"Determine the bearing angle//"
+	Icon:	33
+	Click:	"Util.Output"
+)
+
+(AVIcon.33
+	Name:	"angle.bmp"
+	Data:	4e442049 6d616765 00010012 00120000 
+	Data:	016affff ffffffff ffffffff ffffffff 
+	Data:	ffffffff 0000ffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff 0000ffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff 00000000 
+	Data:	00000000 08000000 00000000 0000000e 
+	Data:	00001313 13131313 13131313 13131313 
+	Data:	13131313 0000ff13 00ffffff ffffffff 
+	Data:	ffffffff ffffffff 0000ffff 1300ffff 
+	Data:	ffffffff ffffffff ffffffff 0000ffff 
+	Data:	ff1300ff ffffffff ffffffff ffffffff 
+	Data:	0000ffff ffff1300 ffffffff ffffffff 
+	Data:	ffffffff 0000ffff ffffff13 00ffffff 
+	Data:	ffffffff ffffffff 0000ffff ffffffff 
+	Data:	1300ffff ffffffff ffffffff 0000ffff 
+	Data:	ffffffff ff1300ff ffffffff ffffffff 
+	Data:	0100ffff ffffffff ffff1300 ffffffff 
+	Data:	ffffffff 0000ffff ffffffff ffffff13 
+	Data:	00ffffff ffffffff 0000ffff ffffffff 
+	Data:	ffffffff 1300ffff ffffffff 0000ffff 
+	Data:	ffffffff ffffffff ff1300ff ffffffff 
+	Data:	0000ffff ffffffff ffffffff ffff1313 
+	Data:	ffffffff 0000ffff ffffffff ffffffff 
+	Data:	ffffff13 ffffffff 00000000 00000400 
+	Data:	00000000 01010100 02020200 03030300 
+	Data:	04040400 05050500 06060600 07070700 
+	Data:	08080800 09090900 0a0a0a00 0b0b0b00 
+	Data:	0c0c0c00 0d0d0d00 0e0e0e00 0f0f0f00 
+	Data:	10101000 11111100 12121200 13131300 
+	Data:	14141400 15151500 16161600 17171700 
+	Data:	18181800 19191900 1a1a1a00 1b1b1b00 
+	Data:	1c1c1c00 1d1d1d00 1e1e1e00 1f1f1f00 
+	Data:	20202000 21212100 22222200 23232300 
+	Data:	24242400 25252500 26262600 27272700 
+	Data:	28282800 29292900 2a2a2a00 2b2b2b00 
+	Data:	2c2c2c00 2d2d2d00 2e2e2e00 2f2f2f00 
+	Data:	30303000 31313100 32323200 33333300 
+	Data:	34343400 35353500 36363600 37373700 
+	Data:	38383800 39393900 3a3a3a00 3b3b3b00 
+	Data:	3c3c3c00 3d3d3d00 3e3e3e00 3f3f3f00 
+	Data:	40404000 41414100 42424200 43434300 
+	Data:	44444400 45454500 46464600 47474700 
+	Data:	48484800 49494900 4a4a4a00 4b4b4b00 
+	Data:	4c4c4c00 4d4d4d00 4e4e4e00 4f4f4f00 
+	Data:	50505000 51515100 52525200 53535300 
+	Data:	54545400 55555500 56565600 57575700 
+	Data:	58585800 59595900 5a5a5a00 5b5b5b00 
+	Data:	5c5c5c00 5d5d5d00 5e5e5e00 5f5f5f00 
+	Data:	60606000 61616100 62626200 63636300 
+	Data:	64646400 65656500 66666600 67676700 
+	Data:	68686800 69696900 6a6a6a00 6b6b6b00 
+	Data:	6c6c6c00 6d6d6d00 6e6e6e00 6f6f6f00 
+	Data:	70707000 71717100 72727200 73737300 
+	Data:	74747400 75757500 76767600 77777700 
+	Data:	78787800 79797900 7a7a7a00 7b7b7b00 
+	Data:	7c7c7c00 7d7d7d00 7e7e7e00 7f7f7f00 
+	Data:	80808000 81818100 82828200 83838300 
+	Data:	84848400 85858500 86868600 87878700 
+	Data:	88888800 89898900 8a8a8a00 8b8b8b00 
+	Data:	8c8c8c00 8d8d8d00 8e8e8e00 8f8f8f00 
+	Data:	90909000 91919100 92929200 93939300 
+	Data:	94949400 95959500 96969600 97979700 
+	Data:	98989800 99999900 9a9a9a00 9b9b9b00 
+	Data:	9c9c9c00 9d9d9d00 9e9e9e00 9f9f9f00 
+	Data:	a0a0a000 a1a1a100 a2a2a200 a3a3a300 
+	Data:	a4a4a400 a5a5a500 a6a6a600 a7a7a700 
+	Data:	a8a8a800 a9a9a900 aaaaaa00 ababab00 
+	Data:	acacac00 adadad00 aeaeae00 afafaf00 
+	Data:	b0b0b000 b1b1b100 b2b2b200 b3b3b300 
+	Data:	b4b4b400 b5b5b500 b6b6b600 b7b7b700 
+	Data:	b8b8b800 b9b9b900 bababa00 bbbbbb00 
+	Data:	bcbcbc00 bdbdbd00 bebebe00 bfbfbf00 
+	Data:	c0c0c000 c1c1c100 c2c2c200 c3c3c300 
+	Data:	c4c4c400 c5c5c500 c6c6c600 c7c7c700 
+	Data:	c8c8c800 c9c9c900 cacaca00 cbcbcb00 
+	Data:	cccccc00 cdcdcd00 cecece00 cfcfcf00 
+	Data:	d0d0d000 d1d1d100 d2d2d200 d3d3d300 
+	Data:	d4d4d400 d5d5d500 d6d6d600 d7d7d700 
+	Data:	d8d8d800 d9d9d900 dadada00 dbdbdb00 
+	Data:	dcdcdc00 dddddd00 dedede00 dfdfdf00 
+	Data:	e0e0e000 e1e1e100 e2e2e200 e3e3e300 
+	Data:	e4e4e400 e5e5e500 e6e6e600 e7e7e700 
+	Data:	e8e8e800 e9e9e900 eaeaea00 ebebeb00 
+	Data:	ececec00 ededed00 eeeeee00 efefef00 
+	Data:	f0f0f000 f1f1f100 f2f2f200 f3f3f300 
+	Data:	f4f4f400 f5f5f500 f6f6f600 f7f7f700 
+	Data:	f8f8f800 f9f9f900 fafafa00 fbfbfb00 
+	Data:	fcfcfc00 fdfdfd00 fefefe00 ffffff00 
+	Data:	00020008 00070020 00010002 00000000 
+	Data:	00000000 
+)
+
+(Butn.34
+	InternalName:	"points2ascii"
+	Help:	"Export point shape to ASCII file//"
+	Icon:	35
+	Click:	"Util.Points2ASCII"
+)
+
+(AVIcon.35
+	Name:	"to_ascii.bmp"
+	Data:	4e442049 6d616765 00010012 00120000 
+	Data:	03f0ffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff 0000ffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	0000ffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff 0000ffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	0000ffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff 0000ffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	0000ffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff 0000ffff ff353535 
+	Data:	b5b5b5b7 b7b73434 34ffffff 00000005 
+	Data:	05055353 53ffffff b0b0b021 21210101 
+	Data:	01ffffff 000000ff ffff0000 00ffffff 
+	Data:	0000ffff ffa0a0a0 00000000 00009e9e 
+	Data:	9effffff fdfdfdb8 b8b80606 06ffffff 
+	Data:	151515b6 b6b6fcfc fcffffff 000000ff 
+	Data:	ffff0000 00ffffff 0000ffff fff7f7f7 
+	Data:	15151514 1414f6f6 f6ffffff 2e2e2e23 
+	Data:	23239696 96ffffff 151515b3 b3b3fbfb 
+	Data:	fbffffff 000000ff ffff0000 00ffffff 
+	Data:	0000ffff ffffffff 76767672 7272ffff 
+	Data:	ffffffff 58585805 05050000 00ffffff 
+	Data:	b3b3b322 22220101 01ffffff 000000ff 
+	Data:	ffff0000 00ffffff 0000ffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	0000ffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff 0000ffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	0000ffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff 0000ffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	0000ffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff 0000ffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	00000000 00000001 00180007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(Butn.36
+	InternalName:	"WorldFile"
+	Help:	"Creates world file//"
+	Icon:	37
+	Click:	"Util.WorldFile"
+)
+
+(AVIcon.37
+	Name:	"tfw.bmp"
+	Data:	4e442049 6d616765 00010020 00200000 
+	Data:	0c00ffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffff2c 2c2ce6e6 e6ffffff 
+	Data:	ffffff24 2424d3d3 d3ffffff ffffffff 
+	Data:	ffffffff ffffffff a2a2a224 2424fdfd 
+	Data:	fdffffff 9c9c9c15 1515f6f6 f6ffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffff7f 7f7f9292 92ffffff 
+	Data:	ffffff6d 6d6d8a8a 8affffff ffffffff 
+	Data:	ffffffff ffffffff 89898904 0404acac 
+	Data:	acffffff 8d8d8d03 03039393 93ffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffd4 d4d43c3c 3cffffff 
+	Data:	ffffffb6 b6b64040 40ffffff ffffffff 
+	Data:	ffffffff ffffffff 70707066 66663737 
+	Data:	37ffffff 7f7f7f5d 5d5d2323 23fbfbfb 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffff2c2c 2ce5e5e5 
+	Data:	fffffff6 f6f60808 08000000 00000000 
+	Data:	0000ebeb ebffffff 575757b2 b2b23838 
+	Data:	38c2c2c2 7070708d 8d8d5454 54a3a3a3 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffff7f7f 7f909090 
+	Data:	ffffffff ffff4848 48aeaeae ffffffff 
+	Data:	ffffffff ffffffff 3e3e3ec8 c8c8a7a7 
+	Data:	a74d4d4d 6262629c 9c9cc7c7 c72c2c2c 
+	Data:	fefefeff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffd4d4 d43a3a3a 
+	Data:	ffffffff ffff9191 91646464 ffffffff 
+	Data:	ffffffff ffffffff 252525de dedefbfb 
+	Data:	fb1e1e1e 2d2d2daa aaaaffff ff3a3a3a 
+	Data:	b3b3b3ff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff 0f0f0f00 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00001313 13ffffff 0c0c0cf4 f4f4ffff 
+	Data:	ff878787 000000b8 b8b8ffff ffadadad 
+	Data:	3b3b3bff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff ffffffff 
+	Data:	ffff0000 00000001 00180007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(LButn.38
+	InternalName:	"Close"
+	Help:	"Close Utilities toolbar//"
+	Label:	"Close"
+	Click:	"Util.Close"
+)
+
+(Butn.39
+	InternalName:	"Gridmkr"
+	Help:	"Generates vector grid//"
+	Icon:	40
+	Click:	"Util.Gridmkr"
+)
+
+(AVIcon.40
+	Name:	"FrameTable"
+	Res:	"Icons.FrameTable"
+
+)
+
+(Butn.41
+	InternalName:	"XYPan"
+	Help:	"Pans to the defined coordinates//"
+	Icon:	42
+	Click:	"Util.XYPan"
+)
+
+(AVIcon.42
+	Name:	"XY"
+	Res:	"Icons.XY"
+
+)
+
+(RectD.43
+	Left:	5.00000000000000
+	Top:	28.00000000000000
+	Right:	29.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.44
+	Left:	137.00000000000000
+	Top:	28.00000000000000
+	Right:	160.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.45
+	Left:	32.00000000000000
+	Top:	28.00000000000000
+	Right:	56.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.46
+	Left:	59.00000000000000
+	Top:	28.00000000000000
+	Right:	83.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.47
+	Left:	188.00000000000000
+	Top:	28.00000000000000
+	Right:	212.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.48
+	Left:	162.00000000000000
+	Top:	28.00000000000000
+	Right:	186.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.49
+	Left:	215.00000000000000
+	Top:	28.00000000000000
+	Right:	260.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.50
+	Left:	111.00000000000000
+	Top:	28.00000000000000
+	Right:	135.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.51
+	Left:	85.00000000000000
+	Top:	28.00000000000000
+	Right:	109.00000000000000
+	Bottom:	4.00000000000000
+)
+
+(RectD.52
+	Left:	4.00000000000000
+	Top:	38.00000000000000
+	Right:	269.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(Nil.53
+)
+
+(Script.54
+	Name:	"Util.Bearing"
+	SourceCode:	"'--- Bearing script\n\nplist = self.get(0)\ni = self.get(1)\np1 = plist.get(i)\np2 = plist.get(i+1)\n\ntheX1 = p1.GetX\ntheY1 = p1.Gety\n \ntheX2 = p2.GetX\ntheY2 = p2.GetY\n \ntheH = theX2 - theX1  '--- where theH is the horizontal difference, or delta x\ntheV = theY2 - theY1  '--- where theV is the vertical difference, or delta y\n\ntheLength = ((theH * theH) + (theV * theV)).SQRT\ntheAngle = (theV/theLength).Abs.Acos.AsDegrees \n\nif ((theH = 0) and (theV > 0 ))  then\n  constant = 0\n  theBearing = constant - theAngle\nend\n\n
+if ((theH > 0 ) and (theV > 0)) then \n  constant = 0 \n  theBearing = theAngle + constant\nend '--- 1st quadrant\n\nif ((theH < 0) and (theV  >= 0)) then '--- 2nd quadrant\n  constant = 360\n  theBearing = constant - theAngle.Abs\nend \n\nif ((theH <= 0) and (theV <= 0)) then '--- 3rd quadrant\n  constant = 180\n  theBearing = theAngle.Abs + constant\nend \n\nif ((theH >= 0) and (theV <= 0)) then \n  constant = 180 '--- 4th quadrantt \n  theBearing = constant - theAngle.abs\nend\n\nreturn thebearing\n\n'--- End of script \n\n"
+)
+
+(Script.55
+	Name:	"Util.Close"
+	SourceCode:	"Self.GetDialog.Close"
+)
+
+(Script.56
+	Name:	"Util.CopyView"
+	SourceCode:	"'Copies a View to a new View with a new name...\n'Created by Fred J. Calef III, CH2M Hill\n'Date:  12/3/1998\n\n'Gets the View...\nmyProj = av.GetProject\ntheViews = myProj.GetDocswithGui(av.FindGui(\"View\"))\naviewChoice = MsgBox.ChoiceAsString( theViews, \"Choose a View to copy:\", \"Views\")\nif (aviewChoice = nil) then\n  return nil\nend\ntheView = myProj.FindDoc( aviewChoice.AsString )\n\n'Copies the View and renames it...\nnewViewName = MsgBox.Input( \"Enter a new name for the view:\", \"New View Name\", \"New View\" )\nif (ne
+wViewName = nil) then   'Cancels if the there is no View name\n  return nil\nend\nif (av.FindDoc(newViewName).AsString = newViewName.AsString) then\n  'Cancels if the view name already exists\n  MsgBox.Error(\"That View name already exists! Press the Copy View button again...\",\"View Already Exists\")\n  return nil\nelse\n  newView = theView.Clone\n  newView.SetName ( newViewName )\n  myProj.AddDoc ( newView )\n  newView.GetWin.Open\nend\n\n'End of script..."
+)
+
+(Script.57
+	Name:	"Util.Explode"
+	SourceCode:	"'--- Explode script\n\nplist = self.get(0)\ni = self.get(1)\n\np1 = plist.get(i)\np2 = plist.get(i+1)\nl = polyline.make({{p1, p2}})\n\nreturn l\n\n'--- End of script \n"
+)
+
+(Script.58
+	Name:	"Util.GeoRefImage"
+	SourceCode:	"'**********************************************************************\n\n'View.GeoRefImage\n\n'**** get image theme and point ***************************************\n\ntheView  = av.GetActiveDoc\nthmImage = theView.GetActiveThemes.Get(0)\np1 = theView.GetDisplay.ReturnUserPoint\n\n' **** if georefpoint is not null, find out if current point is 2nd **\n\ngeorefpoint = Self.GetObjectTag\nif (georefpoint = nil) then\n   resp = false\nelseif (georefpoint.Is(Point)) then\n   resp = MsgBox.YesNo(\"Use current point to complete
+ rectangle?\", \"\", false)\nelse\n   resp = false\nend\n\nif (not resp) then\n\n   ' **** store current point *****************************************\n\n   Self.SetObjectTag(p1)\n   MsgBox.Info(\"Point collected\", \"\")\n\nelse\n\n   ' **** retrieve first point ****************************************\n\n   p2 = p1\n   p1 = georefpoint\n   r1 = Rect.MakeXY( p1.GetX, p1.GetY, p2.GetX, p2.GetY)\n\n   ' **** get coordinates for second rectangle ************************\n\n   labels = {\"X1:\", \"Y1:\", \"X2:\", \"Y2:\"}\n   XYlist = MsgBox.Mul
+tiInput(\"Enter Map Coordinates\", \"Georeference Points\", labels, {})\n   if (XYlist.Count > 0) then\n      X1 = XYlist.Get(0)\n      Y1 = XYlist.Get(1)\n      X2 = XYlist.Get(2)\n      Y2 = XYlist.Get(3)\n      if ( X1.IsNumber and Y1.IsNumber and X2.IsNumber and Y2.IsNumber ) then\n         r2 = Rect.MakeXY( X1.AsNumber, Y1.AsNumber, X2.AsNumber, Y2.AsNumber)\n         thmImage.GetImgSrc.MatchRectangles(r1, r2)\n\n         thmImage.Invalidate(TRUE)\n         temp = av.Run(\"View.ZoomToThemes\", \"\")\n         Self.SetObje
+ctTag(nil)\n      else\n         Msgbox.warning(\"Invalid coordinate entry\",\"Georeference Points\")\n      end\n   end\nend\n\n'**********************************************************************\n"
+)
+
+(Script.59
+	Name:	"Util.Gridmkr"
+	SourceCode:	"' Name:  milagrdmkr.ave\n' Modifief : by V. Guissard, from ESRI\n' Date : 09/04/2000\n' \n' Title:  Creates arbitrary grid(vector) shapefile\n' \n' Topics:  Views, Geodata\n' \n' Description:  This script is attached to a view button. One attribute is added to this \n' grid shape theme, a label, that is \"A1 A2  B1 B2....\" as you might see on an index map.  The \n' labeling starts at the upper left.\n'  \n' The grid is added to your current view as a theme called \"Grid\" with hollow fill pattern and thick \n' (thickness 2
+) black lines.  You are prompted as to whether you want to label the grid. If you say yes, \n' it will put the labels in the grid box using the current textsymbol. \n' \n \n\ntheView = av.GetActiveDoc\n\nllx = MsgBox.Input( \"Minimum X coordinate?\", \"UCL-MILA-GridMaker\", \"\" )\nif (llx = nil) then\n  MsgBox.Error(\"Must choose an X coordinate\",\"Aborting\")\n  exit\nend\n\nlly = MsgBox.Input( \"Minimum Y coordinate?\", \"UCL-MILA-GridMaker\", \"\" )\nif (lly = nil) then\n  MsgBox.Error(\"Must choose an Y coordinate\",\"Aborting\")\n  exi
+t\nend\n\nllx = llx.asNumber\nlly = lly.asNumber\n\ncsize = MsgBox.Input( \"Rectangle X size (map units)?\", \"UCL-MILA-GridMaker\", \"\" )\nif ((csize = nil) or (csize.asNumber < 0) or (csize.asNumber = 0)) then\n  MsgBox.Error(\"X size must be greater than 0\",\"Aborting\")\n  exit\nend\n\nrsize = MsgBox.Input( \"Rectangle Y size (map units)?\", \"UCL-MILA-GridMaker\", \"\" )\nif ((rsize = nil) or (rsize.asNumber < 0) or (rsize.asNumber = 0)) then\n  MsgBox.Error(\"Y size must be greater than 0\",\"Aborting\")\n  exit\nend\n\nrsize = rsize.as
+Number\ncsize = csize.asNumber\n\nrows=Msgbox.Input(\"How many rows (up/down):\",\"UCL-MILA-GridMaker\",\"10\")\n\nif ((rows = nil) or (rows.asNumber < 1)) then\n  MsgBox.Error(\"Must use more than one row.\",\"Aborting\")\n  exit\nend\n\ncols=Msgbox.Input(\"How many columns:\",\"UCL-MILA-GridMaker\",\"10\")\nif ((cols =nil) or (cols.asNumber < 1)) then\n  MsgBox.Error(\"Must use more than one column.\",\"Aborting\")\n  exit\nend\n\nrows=rows.asnumber\ncols=cols.asnumber\n\ntheWidth = csize * cols\ntheHeight = rsize * rows\n\n\nletters=\"ABCDEFGHIJKL
+MNOPQRSTUVWXYZ\"\n\nnewshpname=filedialog.Put(\"grid.shp\".AsFilename,\"*.shp\",\"Grid file\")\nif (newshpname =nil) then\n  exit\nend\n\n\n\ngridftab=Ftab.MakeNew(newshpname,POLYGON)\nlabelfield=Field.Make(\"Label\",#FIELD_CHAR,6,0)\ngridftab.SetEditable(true)\ngridftab.Addfields({labelfield})\ngridftab.SetEditable(True)\nshpfield=gridftab.FindField(\"shape\")\nlabfield=gridftab.FindField(\"label\")\n\ncountup=0\nsizer=rows*cols\nav.setstatus(0)\nAv.ShowMsg(\"Creating grid...\")\nfor each r in 1..rows\n  row_id=(rows-r+1).AsString\n  for each 
+c in 1..cols\n    countup=countup+1\n    av.setstatus(countup/sizer*100)\n    if ((c/26) > 1) then\n      col_prefix=letters.middle((c/26).floor-1,1)\n    else\n      col_prefix=\"\"\n    end\n    if (c.Mod(26) = 0) then\n      col_name=letters.Middle(25,1)\n    else\n      col_name=letters.Middle(c.Mod(26)-1,1)\n    end\n    col_id=col_prefix+col_name\n\n   originx=llx+((c-1)*csize)\n   originy=lly+((r-1)*rsize)\n   size=csize@rsize\n   theOrigin=originx@originy\n    rct=rect.make(theOrigin,size)\n    'if (viewunits=#UNITS_LINE
+AR_METERS) then\n      'rct=rct.ReturnUnprojected(viewproj)\n    'end\n    newrec=gridftab.AddRecord\n    gridftab.SetValue(shpfield,newrec,rct.aspolygon)\n    gridftab.SetValue(labfield,newrec,col_id+row_id)\n  end\nend\ngridftab.SetEditable(false)\nav.clearMsg\n\nmytheme=ftheme.Make(gridftab)\nmysym=av.GetSymbolWin.GetPalette.GetList(#PALETTE_LIST_FILL).Get(0)\nmysym.setolwidth(2)\nmytheme.GetLegend.GetSymbols.Set(0,mysym)\nmytheme.SetName(\"Grid\")\nmytheme.SetActive(true)\nmyTheme.SetVisible(true)\ntheview.AddTheme(mytheme
+)\nmytheme.Invalidate(true)\ntheview.GetDisplay.Flush\n\nyn=MsgBox.YesNo(\"Label the grid?\",\"Gridmaker\",true)\n\n\nif (yn) then\n  for each thm in theView.GetThemes\n    if (thm <> mytheme) then\n      thm.SetActive(False)\n    end\n  end\n\n  theView.LabelThemes(false)\nend\n\n\n\n\n"
+)
+
+(Script.60
+	Name:	"Util.ImageThemesUpdate"
+	SourceCode:	"'**********************************************************************\n\n'View.ImageThemesUpdate\n'Update script for View.GeoRefImage\n\ntheView = av.GetActiveDoc\nSELF.SetEnabled((theView.GetActiveThemes.Count > 0) AND\n  (theView.GetActiveThemes.Get(0).Is(ITheme)))\n\n'**********************************************************************\n"
+)
+
+(Script.61
+	Name:	"Util.LineSquareBuffer"
+	SourceCode:	"' Name: LineSquareBuffer 	\n'\n' Date: 12.10.2000\n' \n' Updated: 07.02.2001\n' \n' Author: Nick Bauer \n'         CRC Freshwater Ecology\n'         University of Canberra\n'         Australia\n'         Please send any comments to email: bauer@lake.canberra.edu.au\n' \n' ** Modified from a script written by BERKI, Zsolt of TRANSMAN Ltd.\n'    Many thanks to him **\n'\n'\n' Title:  Line Square Buffers\n'\n' Topics: Buffer, View, Theme, Square \n'\n' Description: Buffers a PolyLine theme as normal, however it\n'              squ
+ares the buffer at the start and end of the line (or node).\n'              The user is prompted for a field to link the buffer polygon to the\n'              original line theme. If no field is given the script automatically\n'              assigns a uniquue id.\n'    \n' Requires: PolyLine with at least one selected feature. At least MAP UNITS must be set\n'           in the view !!    \n'\n' Know Issues: The script takes some time to buffer polylines. My advice is to be patient, and if\n'              your ArcVie
+w session appears to be 'dead' then just wait a while. I have succesfully \n'              buffered over 13000 polylines at once (took about 30 minutes to do so). \n'\n'              The resulting buffer is not always flush with the end of the line, particularly when using\n'              larger buffer distances. I have not been able to rectify this problem, let me know if you do. \n'\n' Self:  Nil\n'\n' Returns: Polygon Theme\n\n\n' GET THE ACTIVEDOC (MUST BE A VIEW) AND THEMES\n\ndocView = av.GetActiveDoc\n\n' GET THE D
+ISPLAY MAP UNITS OF THE VIEW\n\ndspView = docView.GetDisplay\nnumDspMapUnit = dspView.GetUnits\n\n' CHECK IF DISPLAY MAP UNITS HAVE BEEN SET\n\nif (numDspMapUnit = #UNITS_LINEAR_UNKNOWN) then\n  MsgBox.Warning(\"Sorry no map units defined.  Please define the map units in the View, \"+ \n  \"Properties dialog.\",\"No map units set\")\n  exit\nend\n\n' CHECK IF DISPLAY DISTANCE UNITS HAVE BEEN SET\n\nnumDspDistanceUnit = dspView.GetDistanceUnits\n\nif (numDspDistanceUnit = #UNITS_LINEAR_UNKNOWN) then\n  numDspDistanceUnit = numDspMa
+pUnit\n  strDistanceUnit=numDspDistanceUnit.AsString.AsTokens(\"_\").Get(2).LCase\n  MsgBox.Warning(\"No distance units for view defined. Distance units set to MAP DISPLAY units\"++\n                 \"( \"+strDistanceUnit+\" )\",\"No distance units set\") \nelse\n  strDistanceUnit=numDspDistanceUnit.AsString.AsTokens(\"_\").Get(2).LCase\nend\n\n' GET THE FTAB OF ANY LINES THEMES IN THE VIEW\nlstLineThm = {}\nfor each l in docView.GetThemes\n  if(l.GetClass.GetClassName = \"FTheme\") then \n  type = l.GetFTab.GetSrcName.GetSubName  
+\n    if (l.GetFTab.GetSrcName.GetSubName = \"Arc\") then\n       lstLineThm.Add(l)\n    end \n  end\nend\n\n' CHECK THAT A LINE THEME WAS FOUND\n\nif (lstLineThm.Count = 0) then\n  msgBox.Error(\"No line themes found. Exiting.\",\"Error\")\n  exit\nend\n\n\n\n' GET THE LINE THEME TO BUFFER AND ITS FTAB\n\nthmLine = MsgBox.ListAsString(lstLineThm,\"Please choose a line theme\",\"Line Selection\")\nif (thmLine=nil) then\n  return nil\n  exit\nend\n\nftbLine = thmLine.GetFtab\nnumLineRecords = ftbLine.GetSelection.Count\n\n' CHECK IF ANY RECORDS
+ ARE SELECTED, IF NONE SELECTED THEN PROMPT USER FOR RESPONSE\n\nif (numLineRecords=0) then\n  if (MsgBox.YesNo(\"No records selected. Select YES to buffer all records in the line theme.\"+NL+\n                   \"NO to exit.\",\"No records selected\", TRUE)) then\n    ftbLine.GetSelection.SetAll                 \n  else\n    return nil\n    exit\n  end\nend\n\n' GET THE FIELDS OF THE LINE THEME FTAB\n\nlstFields = ftbLine.GetFields\nfldLineShape = ftbLine.FindField(\"Shape\")\nfldLineID = MsgBox.ChoiceAsString(lstFields,\"Choose 
+a field containing a Line ID.\"+NL+\n                                           \"Cancel for script to add own unique buffer number\", \"Field ID\") \nif (fldLineID = nil) then\n  blnFldID = FALSE\nelse\n  blnFldID = TRUE\nend   \n\n' GET THE DISTANCE TO BUFFER\n\nnumBuffDistance =(MsgBox.Input(\"Enter the buffer distance in \"+strDistanceUnit+\".\",\"Buffer\",\"100\")).AsNumber\nif (numBuffDistance=NIL) then\n  exit\nend\nnumBuffDistance = Units.Convert(numBuffDistance, numDspDistanceUnit, numDspMapUnit)\n  \n' GET SHAPEFILE STORAGE L
+OCATION \n\nfnaBuffer = FileName.Make(\"$HOME\").MakeTmp(\"shape\",\"shp\")\nobjBufferLocation  = FileDialog.Put( fnaBuffer,\"*.shp\",\"Output Shape File\" )\nif (objBufferLocation = nil) then\n    return nil\nend\nobjBufferLocation.SetExtension(\"shp\")\n\n' CREATE A NEW SHAPEFILE (THE BUFFER POLYGON). ADD FIELDS TO IT\n\nftbBuffer = Ftab.MakeNew(objBufferLocation, Polygon) 'New shapefile for the loads\n\nlstBufferFields = List.Make\nlstBufferFields.Add(Field.Make(\"Line_ID\", fldLineID.GetType, fldLineID.GetWidth, fldLineID.GetPreci
+sion))\nstrBuffDistance = \"Buff_Dist_\"+strDistanceUnit\nlstBufferFields.Add(Field.Make(strBuffDistance, #FIELD_DECIMAL, 15, 4))\nftbBuffer.AddFields(lstBufferFields)\n\nfldBufferShape = ftbBuffer.FindField(\"Shape\")\nfldBufferID = ftbBuffer.FindField(\"Line_ID\")\nfldBufferDistance = ftbBuffer.FindField(strBuffDistance)\n\n\n' COMMENCE BUFFERING EACH SELECTED RECORD IN THE LINE FILE\n' THIS SECTION ORIGINALLY WRITTEN BY BERKI, Zsolt. \n \nnumLineCounter = 0\n\nfor each numPolyLineRec in ftbLine.GetSelection\n\n \n  'lnfBufferLi
+ne.WriteElt( ftbLine.ReturnValueString(fldLinefldBufferID,numPolyLineRec))\n  \n  numLineCounter = numLineCounter + 1\n  \n  shpPolyLine = ftbLine.ReturnValue(fldLineShape, numPolyLineRec)\n  shpBuffPolyLine = shpPolyLine.ReturnBuffered(numBuffDistance)\n    \n    if (shpBuffPolyLine<>nil) then  \n      \n      lstBuffPolyLines = shpBuffPolyLine.AsPolyLine.Aslist\n      shpLine = shpPolyLine.Asline\n    \n      'shpFromNodePoint=shpLine.ReturnStart\n      shpFromNodePoint=shpPolyLine.Along(0)\n      numBuffPolyLines = ls
+tBuffPolyLines.Count\n      \n      for each numLineRec in 1..numBuffPolyLines\n        \n        objBuffLine = lstBuffPolyLines.Get(numLineRec - 1)\n        lstREM = {}\n        numBuffLine = objBuffLine.Count-1\n      \n        if (numLineRec = numBuffPolyLines) then\n          numBuffLine = objBuffLine.Count-2\n        end\n        \n        for each numArcRec in 0..numBuffLine\n          objBuffArc = objBuffLine.Get(numArcRec)\n          numNodeToArc= shpFromNodePoint.Distance(objBuffArc)\n          \n          if (num
+NodeToArc<((numBuffDistance)+0.0001)) then\n            lstREM.Add(objBuffArc)\n          end\n       \n        end\n       \n        numLstREM =lstREM.count-2\n        \n        if (numLstREM > 0) then\n          \n          for each numREMrec in 1..numLstREM\n            objBuffLine.RemoveObj(lstREM.Get(numREMrec))\n          end\n        end 'if\n      end\n      \n      'tonode=shpLine.ReturnEnd\n      \n      tonode=shpPolyLine.Along(100)\n      \n      for each numLineRec in 1..numBuffPolyLines\n        \n        objBuffLi
+ne=lstBuffPolyLines.Get(numLineRec - 1)\n        lstREM={}\n        numBuffLine=objBuffLine.Count-1\n      \n        if (numLineRec=numBuffPolyLines) then\n          numBuffLine = objBuffLine.Count-2\n        end\n        for each numArcRec in 0..numBuffLine\n          objBuffArc=objBuffLine.Get(numArcRec)\n          numNodeToArc=tonode.Distance(objBuffArc)\n      \n          if (numNodeToArc<((numBuffDistance)+0.0001)) then\n            lstREM.Add(objBuffArc)\n          end\n        end\n      \n       numLstREM=lstREM.co
+unt-2\n      \n       if (numLstREM>0) then\n      \n         for each numREMrec in 1..(lstREM.count-2)\n           objBuffLine.RemoveObj(lstREM.Get(numREMrec))\n         end\n       end 'if\n      \n     end\n        \n     objLastArc = lstBuffPolyLines.Get(0).Get(0)\n     lstBuffPolyLines.Get((lstBuffPolyLines.count-1)).Add(objLastArc)\n     if (blnFldID = TRUE) then\n       strBuffID = ftbLine.ReturnValueString(fldLineID, numPolyLineRec)\n     else\n       strBuffID = numLineCounter.AsString\n     end  \n     numNewBuffRe
+c = ftbBuffer.AddRecord\n     ftbBuffer.SetValue(fldBufferID, numNewBuffRec, strBuffID)\n     ftbBuffer.SetValueNumber(fldBufferDistance, numNewBuffRec, numBuffDistance)\n     shpPolyBuff = Polygon.Make(lstBuffPolyLines)\n     ftbBuffer.SetValue(fldBufferShape, numNewBuffRec, shpPolyBuff)\n     \n  end 'if\n \n  numProgress = (numLineCounter/numLineRecords) * 100\n  av.SetStatus(numProgress)\n\nend 'for\n\nav.ClearStatus\nav.ClearMsg\nftbBuffer.Flush\nav.PurgeObjects\n\n'  CREATE OUTPUT THEME\n\nif (MsgBox.YesNo(\"Do you want t
+o add the new theme to your view now ?\",\"FINISHED. ADD BUFFER TO VIEW?\",TRUE)) then\n   \nsnaBufferPoly = SrcName.Make(objBufferLocation.AsString)\nthmBufferPoly = Theme.Make(snaBufferPoly)\n   docView.AddTheme(thmBufferPoly)\n   if (docView.GetThemes.Count > 0) then\n     av.GetProject.SetModified( TRUE )\n   end\nend\n\nav.ShowMsg(numLineRecords.AsString++\"lines buffered. Processing completed\")\n\n'END SCRIPT\n\n\n"
+)
+
+(Script.62
+	Name:	"Util.Output"
+	SourceCode:	"'--- Create output script\n\nv = av.getactivedoc\nt = v.getactivethemes.get(0)\nft = t.getftab\ngl = v.getgraphics\n\ndef = av.GetProject.MakeFileName(\"theme\", \"shp\")\ndef = FileDialog.Put(def, \"*.shp\", \"Output Theme\")\nif (def = nil) then return nil end\n\nidfield = msgbox.listasstring(ft.getfields,\n  \"The field must contain unique values\", \n  \"Select Join Field\")\nif (idfield = nil) then return nil end\n\ntbl = FTab.MakeNew(def, polyline)\nfld = idfield.clone\nanglefld = Field.Make(\"bearing\", #FIELD_DECIMAL, 8, 4)\nfld.Se
+tVisible( TRUE )\ntbl.AddFields({fld, anglefld})\ntheTheme = FTheme.Make(tbl)\n\ncountlist = {}\n\nif (ft.getselection.count = 0) then\n  ft.getselection.setall\nend\n\nfor each rec in ft.getselection\n  id = ft.returnvalue(idfield, rec)\n  pl = ft.returnvalue(ft.findfield(\"shape\"),rec)\n  plist = pl.asmultipoint.aslist\n  \n  for each i in 0..(plist.count - 2)\n    tbl.addrecord       \n    l = av.run(\"Util.Explode\", {plist, i})\n    thebearing = av.run(\"Util.Bearing\", {plist, i})\n    gs = graphicshape.make(l)\n    tbl.setva
+lue(tbl.findfield(\"shape\"), countlist.count, l)\n    tbl.setvalue(fld, countlist.count, id)\n    tbl.setvalue(tbl.findfield(\"bearing\"), countlist.count, thebearing)\n    countlist.add(\"added\")\n  end\nend\n\nv.addtheme(thetheme)\n\nthetheme.stopediting(true)\ntbl.seteditable(false)\nv.invalidate\n\n'--- End of script \n"
+)
+
+(Script.63
+	Name:	"Util.Points2ASCII"
+	SourceCode:	"'Name:  GSI.Points2ascii\n \n'Description:  This script automates converting a point shapefile to\n'a comma-delimited textfile that can be used as an event theme or to\n'be imported into other software.  This script adds 2 fields onto the \n'FTab of the active theme (called x_coord and y_coord) and populates \n'them with the coordinates of the features.  It then saves all records \n'to a comma-delimited text file.  \n \n'Requirements:  Active document must be a view with an active point theme\n'whose source is a shap
+efile.  Designed to be run from either a button\n'or menu choice.  User must have write privileges to the shapefile.\n \n'Author:  Ruth Bowers, Geodynamic Solutions, Inc., Houston, TX\n'rbowers@geodynamic.com\n \nv = av.getActiveDoc\nif (not(v.is(view))) then return nil end\nif (v.getActiveThemes.count < 1) then return nil end\nt = v.getActiveThemes.get(0)\nif (not(t.canEdit)) then return nil end\nif (not(t.getftab.getshapeclass.getclassname.contains(\"point\"))) then\n  av.showmsg(\"Wrong feature type.\")\n  return nil\nend
+\nwhile (true)   'SHOW DIALOG TO LET USER PICK DESTINATION FILENAME\n  afn = fileDialog.put(\"$TEMP/myfile.txt\".asFilename, \"*.txt\", \"SAVE FILE AS...\")\n  if (afn = nil) then\n    return nil\n  end\n  d = afn.returnDir\n  if (file.isWritable(d)) then\n    break\n  else\n    av.showMsg(\"File is not writable, try a different directory.\")\n    'keep showing dialog\n  end\nend\n'afn = \"c:\\temp\\myfile.txt\".asFilename\nf = t.getFTab\nf1 = field.make(\"x_coord\", #FIELD_DECIMAL, 16, 6)\nf2 = field.make(\"y_coord\", #FIELD_DECIMAL, 16, 
+6)\nnf = {}\nf.setEditable(true)\nif (not(t.canEdit)) then return nil end\nnf.add(f1) nf.add(f2)\nf.addFields(nf)\ns = f.findField(\"shape\")\nb = f.getSelection\nb.setAll\nf.calculate(\"([shape].getx)\", f1)\nf.calculate(\"([shape].gety)\", f2)\nf.refresh\nf.setEditable(false)\nb.clearAll\nf.Export(afn, DTXT, FALSE)\nmsgbox.info(\"All records written to\"++afn.Getfullname,\"EXPORT POINT SHAPEFILE TO DELIMITED TEXT FILE.\")\n \n"
+)
+
+(Script.64
+	Name:	"Util.start"
+	SourceCode:	"av.GetProject.FindDialog(\"Utilities\").Open"
+)
+
+(Script.65
+	Name:	"Util.WorldFile"
+	SourceCode:	"'======================================================================\n\n'View.WorldFile\n\n'Create world file for current georeferenced image theme\n\n'**** get image theme *************************************************\n\nScript.The.SetNumberFormat( \"d.dddddddddddddd\" )\ntheView  = av.GetActiveDoc\nthmImage = theView.GetActiveThemes.Get(0)\n\n'**** see if world filename exists ************************************\n\nWFName = ( thmImage.GetImgSrc.GetSrcName.GetFileName.AsString\n           + \"w\" ).AsFilename\nif (Fil
+e.Exists(WFName)) then\n   resp = MsgBox.YesNo(WFName.AsString+\" already exists.  Overwrite?\", \"\", false)\n   if (resp) then\n      File.Delete(WFName)\n   else\n      exit\n   end\nend\n\n'**** create world file parameters ************************************\n\nMapE = thmImage.GetImgSrc.ReturnMapExtent\nnumCol = thmImage.GetImgSrc.GetNumColumns\nnumRow = thmImage.GetImgSrc.GetNumRows\nX0 = MapE.GetLeft\nY0 = MapE.GetTop\nX1 = MapE.GetRight\nY1 = MapE.GetBottom\n\nA = (X1-X0)/numCol\nD = 0\nB = 0\nE = (Y1-Y0)/numRow\nC = X0+(A/2
+)\nF = Y0+(E/2)\n\n'**** write world file ************************************************\n\nwf = LineFile.Make(WFName,#FILE_PERM_WRITE)\nwf.WriteElt(A.AsString)\nwf.WriteElt(D.AsString)\nwf.WriteElt(B.AsString)\nwf.WriteElt(E.AsString)\nwf.WriteElt(C.AsString)\nwf.WriteElt(F.AsString)\nwf.close\n\nMsgBox.Info(\"World File exportet.\",\"\")\n\n'======================================================================\n"
+)
+
+(Script.66
+	Name:	"Util.XYPan"
+	SourceCode:	"'by JP Gallet; jpgallet@dmws.durban.gov.za\n\ntheView=av.getActiveDoc\ntheDisplay=theView.getDisplay\n\ntheLabs={\"Y Coord:\",\"X Coord:\",\"Scale  1:\"}\ntheVals={\"\",\"\",\"1000\"}\n\ntheInput=msgBox.multiInput(\"Enter Y, X coordinates and scale of zoom...\",\"\",theLabs,theVals)\n\nif (theInput=nil) then\n  return nil\nelse\n  theYVal=theInput.get(0)\n  theXVal=theInput.get(1)\n  theScale=theInput.get(2)\n\n  theXYPoint=point.make(theYVal.asNumber,theXVal.asNumber)\n  theDisplay.panTo(theXYPoint)\n  theDisplay.zoomToScale(theScale.asNumb
+er)\n \n  graphicPoint=graphicShape.make(theXYPoint)\n  theView.getGraphics.unselectAll\n  graphicPoint.setSelected(TRUE)\n  theView.getGraphics.add(graphicPoint)\nend\n\n\n\n"
+)
+
+(Script.67
+	Name:	"Ext_unload"
+	SourceCode:	"Dialog.DetachFromExtension(self)\n"
+)
+
+(Script.68
+	Name:	"Ext_Inst"
+	SourceCode:	"if (av.GetProject = nil) then\n  return nil\nend\n\nSack=self\n\nSchaltflaeche=Sack.get(0)\nviewGUI = av.GetProject.FindGUI( \"View\" )\nif (viewGUI <> nil) then\n    'prüfen, ob die Schaltfläche schon existiert\n    if(viewGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick)=nil)then\n      viewGUI.GetButtonBar.Add( Schaltflaeche, 100)\n    end\nend\n\nav.getproject.Adddialog( Sack.get(1))\n\n\n\n"
+)
+
+(Script.69
+	Name:	"Ext_unin"
+	SourceCode:	"if (av.GetProject = nil) then\n  return nil\nend\n\nif (av.GetProject.IsClosing) then\n  return nil\nend\n\nviewGUI = av.GetProject.FindGUI( \"View\" )\n\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \"Util.start\"))\nav.GetProject.removedialog(\"Util\")\n"
+)
+

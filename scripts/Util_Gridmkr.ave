@@ -1,0 +1,152 @@
+' Name:  milagrdmkr.ave
+' Modifief : by V. Guissard, from ESRI
+' Date : 09/04/2000
+' 
+' Title:  Creates arbitrary grid(vector) shapefile
+' 
+' Topics:  Views, Geodata
+' 
+' Description:  This script is attached to a view button. One attribute is added to this 
+' grid shape theme, a label, that is "A1 A2  B1 B2...." as you might see on an index map.  The 
+' labeling starts at the upper left.
+'  
+' The grid is added to your current view as a theme called "Grid" with hollow fill pattern and thick 
+' (thickness 2) black lines.  You are prompted as to whether you want to label the grid. If you say yes, 
+' it will put the labels in the grid box using the current textsymbol. 
+' 
+ 
+
+theView = av.GetActiveDoc
+
+llx = MsgBox.Input( "Minimum X coordinate?", "UCL-MILA-GridMaker", "" )
+if (llx = nil) then
+  MsgBox.Error("Must choose an X coordinate","Aborting")
+  exit
+end
+
+lly = MsgBox.Input( "Minimum Y coordinate?", "UCL-MILA-GridMaker", "" )
+if (lly = nil) then
+  MsgBox.Error("Must choose an Y coordinate","Aborting")
+  exit
+end
+
+llx = llx.asNumber
+lly = lly.asNumber
+
+csize = MsgBox.Input( "Rectangle X size (map units)?", "UCL-MILA-GridMaker", "" )
+if ((csize = nil) or (csize.asNumber < 0) or (csize.asNumber = 0)) then
+  MsgBox.Error("X size must be greater than 0","Aborting")
+  exit
+end
+
+rsize = MsgBox.Input( "Rectangle Y size (map units)?", "UCL-MILA-GridMaker", "" )
+if ((rsize = nil) or (rsize.asNumber < 0) or (rsize.asNumber = 0)) then
+  MsgBox.Error("Y size must be greater than 0","Aborting")
+  exit
+end
+
+rsize = rsize.asNumber
+csize = csize.asNumber
+
+rows=Msgbox.Input("How many rows (up/down):","UCL-MILA-GridMaker","10")
+
+if ((rows = nil) or (rows.asNumber < 1)) then
+  MsgBox.Error("Must use more than one row.","Aborting")
+  exit
+end
+
+cols=Msgbox.Input("How many columns:","UCL-MILA-GridMaker","10")
+if ((cols =nil) or (cols.asNumber < 1)) then
+  MsgBox.Error("Must use more than one column.","Aborting")
+  exit
+end
+
+rows=rows.asnumber
+cols=cols.asnumber
+
+theWidth = csize * cols
+theHeight = rsize * rows
+
+
+letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+newshpname=filedialog.Put("grid.shp".AsFilename,"*.shp","Grid file")
+if (newshpname =nil) then
+  exit
+end
+
+
+
+gridftab=Ftab.MakeNew(newshpname,POLYGON)
+labelfield=Field.Make("Label",#FIELD_CHAR,6,0)
+gridftab.SetEditable(true)
+gridftab.Addfields({labelfield})
+gridftab.SetEditable(True)
+shpfield=gridftab.FindField("shape")
+labfield=gridftab.FindField("label")
+
+countup=0
+sizer=rows*cols
+av.setstatus(0)
+Av.ShowMsg("Creating grid...")
+for each r in 1..rows
+  row_id=(rows-r+1).AsString
+  for each c in 1..cols
+    countup=countup+1
+    av.setstatus(countup/sizer*100)
+    if ((c/26) > 1) then
+      col_prefix=letters.middle((c/26).floor-1,1)
+    else
+      col_prefix=""
+    end
+    if (c.Mod(26) = 0) then
+      col_name=letters.Middle(25,1)
+    else
+      col_name=letters.Middle(c.Mod(26)-1,1)
+    end
+    col_id=col_prefix+col_name
+
+   originx=llx+((c-1)*csize)
+   originy=lly+((r-1)*rsize)
+   size=csize@rsize
+   theOrigin=originx@originy
+    rct=rect.make(theOrigin,size)
+    'if (viewunits=#UNITS_LINEAR_METERS) then
+      'rct=rct.ReturnUnprojected(viewproj)
+    'end
+    newrec=gridftab.AddRecord
+    gridftab.SetValue(shpfield,newrec,rct.aspolygon)
+    gridftab.SetValue(labfield,newrec,col_id+row_id)
+  end
+end
+gridftab.SetEditable(false)
+av.clearMsg
+
+mytheme=ftheme.Make(gridftab)
+mysym=av.GetSymbolWin.GetPalette.GetList(#PALETTE_LIST_FILL).Get(0)
+mysym.setolwidth(2)
+mytheme.GetLegend.GetSymbols.Set(0,mysym)
+mytheme.SetName("Grid")
+mytheme.SetActive(true)
+myTheme.SetVisible(true)
+theview.AddTheme(mytheme)
+mytheme.Invalidate(true)
+theview.GetDisplay.Flush
+
+yn=MsgBox.YesNo("Label the grid?","Gridmaker",true)
+
+
+if (yn) then
+  for each thm in theView.GetThemes
+    if (thm <> mytheme) then
+      thm.SetActive(False)
+    end
+  end
+
+  theView.LabelThemes(false)
+end
+
+
+
+
+

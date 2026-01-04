@@ -1,0 +1,50 @@
+'script that enables spatial join from pointtable to polygontable
+'conditions: one-to-one relationship, shapefields are active in both themes, polygontable is active
+'--------------------------------------------------------------------------------------------------
+'created by Michael Herter ;-)
+'--------------------------------------------------------------------------------------------------
+
+theTable = av.GetActiveDoc  '###########table of polygontheme
+next = theTable.GetWin.GetNextDoc '#####table of pointtheme
+
+'creates joinfield and adds it to polygontable
+'---------------------------------------------
+JoinFld1 = Field.Make ("JoinField", #FIELD_BYTE, 7, 0)
+theTable.GetVTab.SetEditable (true)
+theTable.GetVTab.AddFields ({JoinFld1})
+
+'fills joinfield with temporary ids
+'----------------------------------
+for each rec in theTable.GetVTab
+  theTable.GetVTab.SetValue (Joinfld1, rec, rec+1)
+end
+
+theTable.GetVTab.SetEditable (false)
+
+'creates another joinfield and adds it to pointtheme
+'---------------------------------------------------
+JoinFld2 = Field.Make ("Temp_Join", #FIELD_BYTE, 7, 0)
+next.GetVTab.SetEditable (true)
+next.GetVTab.AddFields ({JoinFld2})
+
+'calculates the pointheme's joinfield with the temporary ids from polygontheme
+'-----------------------------------------------------------------------------
+if (theTable.GetVTab.IsBase) then
+  next.GetVTab.Join (next.GetActiveField, theTable.GetVTab, theTable.GetActiveField)
+else
+  exit
+end    
+
+next.GetVTab.Calculate("[JoinField]", JoinFld2)
+next.GetVTab.SetEditable (false)
+next.GetVTab.UnJoinAll
+
+'creates spatial join from pointable to polygontable using the two common joinfields
+'-----------------------------------------------------------------------------------
+
+theTable.GetVTab.Join (Joinfld1, next.GetVTab, JoinFld2)
+
+
+
+
+

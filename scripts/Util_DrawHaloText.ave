@@ -1,0 +1,76 @@
+' Name: HaloTexter 
+' Author: Michael Silberbauer 2002-03-22 
+' Title: Text halo creator (O'Connor, C) 
+' Description: draw halo around text (hacked from halotext.avx by Christopher O'Connor, cxoconno@gw.dec.state.ny.us)
+' Modified by Adrian Boehlen, 2014-11-23 
+
+theView = av.GetActiveDoc 
+
+if (theView.Is(view).Not) then
+  MsgBox.Warning("Start this script from an active View.","")
+  return nil
+end
+
+theDisplay = theView.GetDisplay 
+
+' Get the GraphicList for the View... 
+theGraphics = theView.GetGraphics 
+HaloColour = Color.GetWhite 
+TextColour = Color.GetBlack 
+pi = Number.GetPi 
+angrad = pi/180 
+nTs = 5 
+hAngle = 360/nTs 
+
+theGraphicsList = theGraphics.FindAllByClass( GraphicText ) 
+
+if (MsgBox.YesNo("Are you sure ? Create halo cannot be undone","Create halo around text features",true)) then
+
+  if (theGraphics.HasSelected) then 
+    theGraphicsList = TheGraphics.GetSelected 
+  end 
+  theGraphics.UnSelectAll 
+  for each g in theGraphicsList 
+    if (g.CanEditText) then 
+      'MsgBox.ListAsString( { g.GetText }, g.AsString, "Symbols of text" ) 
+      theGraphics.UnSelectAll 
+      g.GetSymbol.UnHook 
+      Text = g.GetText 
+      TextHeight = g.GetBounds.GetHeight 
+      TextOrigin = g.GetOrigin 
+      TextSize = g.GetSymbol.GetSize 
+      TextFont = g.GetSymbol.GetFont 
+      NumLines = g.GetText.AsTokens(nl).Count 
+      ExpandDist = (TextHeight/NumLines)/20 
+      theGraphicGroup = GraphicGroup.Make 
+      for each nT in 0..nTs 
+       'gt = g.clone 
+        gt = GraphicText.Make(Text,TextOrigin) 
+        angvalue = hAngle*nT 
+        theOffX = ExpandDist*(angrad*angvalue).cos 
+        theOffY = ExpandDist*(angrad*angvalue).sin 
+        gt.Offset(Point.Make(theOffX,theOffY)) 
+        gt.GetSymbol.SetColor(HaloColour) 
+        gt.GetSymbol.SetSize(TextSize) 
+        gt.GetSymbol.SetFont(TextFont) 
+        theView.GetDisplay.HookUpSymbol(gt.GetSymbol) 
+        theGraphicGroup.Add(gt) 
+      end 
+      theView.GetDisplay.HookUpSymbol(g.GetSymbol) 
+      theGraphicGroup.Add(g) 
+      theGraphicGroup.SetObjectTag("halo") 
+      theGraphics.Add(theGraphicGroup) 
+      theGraphics.Invalidate 
+    end 
+  end 
+  theGraphicsList = theGraphics.FindAllByObjectTag("halo") 
+  theGraphics.UnSelectAll 
+  for each g in theGraphicsList 
+    g.SetSelected(true) 
+  end 
+  theGraphics.MoveSelectedToBack
+  theGraphics.UnSelectAll
+else
+  return nil
+end
+

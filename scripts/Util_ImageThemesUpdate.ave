@@ -1,0 +1,11 @@
+'**********************************************************************
+
+'View.ImageThemesUpdate
+'Update script for View.GeoRefImage
+
+theView = av.GetActiveDoc
+SELF.SetEnabled((theView.GetActiveThemes.Count > 0) AND
+  (theView.GetActiveThemes.Get(0).Is(ITheme)))
+
+'**********************************************************************
+

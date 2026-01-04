@@ -1,0 +1,293 @@
+' Name: LineSquareBuffer 	
+'
+' Date: 12.10.2000
+' 
+' Updated: 07.02.2001
+' 
+' Author: Nick Bauer 
+'         CRC Freshwater Ecology
+'         University of Canberra
+'         Australia
+'         Please send any comments to email: bauer@lake.canberra.edu.au
+' 
+' ** Modified from a script written by BERKI, Zsolt of TRANSMAN Ltd.
+'    Many thanks to him **
+'
+'
+' Title:  Line Square Buffers
+'
+' Topics: Buffer, View, Theme, Square 
+'
+' Description: Buffers a PolyLine theme as normal, however it
+'              squares the buffer at the start and end of the line (or node).
+'              The user is prompted for a field to link the buffer polygon to the
+'              original line theme. If no field is given the script automatically
+'              assigns a uniquue id.
+'    
+' Requires: PolyLine with at least one selected feature. At least MAP UNITS must be set
+'           in the view !!    
+'
+' Know Issues: The script takes some time to buffer polylines. My advice is to be patient, and if
+'              your ArcView session appears to be 'dead' then just wait a while. I have succesfully 
+'              buffered over 13000 polylines at once (took about 30 minutes to do so). 
+'
+'              The resulting buffer is not always flush with the end of the line, particularly when using
+'              larger buffer distances. I have not been able to rectify this problem, let me know if you do. 
+'
+' Self:  Nil
+'
+' Returns: Polygon Theme
+
+
+' GET THE ACTIVEDOC (MUST BE A VIEW) AND THEMES
+
+docView = av.GetActiveDoc
+
+if (docView.Is(view).Not) then
+  MsgBox.Warning("Start this script from an active View.","")
+  return nil
+end
+
+' GET THE DISPLAY MAP UNITS OF THE VIEW
+
+dspView = docView.GetDisplay
+numDspMapUnit = dspView.GetUnits
+
+' CHECK IF DISPLAY MAP UNITS HAVE BEEN SET
+
+if (numDspMapUnit = #UNITS_LINEAR_UNKNOWN) then
+  MsgBox.Warning("Sorry no map units defined.  Please define the map units in the View, "+ 
+  "Properties dialog.","No map units set")
+  exit
+end
+
+' CHECK IF DISPLAY DISTANCE UNITS HAVE BEEN SET
+
+numDspDistanceUnit = dspView.GetDistanceUnits
+
+if (numDspDistanceUnit = #UNITS_LINEAR_UNKNOWN) then
+  numDspDistanceUnit = numDspMapUnit
+  strDistanceUnit=numDspDistanceUnit.AsString.AsTokens("_").Get(2).LCase
+  MsgBox.Warning("No distance units for view defined. Distance units set to MAP DISPLAY units"++
+                 "( "+strDistanceUnit+" )","No distance units set") 
+else
+  strDistanceUnit=numDspDistanceUnit.AsString.AsTokens("_").Get(2).LCase
+end
+
+' GET THE FTAB OF ANY LINES THEMES IN THE VIEW
+lstLineThm = {}
+for each l in docView.GetThemes
+  if(l.GetClass.GetClassName = "FTheme") then 
+  type = l.GetFTab.GetSrcName.GetSubName  
+    if (l.GetFTab.GetSrcName.GetSubName = "Arc") then
+       lstLineThm.Add(l)
+    end 
+  end
+end
+
+' CHECK THAT A LINE THEME WAS FOUND
+
+if (lstLineThm.Count = 0) then
+  msgBox.Error("No line themes found. Exiting.","Error")
+  exit
+end
+
+
+
+' GET THE LINE THEME TO BUFFER AND ITS FTAB
+
+thmLine = MsgBox.ListAsString(lstLineThm,"Please choose a line theme","Line Selection")
+if (thmLine=nil) then
+  return nil
+  exit
+end
+
+ftbLine = thmLine.GetFtab
+numLineRecords = ftbLine.GetSelection.Count
+
+' CHECK IF ANY RECORDS ARE SELECTED, IF NONE SELECTED THEN PROMPT USER FOR RESPONSE
+
+if (numLineRecords=0) then
+  if (MsgBox.YesNo("No records selected. Select YES to buffer all records in the line theme."+NL+
+                   "NO to exit.","No records selected", TRUE)) then
+    ftbLine.GetSelection.SetAll                 
+  else
+    return nil
+    exit
+  end
+end
+
+' GET THE FIELDS OF THE LINE THEME FTAB
+
+lstFields = ftbLine.GetFields
+fldLineShape = ftbLine.FindField("Shape")
+fldLineID = MsgBox.ChoiceAsString(lstFields,"Choose a field containing a Line ID."+NL+
+                                           "Cancel for script to add own unique buffer number", "Field ID") 
+if (fldLineID = nil) then
+  blnFldID = FALSE
+else
+  blnFldID = TRUE
+end   
+
+' GET THE DISTANCE TO BUFFER
+
+numBuffDistance =(MsgBox.Input("Enter the buffer distance in "+strDistanceUnit+".","Buffer","100")).AsNumber
+if (numBuffDistance=NIL) then
+  exit
+end
+numBuffDistance = Units.Convert(numBuffDistance, numDspDistanceUnit, numDspMapUnit)
+  
+' GET SHAPEFILE STORAGE LOCATION 
+
+fnaBuffer = FileName.Make("$HOME").MakeTmp("shape","shp")
+objBufferLocation  = FileDialog.Put( fnaBuffer,"*.shp","Output Shape File" )
+if (objBufferLocation = nil) then
+    return nil
+end
+objBufferLocation.SetExtension("shp")
+
+' CREATE A NEW SHAPEFILE (THE BUFFER POLYGON). ADD FIELDS TO IT
+
+ftbBuffer = Ftab.MakeNew(objBufferLocation, Polygon) 'New shapefile for the loads
+
+lstBufferFields = List.Make
+lstBufferFields.Add(Field.Make("Line_ID", fldLineID.GetType, fldLineID.GetWidth, fldLineID.GetPrecision))
+strBuffDistance = "Buff_Dist_"+strDistanceUnit
+lstBufferFields.Add(Field.Make(strBuffDistance, #FIELD_DECIMAL, 15, 4))
+ftbBuffer.AddFields(lstBufferFields)
+
+fldBufferShape = ftbBuffer.FindField("Shape")
+fldBufferID = ftbBuffer.FindField("Line_ID")
+fldBufferDistance = ftbBuffer.FindField(strBuffDistance)
+
+
+' COMMENCE BUFFERING EACH SELECTED RECORD IN THE LINE FILE
+' THIS SECTION ORIGINALLY WRITTEN BY BERKI, Zsolt. 
+ 
+numLineCounter = 0
+
+for each numPolyLineRec in ftbLine.GetSelection
+
+ 
+  'lnfBufferLine.WriteElt( ftbLine.ReturnValueString(fldLinefldBufferID,numPolyLineRec))
+  
+  numLineCounter = numLineCounter + 1
+  
+  shpPolyLine = ftbLine.ReturnValue(fldLineShape, numPolyLineRec)
+  shpBuffPolyLine = shpPolyLine.ReturnBuffered(numBuffDistance)
+    
+    if (shpBuffPolyLine<>nil) then  
+      
+      lstBuffPolyLines = shpBuffPolyLine.AsPolyLine.Aslist
+      shpLine = shpPolyLine.Asline
+    
+      'shpFromNodePoint=shpLine.ReturnStart
+      shpFromNodePoint=shpPolyLine.Along(0)
+      numBuffPolyLines = lstBuffPolyLines.Count
+      
+      for each numLineRec in 1..numBuffPolyLines
+        
+        objBuffLine = lstBuffPolyLines.Get(numLineRec - 1)
+        lstREM = {}
+        numBuffLine = objBuffLine.Count-1
+      
+        if (numLineRec = numBuffPolyLines) then
+          numBuffLine = objBuffLine.Count-2
+        end
+        
+        for each numArcRec in 0..numBuffLine
+          objBuffArc = objBuffLine.Get(numArcRec)
+          numNodeToArc= shpFromNodePoint.Distance(objBuffArc)
+          
+          if (numNodeToArc<((numBuffDistance)+0.0001)) then
+            lstREM.Add(objBuffArc)
+          end
+       
+        end
+       
+        numLstREM =lstREM.count-2
+        
+        if (numLstREM > 0) then
+          
+          for each numREMrec in 1..numLstREM
+            objBuffLine.RemoveObj(lstREM.Get(numREMrec))
+          end
+        end 'if
+      end
+      
+      'tonode=shpLine.ReturnEnd
+      
+      tonode=shpPolyLine.Along(100)
+      
+      for each numLineRec in 1..numBuffPolyLines
+        
+        objBuffLine=lstBuffPolyLines.Get(numLineRec - 1)
+        lstREM={}
+        numBuffLine=objBuffLine.Count-1
+      
+        if (numLineRec=numBuffPolyLines) then
+          numBuffLine = objBuffLine.Count-2
+        end
+        for each numArcRec in 0..numBuffLine
+          objBuffArc=objBuffLine.Get(numArcRec)
+          numNodeToArc=tonode.Distance(objBuffArc)
+      
+          if (numNodeToArc<((numBuffDistance)+0.0001)) then
+            lstREM.Add(objBuffArc)
+          end
+        end
+      
+       numLstREM=lstREM.count-2
+      
+       if (numLstREM>0) then
+      
+         for each numREMrec in 1..(lstREM.count-2)
+           objBuffLine.RemoveObj(lstREM.Get(numREMrec))
+         end
+       end 'if
+      
+     end
+        
+     objLastArc = lstBuffPolyLines.Get(0).Get(0)
+     lstBuffPolyLines.Get((lstBuffPolyLines.count-1)).Add(objLastArc)
+     if (blnFldID = TRUE) then
+       strBuffID = ftbLine.ReturnValueString(fldLineID, numPolyLineRec)
+     else
+       strBuffID = numLineCounter.AsString
+     end  
+     numNewBuffRec = ftbBuffer.AddRecord
+     ftbBuffer.SetValue(fldBufferID, numNewBuffRec, strBuffID)
+     ftbBuffer.SetValueNumber(fldBufferDistance, numNewBuffRec, numBuffDistance)
+     shpPolyBuff = Polygon.Make(lstBuffPolyLines)
+     ftbBuffer.SetValue(fldBufferShape, numNewBuffRec, shpPolyBuff)
+     
+  end 'if
+ 
+  numProgress = (numLineCounter/numLineRecords) * 100
+  av.SetStatus(numProgress)
+
+end 'for
+
+av.ClearStatus
+av.ClearMsg
+ftbBuffer.Flush
+av.PurgeObjects
+
+'  CREATE OUTPUT THEME
+
+if (MsgBox.YesNo("Do you want to add the new theme to your view now ?","FINISHED. ADD BUFFER TO VIEW?",TRUE)) then
+   
+snaBufferPoly = SrcName.Make(objBufferLocation.AsString)
+thmBufferPoly = Theme.Make(snaBufferPoly)
+   docView.AddTheme(thmBufferPoly)
+   if (docView.GetThemes.Count > 0) then
+     av.GetProject.SetModified( TRUE )
+   end
+end
+
+av.ShowMsg(numLineRecords.AsString++"lines buffered. Processing completed")
+
+'END SCRIPT
+
+
+

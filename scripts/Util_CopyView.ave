@@ -1,0 +1,30 @@
+'Copies a View to a new View with a new name...
+'Created by Fred J. Calef III, CH2M Hill
+'Date:  12/3/1998
+
+'Gets the View...
+myProj = av.GetProject
+theViews = myProj.GetDocswithGui(av.FindGui("View"))
+aviewChoice = MsgBox.ChoiceAsString( theViews, "Choose a View to copy:", "Views")
+if (aviewChoice = nil) then
+  return nil
+end
+theView = myProj.FindDoc( aviewChoice.AsString )
+
+'Copies the View and renames it...
+newViewName = MsgBox.Input( "Enter a new name for the view:", "New View Name", "New View" )
+if (newViewName = nil) then   'Cancels if the there is no View name
+  return nil
+end
+if (av.FindDoc(newViewName).AsString = newViewName.AsString) then
+  'Cancels if the view name already exists
+  MsgBox.Error("That View name already exists! Press the Copy View button again...","View Already Exists")
+  return nil
+else
+  newView = theView.Clone
+  newView.SetName ( newViewName )
+  myProj.AddDoc ( newView )
+  newView.GetWin.Open
+end
+
+'End of script...

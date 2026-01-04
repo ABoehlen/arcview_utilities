@@ -1,0 +1,115 @@
+'##############################################################
+'#
+'# Filename:     Util.gpx2shp_lv03
+'# Author:       Adrian Boehlen
+'# Date:         13.01.2023
+'# Version:      1.3
+'#
+'# Purpose:      konvertiert ein GPX-File in ein Shapefile
+'#               in CH1903 LV03
+'#               bei gedrueckter Shift-Taste kann ein ganzer
+'#               Ordner mit GPX-Files auf einmal konvertiert
+'#               werden
+'# Note:         benoetigt...
+'#                Util.Sub_gpx2shp
+'#                Util.Sub_wgs2ch03
+'#                Util.Sub_prj  ...im gleichen Projekt
+'#                 
+'##############################################################
+
+'# ein View muss aktiv sein
+
+theView = av.GetActiveDoc
+
+if (theView.Is(view).Not) then
+  MsgBox.Warning("Start this script from an active View.","")
+  return nil
+end
+
+if (System.IsShiftKeyDown) then
+
+  '# Filter setzen
+  theFilter = "*.gpx"
+  
+  '# Inputverzeichnis definieren
+  inputdir = FileDialog.Put("   Select directory - not files".AsFileName,
+                             theFilter,"Selecting " + theFilter +
+                             " files from directory...")
+  if (inputdir = nil)then
+    return nil
+  end
+
+  inputdir = inputdir.ReturnDir
+
+  '# Outputverzeichnis definieren
+  outputdir = FileDialog.Put("   Select directory - not files".AsFileName,
+                             theFilter,"Saving Shapefile in directory...")
+  if (outputdir = nil)then
+    return nil
+  end
+
+  outputdir = outputdir.AsString.AsTokens("   ").Get(0)
+
+  '# Fortschrittsanzeige mit Stop button definieren
+  av.ShowMsg("Converting gpx files...")
+  canceled = False
+  av.ShowStopButton
+  statusIndex = 0
+  av.SetStatus(statusIndex)
+  
+  '# alle Dateien mit der passenden Endung gemaess Filter im Verzeichnis auswaehlen
+  '# und konvertieren sowie Fortschrittsanzeige aufbauen
+  fileStack = Stack.Make
+  fileStack.Push(inputdir)
+  while (fileStack.IsEmpty.Not)
+    fileNameList = fileStack.Pop.Read(theFilter)
+    fileNameCount = fileNameList.Count
+    statusIncrement = 100 / fileNameCount
+    for each gpxName in fileNameList
+      gpxBaseName = gpxName.GetBaseName.AsTokens(".").Get(0)
+      gpxFile = LineFile.Make(gpxName, #FILE_PERM_READ)
+      shpName = FileName.Make(outputdir.AsString + gpxBaseName + "_pt")
+      'av.Run("Util.Sub_prj", {shpName}) 'zurzeit nicht benoetigt
+      shpName.SetExtension("shp")
+      av.Run("Util.Sub_gpx2shp", {gpxFile, shpName})
+      statusIndex = statusIndex + statusIncrement
+      continued = av.SetStatus(statusIndex)
+      if (Not continued) then
+        canceled = true
+        break
+      end
+    end
+  end
+  
+  '# Falls Stop button gedrueckt wurde, Meldung ausgeben
+  if (canceled) then
+    av.ShowMsg("Process interrupted")
+  else
+    av.ShowMsg("Process completed")
+    av.ClearStatus   '# damit Fortschrittsanzeige verschwindet
+  end
+else
+
+  '# einzelnes GPX-File einlesen
+  gpxName = FileDialog.Show("*.gpx","GPX File","Select GPX File")
+  if (gpxName = nil) then 
+    return nil 
+  end
+  
+  gpxBaseName = gpxName.GetBaseName.AsTokens(".").Get(0)
+
+  gpxFile = LineFile.Make(gpxName, #FILE_PERM_READ)
+
+  '# zu erstellendes Shapefile definieren
+  outputdir = av.GetProject.GetWorkDir
+  defaultName = FileName.Make(outputdir.AsString + "\" + gpxBaseName + "_pt.shp")
+  shpName  = FileDialog.Put(defaultName,"shp","Output Shape File")
+  if (shpName = nil) then 
+    return nil 
+  end
+
+  'av.Run("Util.Sub_prj", {shpName})  'zurzeit nicht benoetigt
+  shpName.SetExtension("shp")
+  
+  av.Run("Util.Sub_gpx2shp", {gpxFile, shpName})
+end

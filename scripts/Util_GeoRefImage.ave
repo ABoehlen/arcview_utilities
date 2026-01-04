@@ -1,0 +1,60 @@
+'**********************************************************************
+
+'View.GeoRefImage
+
+'**** get image theme and point ***************************************
+
+theView  = av.GetActiveDoc
+thmImage = theView.GetActiveThemes.Get(0)
+p1 = theView.GetDisplay.ReturnUserPoint
+
+' **** if georefpoint is not null, find out if current point is 2nd **
+
+georefpoint = Self.GetObjectTag
+if (georefpoint = nil) then
+   resp = false
+elseif (georefpoint.Is(Point)) then
+   resp = MsgBox.YesNo("Use current point to complete rectangle?", "", false)
+else
+   resp = false
+end
+
+if (not resp) then
+
+   ' **** store current point *****************************************
+
+   Self.SetObjectTag(p1)
+   MsgBox.Info("Point collected", "")
+
+else
+
+   ' **** retrieve first point ****************************************
+
+   p2 = p1
+   p1 = georefpoint
+   r1 = Rect.MakeXY( p1.GetX, p1.GetY, p2.GetX, p2.GetY)
+
+   ' **** get coordinates for second rectangle ************************
+
+   labels = {"X1:", "Y1:", "X2:", "Y2:"}
+   XYlist = MsgBox.MultiInput("Enter Map Coordinates", "Georeference Points", labels, {})
+   if (XYlist.Count > 0) then
+      X1 = XYlist.Get(0)
+      Y1 = XYlist.Get(1)
+      X2 = XYlist.Get(2)
+      Y2 = XYlist.Get(3)
+      if ( X1.IsNumber and Y1.IsNumber and X2.IsNumber and Y2.IsNumber ) then
+         r2 = Rect.MakeXY( X1.AsNumber, Y1.AsNumber, X2.AsNumber, Y2.AsNumber)
+         thmImage.GetImgSrc.MatchRectangles(r1, r2)
+
+         thmImage.Invalidate(TRUE)
+         temp = av.Run("View.ZoomToThemes", "")
+         Self.SetObjectTag(nil)
+      else
+         Msgbox.warning("Invalid coordinate entry","Georeference Points")
+      end
+   end
+end
+
+'**********************************************************************
+

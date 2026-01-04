@@ -1,0 +1,25 @@
+Util = Extension.Make("$AVHOME\projects\Utilities\Utilities.avx".AsFileName,
+"Utilities",av.FindScript("Ext_inst"),av.FindScript("Ext_unin"), {"$AVBIN/avdlog.dll".AsFileName})
+
+Util.SetExtVersion(1)
+Util.SetAbout("Utilities toolbar (v1.2)")'Beschreibung
+Util.SetUnloadScript(av.FindScript("ext_unload"))
+
+Schaltflaeche = ( av.FindGUI( "View").GetButtonBar.findbyscript("Util.start"))  
+UtilDialog = av.FindDialog("Utilities")
+Util.Add( Schaltflaeche)   'Schaltfläche hinzufügen
+Util.Add(UtilDialog)
+
+for each aDoc in av.GetProject.GetDocs
+  if (aDoc.Is(SEd)) then
+    if (aDoc.GetName.Contains("Util.")) then
+      if (aDoc.IsCompiled.Not) then
+        aDoc.Compile
+      end
+      Util.Add(av.FindScript(aDoc.GetName))
+    end
+  end
+end
+
+Util.Commit
+

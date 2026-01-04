@@ -1,0 +1,50 @@
+'# Filename:     Util.Bearing
+
+
+plist = self.get(0)
+i = self.get(1)
+p1 = plist.get(i)
+p2 = plist.get(i+1)
+
+theX1 = p1.GetX
+theY1 = p1.Gety
+ 
+theX2 = p2.GetX
+theY2 = p2.GetY
+ 
+theH = theX2 - theX1  '--- where theH is the horizontal difference, or delta x
+theV = theY2 - theY1  '--- where theV is the vertical difference, or delta y
+
+theLength = ((theH * theH) + (theV * theV)).SQRT
+theAngle = (theV/theLength).Abs.Acos.AsDegrees 
+
+if ((theH = 0) and (theV > 0 ))  then
+  constant = 0
+  theBearing = constant - theAngle
+end
+
+if ((theH > 0 ) and (theV > 0)) then 
+  constant = 0 
+  theBearing = theAngle + constant
+end '--- 1st quadrant
+
+if ((theH < 0) and (theV  >= 0)) then '--- 2nd quadrant
+  constant = 360
+  theBearing = constant - theAngle.Abs
+end 
+
+if ((theH <= 0) and (theV <= 0)) then '--- 3rd quadrant
+  constant = 180
+  theBearing = theAngle.Abs + constant
+end 
+
+if ((theH >= 0) and (theV <= 0)) then 
+  constant = 180 '--- 4th quadrantt 
+  theBearing = constant - theAngle.abs
+end
+
+return thebearing
+
+'--- End of script 
+
+

@@ -1,0 +1,57 @@
+'======================================================================
+
+'View.WorldFile
+
+'Create world file for current georeferenced image theme
+
+'**** get image theme *************************************************
+
+Script.The.SetNumberFormat( "d.dddddddddddddd" )
+theView  = av.GetActiveDoc
+thmImage = theView.GetActiveThemes.Get(0)
+
+'**** see if world filename exists ************************************
+
+WFName = ( thmImage.GetImgSrc.GetSrcName.GetFileName.AsString
+           + "w" ).AsFilename
+if (File.Exists(WFName)) then
+   resp = MsgBox.YesNo(WFName.AsString+" already exists.  Overwrite?", "", false)
+   if (resp) then
+      File.Delete(WFName)
+   else
+      exit
+   end
+end
+
+'**** create world file parameters ************************************
+
+MapE = thmImage.GetImgSrc.ReturnMapExtent
+numCol = thmImage.GetImgSrc.GetNumColumns
+numRow = thmImage.GetImgSrc.GetNumRows
+X0 = MapE.GetLeft
+Y0 = MapE.GetTop
+X1 = MapE.GetRight
+Y1 = MapE.GetBottom
+
+A = (X1-X0)/numCol
+D = 0
+B = 0
+E = (Y1-Y0)/numRow
+C = X0+(A/2)
+F = Y0+(E/2)
+
+'**** write world file ************************************************
+
+wf = LineFile.Make(WFName,#FILE_PERM_WRITE)
+wf.WriteElt(A.AsString)
+wf.WriteElt(D.AsString)
+wf.WriteElt(B.AsString)
+wf.WriteElt(E.AsString)
+wf.WriteElt(C.AsString)
+wf.WriteElt(F.AsString)
+wf.close
+
+MsgBox.Info("World File exportet.","")
+
+'======================================================================
+

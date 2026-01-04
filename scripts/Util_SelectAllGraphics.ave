@@ -1,0 +1,9 @@
+theView = av.GetActiveDoc
+
+if (theView.Is(view).Not) then
+  MsgBox.Warning("Start this script from an active View.","")
+  return nil
+end
+
+theGraphicsList = theView.GetGraphics
+theGraphicsList.SelectAll

@@ -1,0 +1,59 @@
+'Name:  Util.Points2ascii
+ 
+'Description:  This script automates converting a point shapefile to
+'a comma-delimited textfile that can be used as an event theme or to
+'be imported into other software.  This script adds 2 fields onto the 
+'FTab of the active theme (called x_coord and y_coord) and populates 
+'them with the coordinates of the features.  It then saves all records 
+'to a comma-delimited text file.  
+ 
+'Requirements:  Active document must be a view with an active point theme
+'whose source is a shapefile.  Designed to be run from either a button
+'or menu choice.  User must have write privileges to the shapefile.
+ 
+'Author:  Ruth Bowers, Geodynamic Solutions, Inc., Houston, TX
+'rbowers@geodynamic.com
+ 
+v = av.getActiveDoc
+if (not(v.is(view))) then return nil end
+if (v.getActiveThemes.count < 1) then return nil end
+t = v.getActiveThemes.get(0)
+if (not(t.canEdit)) then return nil end
+if (not(t.getftab.getshapeclass.getclassname.contains("point"))) then
+  av.showmsg("Wrong feature type.")
+  return nil
+end
+while (true)   'SHOW DIALOG TO LET USER PICK DESTINATION FILENAME
+  afn = fileDialog.put("$TEMP/myfile.txt".asFilename, "*.txt", "SAVE FILE AS...")
+  if (afn = nil) then
+    return nil
+  end
+  d = afn.returnDir
+  if (file.isWritable(d)) then
+    break
+  else
+    av.showMsg("File is not writable, try a different directory.")
+    'keep showing dialog
+  end
+end
+'afn = "c:\temp\myfile.txt".asFilename
+f = t.getFTab
+f1 = field.make("x_coord", #FIELD_DECIMAL, 16, 6)
+f2 = field.make("y_coord", #FIELD_DECIMAL, 16, 6)
+nf = {}
+f.setEditable(true)
+if (not(t.canEdit)) then return nil end
+nf.add(f1) nf.add(f2)
+f.addFields(nf)
+s = f.findField("shape")
+b = f.getSelection
+b.setAll
+f.calculate("([shape].getx)", f1)
+f.calculate("([shape].gety)", f2)
+f.refresh
+f.setEditable(false)
+b.clearAll
+f.Export(afn, DTXT, FALSE)
+msgbox.info("All records written to"++afn.Getfullname,"EXPORT POINT SHAPEFILE TO DELIMITED TEXT FILE.")
+ 
+

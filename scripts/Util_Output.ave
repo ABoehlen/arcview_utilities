@@ -1,0 +1,54 @@
+'--- Create output script
+
+v = av.getactivedoc
+t = v.getactivethemes.get(0)
+ft = t.getftab
+gl = v.getgraphics
+
+def = av.GetProject.MakeFileName("theme", "shp")
+def = FileDialog.Put(def, "*.shp", "Output Theme")
+if (def = nil) then return nil end
+
+idfield = msgbox.listasstring(ft.getfields,
+  "The field must contain unique values", 
+  "Select Join Field")
+if (idfield = nil) then return nil end
+
+tbl = FTab.MakeNew(def, polyline)
+fld = idfield.clone
+anglefld = Field.Make("bearing", #FIELD_DECIMAL, 8, 4)
+fld.SetVisible( TRUE )
+tbl.AddFields({fld, anglefld})
+theTheme = FTheme.Make(tbl)
+
+countlist = {}
+
+if (ft.getselection.count = 0) then
+  ft.getselection.setall
+end
+
+for each rec in ft.getselection
+  id = ft.returnvalue(idfield, rec)
+  pl = ft.returnvalue(ft.findfield("shape"),rec)
+  plist = pl.asmultipoint.aslist
+  
+  for each i in 0..(plist.count - 2)
+    tbl.addrecord       
+    l = av.run("Util.Explode", {plist, i})
+    thebearing = av.run("Util.Bearing", {plist, i})
+    gs = graphicshape.make(l)
+    tbl.setvalue(tbl.findfield("shape"), countlist.count, l)
+    tbl.setvalue(fld, countlist.count, id)
+    tbl.setvalue(tbl.findfield("bearing"), countlist.count, thebearing)
+    countlist.add("added")
+  end
+end
+
+v.addtheme(thetheme)
+
+thetheme.stopediting(true)
+tbl.seteditable(false)
+v.invalidate
+
+'--- End of script 
+

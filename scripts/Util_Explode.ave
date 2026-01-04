@@ -1,0 +1,13 @@
+'--- Explode script
+
+plist = self.get(0)
+i = self.get(1)
+
+p1 = plist.get(i)
+p2 = plist.get(i+1)
+l = polyline.make({{p1, p2}})
+
+return l
+
+'--- End of script 
+

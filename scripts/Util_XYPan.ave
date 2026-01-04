@@ -1,0 +1,30 @@
+'by JP Gallet; jpgallet@dmws.durban.gov.za
+
+theView=av.getActiveDoc
+theDisplay=theView.getDisplay
+
+theLabs={"Y Coord:","X Coord:","Scale  1:"}
+theVals={"","","1000"}
+
+theInput=msgBox.multiInput("Enter Y, X coordinates and scale of zoom...","",theLabs,theVals)
+
+if (theInput=nil) then
+  return nil
+else
+  theYVal=theInput.get(0)
+  theXVal=theInput.get(1)
+  theScale=theInput.get(2)
+
+  theXYPoint=point.make(theYVal.asNumber,theXVal.asNumber)
+  theDisplay.panTo(theXYPoint)
+  theDisplay.zoomToScale(theScale.asNumber)
+ 
+  graphicPoint=graphicShape.make(theXYPoint)
+  theView.getGraphics.unselectAll
+  graphicPoint.setSelected(TRUE)
+  theView.getGraphics.add(graphicPoint)
+end
+
+
+
+

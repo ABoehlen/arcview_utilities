@@ -1,0 +1,114 @@
+' Name:  Project.Save
+' 
+' Title:  Replacement save script to save project with pathnames for data sources 
+'         which are relative to the project path (e.g. "../directory/datasource")
+' 
+' Topics:  Miscellaneous 
+'
+' Author: Joshua Lieberman, ENSR Consulting and Engineering, May 1999
+'
+' Description:  Saves a project, then uses the ESRI sample script File.FindRepStr to replace all
+'               appropriate pathnames in the project with paths relative to the project path. The
+'               present version also saves an unaltered version of the project for safety. This 
+'               can be changed when one has confidence that the script is reliable.
+'
+' Requires:  Self. Save this script in a project as Project.Save so that it gets called instead
+'            of the system script Project.Save .
+'            Probably best to embed the script in a project for delivery.
+'
+
+theProject = av.GetProject
+theFileName = theProject.GetFileName
+if (theFileName = nil) then
+  av.Run("Project.SaveAs", nil)
+else
+  if (av.Run("Project.CheckForEdits",nil).Not) then
+    return nil
+  end    
+  if (theProject.Save) then
+     theFileName = theProject.GetFileName
+     av.ShowMsg("Project saved to '" + theFileName.GetBaseName + "'")
+  end
+end
+if (theFileName = nil) then
+  return nil
+end 
+
+' Ask about portability:
+'
+myAnswer = MsgBox.YesNo( "Make project portable?", "Replace project paths...", TRUE )    
+if (myAnswer.Not) then
+  return nil
+end
+
+' Create temporary file name and get search string...
+'
+thePathname  = theFileName.GetFullName
+tmpString    = theFileName.GetBaseName
+thePath      = thePathname.Substitute(tmpString, "")
+searchString = thePath.Substitute("\","/")
+theTmpname   = thePathname.Substitute(".apr",".abs")
+
+if (searchString = nil) then
+  exit
+end
+
+' Copy project file to temporary file in same directory
+File.Copy(thePathname.asFileName, theTmpname.asFileName)
+
+replaceString = "../"
+ 
+' Perform substitutions...
+' Output file is opened CLEARMODIFY to overwrite original file.
+'
+fileIn = LineFile.Make( theTmpname.AsFileName, #FILE_PERM_READ )
+fileOut = LineFile.Make( theFileName, #FILE_PERM_CLEARMODIFY )
+
+av.ClearWorkingStatus
+av.ShowMsg("Fixing Project Paths...")
+av.ShowStopButton
+
+done = False
+
+' Read in each line, substitute, and write out to new file
+
+while (done.not)
+  theString = fileIn.ReadElt
+  if ( theString <> nil ) then
+    if ( theString.Left(12).Contains( "Path:" ) ) then
+      if ( theString.Contains( searchString ) ) then
+        newString = theString.Substitute( searchString, replaceString )
+        doMore = av.SetWorkingStatus
+        if (not doMore) then
+          File.Copy(theTmpname.asFileName, thePathname.asFileName)
+          av.ClearWorkingStatus
+          av.ClearStatus
+          return nil
+        end
+      else
+        newString = theString 
+      end
+    else
+      newString = theString
+    end
+    fileOut.WriteElt( newString )
+  else
+    done = true
+  end
+end
+
+av.ShowMsg("Portable Project Saved...")
+av.ClearStatus
+ 
+' Close and report results...
+'"
+fileIn.Close
+fileOut.Close
+MsgBox.Report("Portable Project :"++theFileName.AsString++" "+NL+
+             "Fixed Project :"++theTmpName.AsString++" "," ")
+
+
+
+
+
+
