@@ -10,7 +10,7 @@ Utilities contains the following tools:
 * Buffer a polyline theme and square the buffer
 * Pan to the defined coordinates
 * Generate vector grid
-* Convert gpx track to a LV03 point shape file (same as standalone tool https://github.com/ABoehlen/gpx2shp_lv03
+* Convert gpx track to a LV03 point shape file (the same as standalone tool https://github.com/ABoehlen/gpx2shp_lv03 )
 * Georeference image
 * Create world file
 * Export point shape to ASCII file
