@@ -5,6 +5,11 @@
 	FirstRootClassName:	"Butn"
 	Roots:	2
 	Roots:	4
+	Roots:	74
+	Roots:	75
+	Roots:	76
+	Roots:	77
+	Roots:	78
 	Roots:	79
 	Roots:	80
 	Roots:	81
@@ -19,19 +24,11 @@
 	Roots:	90
 	Roots:	91
 	Roots:	92
-	Roots:	93
-	Roots:	94
-	Roots:	95
-	Roots:	96
-	Roots:	97
-	Roots:	98
-	Roots:	99
-	Roots:	100
 	Version:	32
-	About:	"Utilities toolbar (v1.1)"
-	UnloadScript:	101
-	InstallScript:	102
-	UninstallScript:	103
+	About:	"Utilities toolbar (v1.4)"
+	UnloadScript:	93
+	InstallScript:	94
+	UninstallScript:	95
 	ExtVersion:	1
 )
 
@@ -49,9 +46,9 @@
 
 (AVDLog.4
 	Name:	"Utilities"
-	X:	674
-	Y:	134
-	W:	396
+	X:	438
+	Y:	154
+	W:	374
 	H:	40
 	ConstrainedControlNames:	5
 	ConstrainedControlNames:	6
@@ -66,7 +63,7 @@
 	ConstrainedControlNames:	15
 	ConstrainedControlNames:	16
 	ConstrainedControlNames:	17
-	ConstrainedControlNames:	18
+	Constraints:	18
 	Constraints:	19
 	Constraints:	20
 	Constraints:	21
@@ -79,16 +76,14 @@
 	Constraints:	28
 	Constraints:	29
 	Constraints:	30
-	Constraints:	31
-	Constraints:	32
-	Server:	33
-	ControlPanel:	34
+	Server:	31
+	ControlPanel:	32
 	Title:	"Utilities"
 	EscapeEnabled:	1
 	AlwaysOnTop:	1
 	HasTitleBar:	1
 	Closeable:	1
-	DefaultButton:	78
+	DefaultButton:	73
 )
 
 (AVStr.5
@@ -120,31 +115,31 @@
 )
 
 (AVStr.12
-	S:	"DrawHaloText"
-)
-
-(AVStr.13
 	S:	"aButton1"
 )
 
-(AVStr.14
+(AVStr.13
 	S:	"SelectAllGraphics"
 )
 
-(AVStr.15
+(AVStr.14
 	S:	"UnselectAllGraphics"
 )
 
-(AVStr.16
+(AVStr.15
 	S:	"gpx"
 )
 
-(AVStr.17
+(AVStr.16
 	S:	"ProjectPortable"
 )
 
-(AVStr.18
+(AVStr.17
 	S:	"GeoRefImage"
+)
+
+(Numb.18
+	N:	85.00000000000000
 )
 
 (Numb.19
@@ -195,40 +190,35 @@
 	N:	85.00000000000000
 )
 
-(Numb.31
-	N:	85.00000000000000
+(Nil.31
 )
 
-(Numb.32
-	N:	85.00000000000000
-)
-
-(Nil.33
-)
-
-(CPanel.34
-	Child:	35
-	ResBox:	77
+(CPanel.32
+	Child:	33
+	ResBox:	72
 	Listening:	1
 )
 
-(CPanel.35
+(CPanel.33
 	InternalName:	"aControlPanel5"
+	Child:	34
 	Child:	36
 	Child:	38
 	Child:	40
 	Child:	42
 	Child:	44
 	Child:	46
-	Child:	48
+	Child:	47
 	Child:	49
 	Child:	51
 	Child:	53
 	Child:	55
 	Child:	57
-	Child:	59
-	Child:	61
 	Constraints:	0x55
+	ResBox:	59
+	ResBox:	60
+	ResBox:	61
+	ResBox:	62
 	ResBox:	63
 	ResBox:	64
 	ResBox:	65
@@ -238,38 +228,33 @@
 	ResBox:	69
 	ResBox:	70
 	ResBox:	71
-	ResBox:	72
-	ResBox:	73
-	ResBox:	74
-	ResBox:	75
-	ResBox:	76
 	VisibleBorder:	1
 	Listening:	1
 )
 
-(Butn.36
+(Butn.34
 	InternalName:	"CopyView"
 	Help:	"Copy View//"
-	Icon:	37
+	Icon:	35
 	Click:	"Util.CopyView"
 )
 
-(AVIcon.37
+(AVIcon.35
 	Name:	"Copy"
 	Res:	"Icons.Copy"
 
 )
 
-(Tool.38
+(Tool.36
 	InternalName:	"GeoRefImage"
 	Help:	"Georeference Image//Georeference Image"
 	Update:	"Util.ImageThemesUpdate"
-	Icon:	39
+	Icon:	37
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"Util.GeoRefImage"
 )
 
-(AVIcon.39
+(AVIcon.37
 	Name:	"gr_ico.bmp"
 	Data:	4e442049 6d616765 00010020 00200000 
 	Data:	0c0000ff 0000ff00 00ff0000 ff0000ff 
@@ -468,14 +453,14 @@
 	Data:	00020000 00000000 0000
 )
 
-(Butn.40
+(Butn.38
 	InternalName:	"Linesquarebuffer"
 	Help:	"Buffer a PolyLine theme and squares the buffer//"
-	Icon:	41
+	Icon:	39
 	Click:	"Util.LineSquareBuffer"
 )
 
-(AVIcon.41
+(AVIcon.39
 	Name:	"linesquarebuffer.bmp"
 	Data:	4e442049 6d616765 00010016 00170000 
 	Data:	0228ffff ffffffff ffffffff ffffffff 
@@ -581,14 +566,14 @@
 	Data:	0000
 )
 
-(Butn.42
+(Butn.40
 	InternalName:	"BearingAngle"
 	Help:	"Determine the bearing angle//"
-	Icon:	43
+	Icon:	41
 	Click:	"Util.Output"
 )
 
-(AVIcon.43
+(AVIcon.41
 	Name:	"angle.bmp"
 	Data:	4e442049 6d616765 00010012 00120000 
 	Data:	016affff ffffffff ffffffff ffffffff 
@@ -682,14 +667,14 @@
 	Data:	00000000 
 )
 
-(Butn.44
+(Butn.42
 	InternalName:	"points2ascii"
 	Help:	"Export point shape to ASCII file//"
-	Icon:	45
+	Icon:	43
 	Click:	"Util.Points2ASCII"
 )
 
-(AVIcon.45
+(AVIcon.43
 	Name:	"to_ascii.bmp"
 	Data:	4e442049 6d616765 00010012 00120000 
 	Data:	03f0ffff ffffffff ffffffff ffffffff 
@@ -759,14 +744,14 @@
 	Data:	00020000 00000000 0000
 )
 
-(Butn.46
+(Butn.44
 	InternalName:	"WorldFile"
 	Help:	"Create world file//"
-	Icon:	47
+	Icon:	45
 	Click:	"Util.WorldFile"
 )
 
-(AVIcon.47
+(AVIcon.45
 	Name:	"tfw.bmp"
 	Data:	4e442049 6d616765 00010020 00200000 
 	Data:	0c00ffff ffffffff ffffffff ffffffff 
@@ -965,146 +950,47 @@
 	Data:	00020000 00000000 0000
 )
 
-(LButn.48
+(LButn.46
 	InternalName:	"Close"
 	Help:	"Close Utilities toolbar//"
 	Label:	"Close"
 	Click:	"Util.Close"
 )
 
-(Butn.49
+(Butn.47
 	InternalName:	"Gridmkr"
 	Help:	"Generate vector grid//"
-	Icon:	50
+	Icon:	48
 	Click:	"Util.Gridmkr"
 )
 
-(AVIcon.50
+(AVIcon.48
 	Name:	"FrameTable"
 	Res:	"Icons.FrameTable"
 
 )
 
-(Butn.51
-	InternalName:	"DrawHaloText"
-	Help:	"Draw halo around text//"
-	Icon:	52
-	Click:	"Util.DrawHaloText"
-)
-
-(AVIcon.52
-	Name:	"halotext.bmp"
-	Data:	4e442049 6d616765 00010014 00110000 
-	Data:	0154d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
-	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
-	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0ffff 
-	Data:	ffffd0d0 d0d0ffff ffffd0d0 d0d0d0d0 
-	Data:	d0d0ff00 00ffd0d0 d0d0ff00 00ffd0d0 
-	Data:	d0d0d0d0 d0d0ff00 00ffd0d0 d0d0ff00 
-	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00ffd0d0 
-	Data:	d0d0ff00 00ffd0d0 d0d0d0d0 d0d0ff00 
-	Data:	00ffd0d0 d0d0ff00 00ffd0d0 d0d0d0d0 
-	Data:	d0d0ff00 00ffffff ffffff00 00ffd0d0 
-	Data:	d0d0d0d0 d0d0ff00 00000000 00000000 
-	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00000000 
-	Data:	00000000 00ffd0d0 d0d0d0d0 d0d0ff00 
-	Data:	00ffffff ffffff00 00ffd0d0 d0d0d0d0 
-	Data:	d0d0ff00 00ffd0d0 d0d0ff00 00ffd0d0 
-	Data:	d0d0d0d0 d0d0ff00 00ffd0d0 d0d0ff00 
-	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00ffd0d0 
-	Data:	d0d0ff00 00ffd0d0 d0d0d0d0 d0d0ff00 
-	Data:	00ffd0d0 d0d0ff00 00ffd0d0 d0d0d0d0 
-	Data:	d0d0ffff ffffd0d0 d0d0ffff ffffd0d0 
-	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
-	Data:	d0d0d0d0 d0d00000 04000000 00000101 
-	Data:	01000202 02000303 03000404 04000505 
-	Data:	05000606 06000707 07000808 08000909 
-	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
-	Data:	0d000e0e 0e000f0f 0f001010 10001111 
-	Data:	11001212 12001313 13001414 14001515 
-	Data:	15001616 16001717 17001818 18001919 
-	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
-	Data:	1d001e1e 1e001f1f 1f002020 20002121 
-	Data:	21002222 22002323 23002424 24002525 
-	Data:	25002626 26002727 27002828 28002929 
-	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
-	Data:	2d002e2e 2e002f2f 2f003030 30003131 
-	Data:	31003232 32003333 33003434 34003535 
-	Data:	35003636 36003737 37003838 38003939 
-	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
-	Data:	3d003e3e 3e003f3f 3f004040 40004141 
-	Data:	41004242 42004343 43004444 44004545 
-	Data:	45004646 46004747 47004848 48004949 
-	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
-	Data:	4d004e4e 4e004f4f 4f005050 50005151 
-	Data:	51005252 52005353 53005454 54005555 
-	Data:	55005656 56005757 57005858 58005959 
-	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
-	Data:	5d005e5e 5e005f5f 5f006060 60006161 
-	Data:	61006262 62006363 63006464 64006565 
-	Data:	65006666 66006767 67006868 68006969 
-	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
-	Data:	6d006e6e 6e006f6f 6f007070 70007171 
-	Data:	71007272 72007373 73007474 74007575 
-	Data:	75007676 76007777 77007878 78007979 
-	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
-	Data:	7d007e7e 7e007f7f 7f008080 80008181 
-	Data:	81008282 82008383 83008484 84008585 
-	Data:	85008686 86008787 87008888 88008989 
-	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
-	Data:	8d008e8e 8e008f8f 8f009090 90009191 
-	Data:	91009292 92009393 93009494 94009595 
-	Data:	95009696 96009797 97009898 98009999 
-	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
-	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
-	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
-	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
-	Data:	a900aaaa aa00abab ab00acac ac00adad 
-	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
-	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
-	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
-	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
-	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
-	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
-	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
-	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
-	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
-	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
-	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
-	Data:	d900dada da00dbdb db00dcdc dc00dddd 
-	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
-	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
-	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
-	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
-	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
-	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
-	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
-	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
-	Data:	fd00fefe fe00ffff ff000002 00080007 
-	Data:	00200001 00020000 00000000 0000
-)
-
-(Butn.53
+(Butn.49
 	InternalName:	"aButton1"
 	Help:	"Pan to the defined coordinates//"
-	Icon:	54
+	Icon:	50
 	Click:	"Util.XYPan"
 )
 
-(AVIcon.54
+(AVIcon.50
 	Name:	"XY"
 	Res:	"Icons.XY"
 
 )
 
-(Butn.55
+(Butn.51
 	InternalName:	"SelectAllGraphics"
 	Help:	"Select all graphic features//"
-	Icon:	56
+	Icon:	52
 	Click:	"Util.SelectAllGraphics"
 )
 
-(AVIcon.56
+(AVIcon.52
 	Name:	"select_all_graphics.bmp"
 	Data:	4e442049 6d616765 00010012 00120000 
 	Data:	0168d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
@@ -1198,14 +1084,14 @@
 	Data:	0000
 )
 
-(Butn.57
+(Butn.53
 	InternalName:	"UnselectAllGraphics"
 	Help:	"Unselect all graphic features//"
-	Icon:	58
+	Icon:	54
 	Click:	"Util.UnselectAllGraphics"
 )
 
-(AVIcon.58
+(AVIcon.54
 	Name:	"unselect_all_graphics.bmp"
 	Data:	4e442049 6d616765 00010012 00120000 
 	Data:	0168d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
@@ -1299,14 +1185,14 @@
 	Data:	0000
 )
 
-(Butn.59
+(Butn.55
 	InternalName:	"gpx"
 	Help:	"Click: Converts GPX track to a LV03 point shapefile\nShift-Click: Converts a directory containing GPX files\n//"
-	Icon:	60
+	Icon:	56
 	Click:	"Util.gpx2shp_lv03"
 )
 
-(AVIcon.60
+(AVIcon.56
 	Name:	"gpx.bmp"
 	Data:	4e442049 6d616765 00010013 00130000 
 	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
@@ -1401,14 +1287,14 @@
 	Data:	00000000 0000
 )
 
-(Butn.61
+(Butn.57
 	InternalName:	"ProjectPortable"
 	Help:	"Saves project with relative pathnames//"
-	Icon:	62
+	Icon:	58
 	Click:	"Util.ProjectPortable"
 )
 
-(AVIcon.62
+(AVIcon.58
 	Name:	"save_portable.bmp"
 	Data:	4e442049 6d616765 00010015 00130000 
 	Data:	01c8d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
@@ -1508,147 +1394,131 @@
 	Data:	0000
 )
 
-(RectD.63
+(RectD.59
 	Left:	30.00000000000000
 	Top:	30.00000000000000
 	Right:	54.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.64
-	Left:	266.00000000000000
+(RectD.60
+	Left:	241.00000000000000
 	Top:	30.00000000000000
-	Right:	289.00000000000000
+	Right:	264.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.65
+(RectD.61
 	Left:	109.00000000000000
 	Top:	30.00000000000000
 	Right:	133.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.66
+(RectD.62
 	Left:	136.00000000000000
 	Top:	30.00000000000000
 	Right:	160.00000000000000
 	Bottom:	6.00000000000000
 )
 
+(RectD.63
+	Left:	292.00000000000000
+	Top:	30.00000000000000
+	Right:	316.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.64
+	Left:	266.00000000000000
+	Top:	30.00000000000000
+	Right:	290.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.65
+	Left:	318.00000000000000
+	Top:	30.00000000000000
+	Right:	363.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.66
+	Left:	190.00000000000000
+	Top:	30.00000000000000
+	Right:	214.00000000000000
+	Bottom:	6.00000000000000
+)
+
 (RectD.67
-	Left:	317.00000000000000
-	Top:	30.00000000000000
-	Right:	341.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.68
-	Left:	291.00000000000000
-	Top:	30.00000000000000
-	Right:	315.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.69
-	Left:	343.00000000000000
-	Top:	30.00000000000000
-	Right:	388.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.70
-	Left:	215.00000000000000
-	Top:	30.00000000000000
-	Right:	239.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.71
-	Left:	189.00000000000000
-	Top:	30.00000000000000
-	Right:	213.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.72
 	Left:	163.00000000000000
 	Top:	30.00000000000000
 	Right:	187.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.73
+(RectD.68
 	Left:	56.00000000000000
 	Top:	30.00000000000000
 	Right:	80.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.74
+(RectD.69
 	Left:	83.00000000000000
 	Top:	30.00000000000000
 	Right:	107.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.75
-	Left:	241.00000000000000
+(RectD.70
+	Left:	216.00000000000000
 	Top:	30.00000000000000
-	Right:	265.00000000000000
+	Right:	240.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.76
+(RectD.71
 	Left:	4.00000000000000
 	Top:	30.00000000000000
 	Right:	28.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.77
+(RectD.72
 	Left:	4.00000000000000
 	Top:	38.00000000000000
-	Right:	396.00000000000000
+	Right:	373.00000000000000
 	Bottom:	3.00000000000000
 )
 
-(Nil.78
+(Nil.73
 )
 
-(Script.79
+(Script.74
 	Name:	"Util.Bearing"
 	SourceCode:	"'# Filename:     Util.Bearing\n\n\nplist = self.get(0)\ni = self.get(1)\np1 = plist.get(i)\np2 = plist.get(i+1)\n\ntheX1 = p1.GetX\ntheY1 = p1.Gety\n \ntheX2 = p2.GetX\ntheY2 = p2.GetY\n \ntheH = theX2 - theX1  '--- where theH is the horizontal difference, or delta x\ntheV = theY2 - theY1  '--- where theV is the vertical difference, or delta y\n\ntheLength = ((theH * theH) + (theV * theV)).SQRT\ntheAngle = (theV/theLength).Abs.Acos.AsDegrees \n\nif ((theH = 0) and (theV > 0 ))  then\n  constant = 0\n  theBearing = constant - the
 Angle\nend\n\nif ((theH > 0 ) and (theV > 0)) then \n  constant = 0 \n  theBearing = theAngle + constant\nend '--- 1st quadrant\n\nif ((theH < 0) and (theV  >= 0)) then '--- 2nd quadrant\n  constant = 360\n  theBearing = constant - theAngle.Abs\nend \n\nif ((theH <= 0) and (theV <= 0)) then '--- 3rd quadrant\n  constant = 180\n  theBearing = theAngle.Abs + constant\nend \n\nif ((theH >= 0) and (theV <= 0)) then \n  constant = 180 '--- 4th quadrantt \n  theBearing = constant - theAngle.abs\nend\n\nreturn thebearing\n\n'--- End of sc
 ript \n\n"
 )
 
-(Script.80
+(Script.75
 	Name:	"Util.Close"
 	SourceCode:	"Self.GetDialog.Close"
 )
 
-(Script.81
+(Script.76
 	Name:	"Util.CopyView"
 	SourceCode:	"'Copies a View to a new View with a new name...\n'Created by Fred J. Calef III, CH2M Hill\n'Date:  12/3/1998\n\n'Gets the View...\nmyProj = av.GetProject\ntheViews = myProj.GetDocswithGui(av.FindGui(\"View\"))\naviewChoice = MsgBox.ChoiceAsString( theViews, \"Choose a View to copy:\", \"Views\")\nif (aviewChoice = nil) then\n  return nil\nend\ntheView = myProj.FindDoc( aviewChoice.AsString )\n\n'Copies the View and renames it...\nnewViewName = MsgBox.Input( \"Enter a new name for the view:\", \"New View Name\", \"New View\" )\nif (ne
 wViewName = nil) then   'Cancels if the there is no View name\n  return nil\nend\nif (av.FindDoc(newViewName).AsString = newViewName.AsString) then\n  'Cancels if the view name already exists\n  MsgBox.Error(\"That View name already exists! Press the Copy View button again...\",\"View Already Exists\")\n  return nil\nelse\n  newView = theView.Clone\n  newView.SetName ( newViewName )\n  myProj.AddDoc ( newView )\n  newView.GetWin.Open\nend\n\n'End of script..."
 )
 
-(Script.82
-	Name:	"Util.DrawHaloText"
-	SourceCode:	"' Name: HaloTexter \n' Author: Michael Silberbauer 2002-03-22 \n' Title: Text halo creator (O'Connor, C) \n' Description: draw halo around text (hacked from halotext.avx by Christopher O'Connor, cxoconno@gw.dec.state.ny.us)\n' Modified by Adrian Boehlen, 2014-11-23 \n\ntheView = av.GetActiveDoc \n\nif (theView.Is(view).Not) then\n  MsgBox.Warning(\"Start this script from an active View.\",\"\")\n  return nil\nend\n\ntheDisplay = theView.GetDisplay \n\n' Get the GraphicList for the View... \ntheGraphics = theView.GetGraphics \nH
-aloColour = Color.GetWhite \nTextColour = Color.GetBlack \npi = Number.GetPi \nangrad = pi/180 \nnTs = 5 \nhAngle = 360/nTs \n\ntheGraphicsList = theGraphics.FindAllByClass( GraphicText ) \n\nif (MsgBox.YesNo(\"Are you sure ? Create halo cannot be undone\",\"Create halo around text features\",true)) then\n\n  if (theGraphics.HasSelected) then \n    theGraphicsList = TheGraphics.GetSelected \n  end \n  theGraphics.UnSelectAll \n  for each g in theGraphicsList \n    if (g.CanEditText) then \n      'MsgBox.ListAsString( { g.GetTex
-t }, g.AsString, \"Symbols of text\" ) \n      theGraphics.UnSelectAll \n      g.GetSymbol.UnHook \n      Text = g.GetText \n      TextHeight = g.GetBounds.GetHeight \n      TextOrigin = g.GetOrigin \n      TextSize = g.GetSymbol.GetSize \n      TextFont = g.GetSymbol.GetFont \n      NumLines = g.GetText.AsTokens(nl).Count \n      ExpandDist = (TextHeight/NumLines)/20 \n      theGraphicGroup = GraphicGroup.Make \n      for each nT in 0..nTs \n       'gt = g.clone \n        gt = GraphicText.Make(Text,TextOrigin) \n        a
-ngvalue = hAngle*nT \n        theOffX = ExpandDist*(angrad*angvalue).cos \n        theOffY = ExpandDist*(angrad*angvalue).sin \n        gt.Offset(Point.Make(theOffX,theOffY)) \n        gt.GetSymbol.SetColor(HaloColour) \n        gt.GetSymbol.SetSize(TextSize) \n        gt.GetSymbol.SetFont(TextFont) \n        theView.GetDisplay.HookUpSymbol(gt.GetSymbol) \n        theGraphicGroup.Add(gt) \n      end \n      theView.GetDisplay.HookUpSymbol(g.GetSymbol) \n      theGraphicGroup.Add(g) \n      theGraphicGroup.SetObjectTag(
-\"halo\") \n      theGraphics.Add(theGraphicGroup) \n      theGraphics.Invalidate \n    end \n  end \n  theGraphicsList = theGraphics.FindAllByObjectTag(\"halo\") \n  theGraphics.UnSelectAll \n  for each g in theGraphicsList \n    g.SetSelected(true) \n  end \n  theGraphics.MoveSelectedToBack\n  theGraphics.UnSelectAll\nelse\n  return nil\nend\n"
-)
-
-(Script.83
+(Script.77
 	Name:	"Util.Explode"
 	SourceCode:	"'--- Explode script\n\nplist = self.get(0)\ni = self.get(1)\n\np1 = plist.get(i)\np2 = plist.get(i+1)\nl = polyline.make({{p1, p2}})\n\nreturn l\n\n'--- End of script \n"
 )
 
-(Script.84
+(Script.78
 	Name:	"Util.GeoRefImage"
 	SourceCode:	"'**********************************************************************\n\n'View.GeoRefImage\n\n'**** get image theme and point ***************************************\n\ntheView  = av.GetActiveDoc\nthmImage = theView.GetActiveThemes.Get(0)\np1 = theView.GetDisplay.ReturnUserPoint\n\n' **** if georefpoint is not null, find out if current point is 2nd **\n\ngeorefpoint = Self.GetObjectTag\nif (georefpoint = nil) then\n   resp = false\nelseif (georefpoint.Is(Point)) then\n   resp = MsgBox.YesNo(\"Use current point to complete
  rectangle?\", \"\", false)\nelse\n   resp = false\nend\n\nif (not resp) then\n\n   ' **** store current point *****************************************\n\n   Self.SetObjectTag(p1)\n   MsgBox.Info(\"Point collected\", \"\")\n\nelse\n\n   ' **** retrieve first point ****************************************\n\n   p2 = p1\n   p1 = georefpoint\n   r1 = Rect.MakeXY( p1.GetX, p1.GetY, p2.GetX, p2.GetY)\n\n   ' **** get coordinates for second rectangle ************************\n\n   labels = {\"X1:\", \"Y1:\", \"X2:\", \"Y2:\"}\n   XYlist = MsgBox.Mul
@@ -1656,17 +1526,18 @@ tiInput(\"Enter Map Coordinates\", \"Georeference Points\", labels, {})\n   if (
 ctTag(nil)\n      else\n         Msgbox.warning(\"Invalid coordinate entry\",\"Georeference Points\")\n      end\n   end\nend\n\n'**********************************************************************\n"
 )
 
-(Script.85
+(Script.79
 	Name:	"Util.gpx2shp_lv03"
-	SourceCode:	"'##############################################################\n'#\n'# Filename:     Util.gpx2shp_lv03\n'# Author:       Adrian Boehlen\n'# Date:         05.08.2021\n'# Version:      1.2\n'#\n'# Purpose:      konvertiert ein GPX-File in ein Shapefile\n'#               in CH1903 LV03\n'#               bei gedrueckter Shift-Taste kann ein ganzer\n'#               Ordner mit GPX-Files auf einmal konvertiert\n'#               werden\n'# Note:         benoetigt...\n'#                Util.Sub_gpx2shp\n'#                Util.S
+	SourceCode:	"'##############################################################\n'#\n'# Filename:     Util.gpx2shp_lv03\n'# Author:       Adrian Boehlen\n'# Date:         13.01.2023\n'# Version:      1.3\n'#\n'# Purpose:      konvertiert ein GPX-File in ein Shapefile\n'#               in CH1903 LV03\n'#               bei gedrueckter Shift-Taste kann ein ganzer\n'#               Ordner mit GPX-Files auf einmal konvertiert\n'#               werden\n'# Note:         benoetigt...\n'#                Util.Sub_gpx2shp\n'#                Util.S
 ub_wgs2ch03\n'#                Util.Sub_prj  ...im gleichen Projekt\n'#                 \n'##############################################################\n\n'# ein View muss aktiv sein\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Warning(\"Start this script from an active View.\",\"\")\n  return nil\nend\n\nif (System.IsShiftKeyDown) then\n\n  '# Filter setzen\n  theFilter = \"*.gpx\"\n  \n  '# Inputverzeichnis definieren\n  inputdir = FileDialog.Put(\"   Select directory - not files\".AsFileName,\n         
-                    theFilter,\"Selecting \" + theFilter +\n                             \" files from directory...\")\n  if (inputdir = nil)then\n    return nil\n  end\n\n  inputdir = inputdir.ReturnDir\n\n  '# Outputverzeichnis definieren\n  outputdir = FileDialog.Put(\"   Select directory - not files\".AsFileName,\n                             theFilter,\"Saving Shapefile in directory...\")\n  if (outputdir = nil)then\n    return nil\n  end\n\n  outputdir = outputdir.AsString.AsTokens(\"   \").Get(0)\n\n  '# alle Dateien mit der p
-assenden Endung gemaess Filter im Verzeichnis auswaehlen\n  '# und konvertieren\n  fileStack = Stack.Make\n  fileStack.Push(inputdir)\n  while (fileStack.IsEmpty.Not)\n    fileNameList = fileStack.Pop.Read(theFilter)\n    for each gpxName in fileNameList\n      gpxBaseName = gpxName.GetBaseName.AsTokens(\".\").Get(0)\n      gpxFile = LineFile.Make(gpxName, #FILE_PERM_READ)\n      shpName = FileName.Make(outputdir.AsString + gpxBaseName + \"_pt\")\n      'av.Run(\"Util.Sub_prj\", {shpName}) 'zurzeit nicht benoetigt\n      sh
-pName.SetExtension(\"shp\")\n      av.Run(\"Util.Sub_gpx2shp\", {gpxFile, shpName})\n    end\n  end\n\nelse\n\n  '# einzelnes GPX-File einlesen\n  gpxName = FileDialog.Show(\"*.gpx\",\"GPX File\",\"Select GPX File\")\n  if (gpxName = nil) then \n    return nil \n  end\n  \n  gpxBaseName = gpxName.GetBaseName.AsTokens(\".\").Get(0)\n\n  gpxFile = LineFile.Make(gpxName, #FILE_PERM_READ)\n\n  '# zu erstellendes Shapefile definieren\n  outputdir = av.GetProject.GetWorkDir\n  defaultName = FileName.Make(outputdir.AsString + \"\\\" + gpxBaseName 
-+ \"_pt.shp\")\n  shpName  = FileDialog.Put(defaultName,\"shp\",\"Output Shape File\")\n  if (shpName = nil) then \n    return nil \n  end\n\n  'av.Run(\"Util.Sub_prj\", {shpName})  'zurzeit nicht benoetigt\n  shpName.SetExtension(\"shp\")\n  av.Run(\"Util.Sub_gpx2shp\", {gpxFile, shpName})\nend"
+                    theFilter,\"Selecting \" + theFilter +\n                             \" files from directory...\")\n  if (inputdir = nil)then\n    return nil\n  end\n\n  inputdir = inputdir.ReturnDir\n\n  '# Outputverzeichnis definieren\n  outputdir = FileDialog.Put(\"   Select directory - not files\".AsFileName,\n                             theFilter,\"Saving Shapefile in directory...\")\n  if (outputdir = nil)then\n    return nil\n  end\n\n  outputdir = outputdir.AsString.AsTokens(\"   \").Get(0)\n\n  '# Fortschrittsanzeige mi
+t Stop button definieren\n  av.ShowMsg(\"Converting gpx files...\")\n  canceled = False\n  av.ShowStopButton\n  statusIndex = 0\n  av.SetStatus(statusIndex)\n  \n  '# alle Dateien mit der passenden Endung gemaess Filter im Verzeichnis auswaehlen\n  '# und konvertieren sowie Fortschrittsanzeige aufbauen\n  fileStack = Stack.Make\n  fileStack.Push(inputdir)\n  while (fileStack.IsEmpty.Not)\n    fileNameList = fileStack.Pop.Read(theFilter)\n    fileNameCount = fileNameList.Count\n    statusIncrement = 100 / fileNameCount\n    
+for each gpxName in fileNameList\n      gpxBaseName = gpxName.GetBaseName.AsTokens(\".\").Get(0)\n      gpxFile = LineFile.Make(gpxName, #FILE_PERM_READ)\n      shpName = FileName.Make(outputdir.AsString + gpxBaseName + \"_pt\")\n      'av.Run(\"Util.Sub_prj\", {shpName}) 'zurzeit nicht benoetigt\n      shpName.SetExtension(\"shp\")\n      av.Run(\"Util.Sub_gpx2shp\", {gpxFile, shpName})\n      statusIndex = statusIndex + statusIncrement\n      continued = av.SetStatus(statusIndex)\n      if (Not continued) then\n        cance
+led = true\n        break\n      end\n    end\n  end\n  \n  '# Falls Stop button gedrueckt wurde, Meldung ausgeben\n  if (canceled) then\n    av.ShowMsg(\"Process interrupted\")\n  else\n    av.ShowMsg(\"Process completed\")\n    av.ClearStatus   '# damit Fortschrittsanzeige verschwindet\n  end\nelse\n\n  '# einzelnes GPX-File einlesen\n  gpxName = FileDialog.Show(\"*.gpx\",\"GPX File\",\"Select GPX File\")\n  if (gpxName = nil) then \n    return nil \n  end\n  \n  gpxBaseName = gpxName.GetBaseName.AsTokens(\".\").Get(0)\n\n  gpxFile = LineF
+ile.Make(gpxName, #FILE_PERM_READ)\n\n  '# zu erstellendes Shapefile definieren\n  outputdir = av.GetProject.GetWorkDir\n  defaultName = FileName.Make(outputdir.AsString + \"\\\" + gpxBaseName + \"_pt.shp\")\n  shpName  = FileDialog.Put(defaultName,\"shp\",\"Output Shape File\")\n  if (shpName = nil) then \n    return nil \n  end\n\n  'av.Run(\"Util.Sub_prj\", {shpName})  'zurzeit nicht benoetigt\n  shpName.SetExtension(\"shp\")\n  \n  av.Run(\"Util.Sub_gpx2shp\", {gpxFile, shpName})\nend"
 )
 
-(Script.86
+(Script.80
 	Name:	"Util.Gridmkr"
 	SourceCode:	"' Name:  milagrdmkr.ave\n' Modifief : by V. Guissard, from ESRI\n' Date : 09/04/2000\n' \n' Title:  Creates arbitrary grid(vector) shapefile\n' \n' Topics:  Views, Geodata\n' \n' Description:  This script is attached to a view button. One attribute is added to this \n' grid shape theme, a label, that is \"A1 A2  B1 B2....\" as you might see on an index map.  The \n' labeling starts at the upper left.\n'  \n' The grid is added to your current view as a theme called \"Grid\" with hollow fill pattern and thick \n' (thickness 2
 ) black lines.  You are prompted as to whether you want to label the grid. If you say yes, \n' it will put the labels in the grid box using the current textsymbol. \n' \n \n\ntheView = av.GetActiveDoc\n\nllx = MsgBox.Input( \"Minimum X coordinate?\", \"UCL-MILA-GridMaker\", \"\" )\nif (llx = nil) then\n  MsgBox.Error(\"Must choose an X coordinate\",\"Aborting\")\n  exit\nend\n\nlly = MsgBox.Input( \"Minimum Y coordinate?\", \"UCL-MILA-GridMaker\", \"\" )\nif (lly = nil) then\n  MsgBox.Error(\"Must choose an Y coordinate\",\"Aborting\")\n  exi
@@ -1678,12 +1549,12 @@ AR_METERS) then\n      'rct=rct.ReturnUnprojected(viewproj)\n    'end\n    newre
 )\nmytheme.Invalidate(true)\ntheview.GetDisplay.Flush\n\nyn=MsgBox.YesNo(\"Label the grid?\",\"Gridmaker\",true)\n\n\nif (yn) then\n  for each thm in theView.GetThemes\n    if (thm <> mytheme) then\n      thm.SetActive(False)\n    end\n  end\n\n  theView.LabelThemes(false)\nend\n\n\n\n\n"
 )
 
-(Script.87
+(Script.81
 	Name:	"Util.ImageThemesUpdate"
 	SourceCode:	"'**********************************************************************\n\n'View.ImageThemesUpdate\n'Update script for View.GeoRefImage\n\ntheView = av.GetActiveDoc\nSELF.SetEnabled((theView.GetActiveThemes.Count > 0) AND\n  (theView.GetActiveThemes.Get(0).Is(ITheme)))\n\n'**********************************************************************\n"
 )
 
-(Script.88
+(Script.82
 	Name:	"Util.LineSquareBuffer"
 	SourceCode:	"' Name: LineSquareBuffer 	\n'\n' Date: 12.10.2000\n' \n' Updated: 07.02.2001\n' \n' Author: Nick Bauer \n'         CRC Freshwater Ecology\n'         University of Canberra\n'         Australia\n'         Please send any comments to email: bauer@lake.canberra.edu.au\n' \n' ** Modified from a script written by BERKI, Zsolt of TRANSMAN Ltd.\n'    Many thanks to him **\n'\n'\n' Title:  Line Square Buffers\n'\n' Topics: Buffer, View, Theme, Square \n'\n' Description: Buffers a PolyLine theme as normal, however it\n'              squ
 ares the buffer at the start and end of the line (or node).\n'              The user is prompted for a field to link the buffer polygon to the\n'              original line theme. If no field is given the script automatically\n'              assigns a uniquue id.\n'    \n' Requires: PolyLine with at least one selected feature. At least MAP UNITS must be set\n'           in the view !!    \n'\n' Know Issues: The script takes some time to buffer polylines. My advice is to be patient, and if\n'              your ArcVie
@@ -1705,14 +1576,14 @@ learStatus\nav.ClearMsg\nftbBuffer.Flush\nav.PurgeObjects\n\n'  CREATE OUTPUT TH
 T\n\n\n"
 )
 
-(Script.89
+(Script.83
 	Name:	"Util.Output"
 	SourceCode:	"'--- Create output script\n\nv = av.getactivedoc\nt = v.getactivethemes.get(0)\nft = t.getftab\ngl = v.getgraphics\n\ndef = av.GetProject.MakeFileName(\"theme\", \"shp\")\ndef = FileDialog.Put(def, \"*.shp\", \"Output Theme\")\nif (def = nil) then return nil end\n\nidfield = msgbox.listasstring(ft.getfields,\n  \"The field must contain unique values\", \n  \"Select Join Field\")\nif (idfield = nil) then return nil end\n\ntbl = FTab.MakeNew(def, polyline)\nfld = idfield.clone\nanglefld = Field.Make(\"bearing\", #FIELD_DECIMAL, 8, 4)\nfld.Se
 tVisible( TRUE )\ntbl.AddFields({fld, anglefld})\ntheTheme = FTheme.Make(tbl)\n\ncountlist = {}\n\nif (ft.getselection.count = 0) then\n  ft.getselection.setall\nend\n\nfor each rec in ft.getselection\n  id = ft.returnvalue(idfield, rec)\n  pl = ft.returnvalue(ft.findfield(\"shape\"),rec)\n  plist = pl.asmultipoint.aslist\n  \n  for each i in 0..(plist.count - 2)\n    tbl.addrecord       \n    l = av.run(\"Util.Explode\", {plist, i})\n    thebearing = av.run(\"Util.Bearing\", {plist, i})\n    gs = graphicshape.make(l)\n    tbl.setva
 lue(tbl.findfield(\"shape\"), countlist.count, l)\n    tbl.setvalue(fld, countlist.count, id)\n    tbl.setvalue(tbl.findfield(\"bearing\"), countlist.count, thebearing)\n    countlist.add(\"added\")\n  end\nend\n\nv.addtheme(thetheme)\n\nthetheme.stopediting(true)\ntbl.seteditable(false)\nv.invalidate\n\n'--- End of script \n"
 )
 
-(Script.90
+(Script.84
 	Name:	"Util.Points2ASCII"
 	SourceCode:	"'Name:  Util.Points2ascii\n \n'Description:  This script automates converting a point shapefile to\n'a comma-delimited textfile that can be used as an event theme or to\n'be imported into other software.  This script adds 2 fields onto the \n'FTab of the active theme (called x_coord and y_coord) and populates \n'them with the coordinates of the features.  It then saves all records \n'to a comma-delimited text file.  \n \n'Requirements:  Active document must be a view with an active point theme\n'whose source is a sha
 pefile.  Designed to be run from either a button\n'or menu choice.  User must have write privileges to the shapefile.\n \n'Author:  Ruth Bowers, Geodynamic Solutions, Inc., Houston, TX\n'rbowers@geodynamic.com\n \nv = av.getActiveDoc\nif (not(v.is(view))) then return nil end\nif (v.getActiveThemes.count < 1) then return nil end\nt = v.getActiveThemes.get(0)\nif (not(t.canEdit)) then return nil end\nif (not(t.getftab.getshapeclass.getclassname.contains(\"point\"))) then\n  av.showmsg(\"Wrong feature type.\")\n  return nil\nen
@@ -1720,7 +1591,7 @@ d\nwhile (true)   'SHOW DIALOG TO LET USER PICK DESTINATION FILENAME\n  afn = fi
  6)\nnf = {}\nf.setEditable(true)\nif (not(t.canEdit)) then return nil end\nnf.add(f1) nf.add(f2)\nf.addFields(nf)\ns = f.findField(\"shape\")\nb = f.getSelection\nb.setAll\nf.calculate(\"([shape].getx)\", f1)\nf.calculate(\"([shape].gety)\", f2)\nf.refresh\nf.setEditable(false)\nb.clearAll\nf.Export(afn, DTXT, FALSE)\nmsgbox.info(\"All records written to\"++afn.Getfullname,\"EXPORT POINT SHAPEFILE TO DELIMITED TEXT FILE.\")\n \n"
 )
 
-(Script.91
+(Script.85
 	Name:	"Util.ProjectPortable"
 	SourceCode:	"' Name:  Project.Save\n' \n' Title:  Replacement save script to save project with pathnames for data sources \n'         which are relative to the project path (e.g. \"../directory/datasource\")\n' \n' Topics:  Miscellaneous \n'\n' Author: Joshua Lieberman, ENSR Consulting and Engineering, May 1999\n'\n' Description:  Saves a project, then uses the ESRI sample script File.FindRepStr to replace all\n'               appropriate pathnames in the project with paths relative to the project path. The\n'               present 
 version also saves an unaltered version of the project for safety. This \n'               can be changed when one has confidence that the script is reliable.\n'\n' Requires:  Self. Save this script in a project as Project.Save so that it gets called instead\n'            of the system script Project.Save .\n'            Probably best to embed the script in a project for delivery.\n'\n\ntheProject = av.GetProject\ntheFileName = theProject.GetFileName\nif (theFileName = nil) then\n  av.Run(\"Project.SaveAs\", nil)\nelse\n  
@@ -1731,25 +1602,17 @@ ore = av.SetWorkingStatus\n        if (not doMore) then\n          File.Copy(the
 table Project :\"++theFileName.AsString++\" \"+NL+\n             \"Fixed Project :\"++theTmpName.AsString++\" \",\" \")\n\n\n\n\n\n"
 )
 
-(Script.92
+(Script.86
 	Name:	"Util.SelectAllGraphics"
 	SourceCode:	"theView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Warning(\"Start this script from an active View.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theView.GetGraphics\ntheGraphicsList.SelectAll"
 )
 
-(Script.93
-	Name:	"Util.SpatialJoin"
-	SourceCode:	"'script that enables spatial join from pointtable to polygontable\n'conditions: one-to-one relationship, shapefields are active in both themes, polygontable is active\n'--------------------------------------------------------------------------------------------------\n'created by Michael Herter ;-)\n'--------------------------------------------------------------------------------------------------\n\ntheTable = av.GetActiveDoc  '###########table of polygontheme\nnext = theTable.GetWin.GetNextDoc '#####table of poi
-nttheme\n\n'creates joinfield and adds it to polygontable\n'---------------------------------------------\nJoinFld1 = Field.Make (\"JoinField\", #FIELD_BYTE, 7, 0)\ntheTable.GetVTab.SetEditable (true)\ntheTable.GetVTab.AddFields ({JoinFld1})\n\n'fills joinfield with temporary ids\n'----------------------------------\nfor each rec in theTable.GetVTab\n  theTable.GetVTab.SetValue (Joinfld1, rec, rec+1)\nend\n\ntheTable.GetVTab.SetEditable (false)\n\n'creates another joinfield and adds it to pointtheme\n'------------------------
----------------------------\nJoinFld2 = Field.Make (\"Temp_Join\", #FIELD_BYTE, 7, 0)\nnext.GetVTab.SetEditable (true)\nnext.GetVTab.AddFields ({JoinFld2})\n\n'calculates the pointheme's joinfield with the temporary ids from polygontheme\n'-----------------------------------------------------------------------------\nif (theTable.GetVTab.IsBase) then\n  next.GetVTab.Join (next.GetActiveField, theTable.GetVTab, theTable.GetActiveField)\nelse\n  exit\nend    \n\nnext.GetVTab.Calculate(\"[JoinField]\", JoinFld2)\nnext.GetVTab.S
-etEditable (false)\nnext.GetVTab.UnJoinAll\n\n'creates spatial join from pointable to polygontable using the two common joinfields\n'-----------------------------------------------------------------------------------\n\ntheTable.GetVTab.Join (Joinfld1, next.GetVTab, JoinFld2)\n\n\n\n\n"
-)
-
-(Script.94
+(Script.87
 	Name:	"Util.start"
-	SourceCode:	"av.GetProject.FindDialog(\"Utilities\").Open"
+	SourceCode:	"av.GetProject.FindDialog(\"Utilities\").Open\n"
 )
 
-(Script.95
+(Script.88
 	Name:	"Util.Sub_gpx2shp"
 	SourceCode:	"'##############################################################\n'#\n'# Filename:     Util.Sub_gpx2shp.ave\n'# Author:       Adrian Boehlen\n'# Date:         31.07.2022\n'# Version:      1.2\n'#\n'# Purpose:      Subroutine, welche von Util.gpx2shp aufgerufen\n'#               wird  \n'#               konvertiert GPX-File zu Shape-File (Punkte) \n'#               mit Uebernahme der Hoehe ins Attribut \"Hoehe\"\n'#\n'#               transformiert Koordinaten von WGS1984 nach\n'#               CH1903 LV03\n'#\n'#             
   fuer jeden Punkt wird die Gesamtdistanz\n'#               gegenueber der bisherigen Strecke ermittelt\n'#\n'#               fuer jeden Punkt wird der Auf- und Abstieg\n'#               gegenueber der bisherigen Strecke ermittelt\n'#\n'#               fuer jeden Punkt wird die Zeitdauer in Minuten\n'#               gegenueber der bisherigen Strecke ermittelt\n'#\n'#               fuer jeden Punkt wird die Durchschnitts-\n'#               geschwindigkeit zu diesem Zeitpunkt ermittelt\n'#\n'# Note:         benoetigt Uti
@@ -1762,54 +1625,49 @@ AsTokens(\"<\")      '# 2. Teil an < in Einzelteile aufbrechen\n    datumzeit = 
 )             '# Stunden ermitteln\n    zeitSek = sekunden.AsNumber + (minuten.AsNumber * 60) + (stunden.AsNumber * 3600) '# Zeit in Sekunden\n    \n  elseif (theLine.Trim.Left(8) = \"</trkpt>\") then   '# letztes Element von <trkpt>\n                                                    '# hier beginnt die Auswertung der Daten\n  \n    av.Run(\"Util.Sub_wgs2ch03\", {_breite, _laenge}) '# Koordinaten von WGS1984 nach CH1903 transformieren\n\n    pte = pte + 1\n    \n    '# Distanz zwischen den Punkten und Gesamtdistanz ber
 echnen\n    \n    if (pte = 1) then\n      breite_prev = _breite\n      laenge_prev = _laenge\n    else\n      if (breite_prev > _breite) then\n        breite_diff = breite_prev - _breite\n      else\n        breite_diff = _breite - breite_prev\n      end\n      if (laenge_prev > _laenge) then\n        laenge_diff = laenge_prev - _laenge\n      else\n        laenge_diff = _laenge - laenge_prev\n      end      \n      dist = ((breite_diff ^ 2) + (laenge_diff ^ 2)).Sqrt   '# gemaess Pythagoras\n      dist_total = dist_total +
  dist\n      breite_prev = _breite\n      laenge_prev = _laenge\n    end    \n    \n    '# Auf- und Abstieg berechnen\n    \n    if (pte = 1) then\n      hoehe_prev = hoehe\n    else\n      if (hoehe > hoehe_prev) then\n        bergauf = bergauf + (hoehe - hoehe_prev)\n      elseif (hoehe < hoehe_prev) then\n        bergab = bergab + (hoehe_prev - hoehe)\n      end\n      hoehe_prev = hoehe\n    end\n    \n    '# Zeitdauer berechnen\n    \n    if (pte = 1) then\n      zeitSek_prev = zeitSek\n    else\n      dauer = dauer + (zeitS
-ek - zeitSek_prev)\n      \n      '# bei einem Datumswechsel die Anzahl Sekunden eines Tages wieder addieren\n      if (dauer < 0) then\n        dauer = dauer + 86400\n      end\n      zeitSek_prev = zeitSek\n    end\n    \n    '# Punktgeometrie festlegen und Attributierung durchfuehren\n    \n    thePoint = _laenge@_breite\n    rec = shpFTab.AddRecord\n    shpFTab.SetValueNumber(idField, rec, pte)\n    shpFTab.SetValueNumber(distField, rec, dist_total)\n    shpFTab.SetValueNumber(heightField, rec, hoehe)\n    shpFTab.SetV
-alueNumber(bergaufField, rec, bergauf)\n    shpFTab.SetValueNumber(bergabField, rec, bergab)\n    shpFTab.SetValueString(zeitField, rec, zeit)\n    shpFTab.SetValueNumber(dauerField, rec, (dauer / 60))  '# in Minuten speichern\n    shpFTab.SetValueNumber(durchField, rec, (60 * (dist_total / 1000) / (dauer / 60)))\n    shpFTab.SetValue(shpField, rec, thePoint)\n  end\nend\n\ngpxFile.Close\nshpFTab.Flush\n"
+ek - zeitSek_prev)\n      '# bei einem Datumswechsel die Anzahl Sekunden eines Tages wieder addieren\n      if (dauer < 0) then\n        dauer = dauer + 86400\n      end\n      zeitSek_prev = zeitSek\n    end\n    \n    '# Punktgeometrie festlegen und Attributierung durchfuehren\n    \n    thePoint = _laenge@_breite\n    rec = shpFTab.AddRecord\n    shpFTab.SetValueNumber(idField, rec, pte)\n    shpFTab.SetValueNumber(distField, rec, dist_total)\n    shpFTab.SetValueNumber(heightField, rec, hoehe)\n    shpFTab.SetValueNum
+ber(bergaufField, rec, bergauf)\n    shpFTab.SetValueNumber(bergabField, rec, bergab)\n    shpFTab.SetValueString(zeitField, rec, zeit)\n    shpFTab.SetValueNumber(dauerField, rec, (dauer / 60))  '# in Minuten speichern\n    shpFTab.SetValueNumber(durchField, rec, (60 * (dist_total / 1000) / (dauer / 60)))\n    shpFTab.SetValue(shpField, rec, thePoint)\n  end\nend\n\ngpxFile.Close\nshpFTab.Flush\n"
 )
 
-(Script.96
+(Script.89
 	Name:	"Util.Sub_prj"
 	SourceCode:	"'######################################################################################\n'#\n'# Filename:         Util.Sub_prj.ave\n'# Author:           Adrian Boehlen\n'# Date:             05.08.2021\n'# Version:          1.0\n'#\n'# Purpose:          erzeugt ein PRJ File mit den Angaben fuer das Koordinatensystem\n'#                   CH1903_LV03\n'#\n'# Based on:         ESRI ArcGIS\n'#               \n'######################################################################################\n\n\nshpName = Self.Get(0)\nshp
 Name.SetExtension(\"prj\")\nprjFile = LineFile.Make(shpName,#FILE_PERM_WRITE)\n\nprjFile.WriteElt(\"PROJCS[\"\"CH1903_LV03\"\",GEOGCS[\"\"GCS_CH1903\"\",DATUM[\"\"D_CH1903\"\",SPHEROID[\"\"Bessel_1841\"\",6377397.155,299.1528128]],PRIMEM[\"\"Greenwich\"\",0.0],UNIT[\"\"Degree\"\",0.0174532925199433]],PROJECTION[\"\"Hotine_Oblique_Mercator_Azimuth_Center\"\"],PARAMETER[\"\"False_Easting\"\",600000.0],PARAMETER[\"\"False_Northing\"\",200000.0],PARAMETER[\"\"Scale_Factor\"\",1.0],PARAMETER[\"\"Azimuth\"\",90.0],PARAMETER[\"\"Longitude_Of_Center\"\",7.439583333333
 333],PARAMETER[\"\"Latitude_Of_Center\"\",46.95240555555556],UNIT[\"\"Meter\"\",1.0]]\")\nprjFile.Close\n\n"
 )
 
-(Script.97
-	Name:	"Util.Sub_wgs2ch03"
-	SourceCode:	"'##################################################################\n'#\n'# Filename:         wgs2ch03.ave\n'# Author:           Adrian Boehlen\n'# Date:             24.05.2015\n'# Version:          1.0\n'#\n'# Purpose:          konvertiert WGS1984 Koordinaten\n'#                     (Laenge / Breite in Dezimalgrad) \n'#                   zu CH1903-Koordinaten \n'#                     (Meter, bezogen auf den Nullpunkt Bern)\n'#\n'# Translated from:  wgs84_ch1903.js (swisstopo JavaScript)\n'#               \n'############
-######################################################\n\n'# rechnet Winkel von Dezimalgrad zu sexagesimalen Sekunden um\n\ngrad = _breite.Truncate\nminute = ((_breite - grad) * 60).Truncate\nsekunde = (((_breite - grad) * 60) - minute ) * 60\nsexagesimalBreite = sekunde + (minute * 60) + (grad * 3600)\n\ngrad = _laenge.Truncate\nminute = ((_laenge - grad) * 60).Truncate\nsekunde = (((_laenge - grad) * 60) - minute ) * 60\nsexagesimalLaenge = sekunde + (minute * 60) + (grad * 3600)\n\n'# konvertiert WGS Breite/Laenge zu 
-CH1903\n\nbreiteAux = (sexagesimalBreite - 169028.66) / 10000\nlaengeAux = (sexagesimalLaenge - 26782.5) / 10000\n\n_laenge = 600072.37 \n+ (211455.93 * laengeAux) \n-  (10938.51 * laengeAux * breiteAux)\n-      (0.36 * laengeAux * (breiteAux ^ 2))\n-     (44.54 * (laengeAux ^ 3))\n\n_breite = 200147.07\n+ (308807.95 * breiteAux) \n+   (3745.25 * (laengeAux ^ 2))\n+     (76.63 * (breiteAux ^ 2))\n-    (194.56 * (laengeAux ^ 2) * breiteAux)\n+    (119.79 * (breiteAux ^ 3))\n"
-)
-
-(Script.98
+(Script.90
 	Name:	"Util.UnselectAllGraphics"
 	SourceCode:	"theView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Warning(\"Start this script from an active View.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theView.GetGraphics\ntheGraphicsList.UnselectAll"
 )
 
-(Script.99
+(Script.91
 	Name:	"Util.WorldFile"
 	SourceCode:	"'======================================================================\n\n'View.WorldFile\n\n'Create world file for current georeferenced image theme\n\n'**** get image theme *************************************************\n\nScript.The.SetNumberFormat( \"d.dddddddddddddd\" )\ntheView  = av.GetActiveDoc\nthmImage = theView.GetActiveThemes.Get(0)\n\n'**** see if world filename exists ************************************\n\nWFName = ( thmImage.GetImgSrc.GetSrcName.GetFileName.AsString\n           + \"w\" ).AsFilename\nif (Fil
 e.Exists(WFName)) then\n   resp = MsgBox.YesNo(WFName.AsString+\" already exists.  Overwrite?\", \"\", false)\n   if (resp) then\n      File.Delete(WFName)\n   else\n      exit\n   end\nend\n\n'**** create world file parameters ************************************\n\nMapE = thmImage.GetImgSrc.ReturnMapExtent\nnumCol = thmImage.GetImgSrc.GetNumColumns\nnumRow = thmImage.GetImgSrc.GetNumRows\nX0 = MapE.GetLeft\nY0 = MapE.GetTop\nX1 = MapE.GetRight\nY1 = MapE.GetBottom\n\nA = (X1-X0)/numCol\nD = 0\nB = 0\nE = (Y1-Y0)/numRow\nC = X0+(A/2
 )\nF = Y0+(E/2)\n\n'**** write world file ************************************************\n\nwf = LineFile.Make(WFName,#FILE_PERM_WRITE)\nwf.WriteElt(A.AsString)\nwf.WriteElt(D.AsString)\nwf.WriteElt(B.AsString)\nwf.WriteElt(E.AsString)\nwf.WriteElt(C.AsString)\nwf.WriteElt(F.AsString)\nwf.close\n\nMsgBox.Info(\"World File exportet.\",\"\")\n\n'======================================================================\n"
 )
 
-(Script.100
+(Script.92
 	Name:	"Util.XYPan"
 	SourceCode:	"'by JP Gallet; jpgallet@dmws.durban.gov.za\n\ntheView=av.getActiveDoc\ntheDisplay=theView.getDisplay\n\ntheLabs={\"Y Coord:\",\"X Coord:\",\"Scale  1:\"}\ntheVals={\"\",\"\",\"1000\"}\n\ntheInput=msgBox.multiInput(\"Enter Y, X coordinates and scale of zoom...\",\"\",theLabs,theVals)\n\nif (theInput=nil) then\n  return nil\nelse\n  theYVal=theInput.get(0)\n  theXVal=theInput.get(1)\n  theScale=theInput.get(2)\n\n  theXYPoint=point.make(theYVal.asNumber,theXVal.asNumber)\n  theDisplay.panTo(theXYPoint)\n  theDisplay.zoomToScale(theScale.asNumb
 er)\n \n  graphicPoint=graphicShape.make(theXYPoint)\n  theView.getGraphics.unselectAll\n  graphicPoint.setSelected(TRUE)\n  theView.getGraphics.add(graphicPoint)\nend\n\n\n\n"
 )
 
-(Script.101
-	Name:	"Ext_unload"
-	SourceCode:	"Dialog.DetachFromExtension(self)\n"
+(Script.93
+	Name:	"Ext.Unload"
+	SourceCode:	"Dialog.DetachFromExtension(self)\n\n"
 )
 
-(Script.102
-	Name:	"Ext_Inst"
-	SourceCode:	"if (av.GetProject = nil) then\n  return nil\nend\n\nSack=self\n\nSchaltflaeche=Sack.get(0)\nviewGUI = av.GetProject.FindGUI( \"View\" )\nif (viewGUI <> nil) then\n    'prüfen, ob die Schaltfläche schon existiert\n    if(viewGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick)=nil)then\n      viewGUI.GetButtonBar.Add( Schaltflaeche, 100)\n    end\nend\n\nav.getproject.Adddialog( Sack.get(1))\n\n\n\n"
+(Script.94
+	Name:	"Ext.Inst"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     ExtInst.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      0.4\n'#\n'# Purpose:      installiert die Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nSack=self\n\nSchaltflaeche=Sack.get(0)\nviewGUI = av.GetProject.FindGUI( \"View\" )\nif (viewGUI <> nil) then\n    'prüfen, ob die Schaltfläche schon existie
+rt\n    if(viewGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick)=nil)then\n      viewGUI.GetButtonBar.Add( Schaltflaeche, 100)\n    end\nend\n\nav.getproject.Adddialog( Sack.get(1))\n\n\n\n\n"
 )
 
-(Script.103
-	Name:	"Ext_unin"
-	SourceCode:	"if (av.GetProject = nil) then\n  return nil\nend\n\nif (av.GetProject.IsClosing) then\n  return nil\nend\n\nviewGUI = av.GetProject.FindGUI( \"View\" )\n\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \"Util.start\"))\nav.GetProject.removedialog(\"Util\")\n"
+(Script.95
+	Name:	"Ext.Unin"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     Ext.Unin.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      0.4\n'#\n'# Purpose:      entfernt die Komponenten beim Deaktivieren der Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nif (av.GetProject.IsClosing) then\n  return nil\nend\n\nviewGUI = av.GetProject.FindGUI( \"View\" )\n\nviewGUI.GetButtonBar.re
+move(viewGUI.GetButtonBar.findbyscript( \"Util.start\"))\nav.GetProject.removedialog(\"Util\")\n\n"
 )
 

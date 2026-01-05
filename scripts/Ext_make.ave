@@ -1,9 +1,21 @@
+'#########################################################################
+'#
+'# Filename:     Ext.Make.ave
+'# Author:       Adrian Boehlen
+'# Date:         05.01.2026
+'# Version:      0.6
+'#
+'# Purpose:      erstellt die Extension
+'#               Zum Erstellen der Extension NUR dieses Script ausfuehren
+'#
+'#########################################################################
+
 Util = Extension.Make("$AVHOME\projects\Utilities\Utilities.avx".AsFileName,
-"Utilities",av.FindScript("Ext_inst"),av.FindScript("Ext_unin"), {"$AVBIN/avdlog.dll".AsFileName})
+"Utilities",av.FindScript("Ext.Inst"),av.FindScript("Ext.Unin"), {"$AVBIN/avdlog.dll".AsFileName})
 
 Util.SetExtVersion(1)
-Util.SetAbout("Utilities toolbar (v1.2)")'Beschreibung
-Util.SetUnloadScript(av.FindScript("ext_unload"))
+Util.SetAbout("Utilities toolbar (v1.4)")'Beschreibung
+Util.SetUnloadScript(av.FindScript("Ext.Unload"))
 
 Schaltflaeche = ( av.FindGUI( "View").GetButtonBar.findbyscript("Util.start"))  
 UtilDialog = av.FindDialog("Utilities")
@@ -22,4 +34,5 @@ for each aDoc in av.GetProject.GetDocs
 end
 
 Util.Commit
+
 
