@@ -24,20 +24,13 @@
 	Roots:	90
 	Roots:	91
 	Roots:	92
-	Roots:	93
-	Roots:	94
-	Roots:	95
-	Roots:	96
 	Version:	32
-	About:	"Utilities toolbar (v1.5)"
-	UnloadScript:	97
-	InstallScript:	98
-	UninstallScript:	99
+	About:	"Utilities toolbar (v1.4)"
 	ExtVersion:	1
 )
 
 (Butn.2
-	Help:	"Utilities toolbar//"
+	Help:	"Open the Utility toolbar//"
 	Icon:	3
 	Click:	"Util.start"
 )
@@ -50,8 +43,8 @@
 
 (AVDLog.4
 	Name:	"Utilities"
-	X:	780
-	Y:	270
+	X:	399
+	Y:	140
 	W:	374
 	H:	40
 	ConstrainedControlNames:	5
@@ -103,43 +96,43 @@
 )
 
 (AVStr.8
-	S:	"points2ascii"
+	S:	"BearingAngle"
 )
 
 (AVStr.9
-	S:	"WorldFile"
+	S:	"points2ascii"
 )
 
 (AVStr.10
-	S:	"Gridmkr"
+	S:	"WorldFile"
 )
 
 (AVStr.11
-	S:	"aButton1"
+	S:	"Gridmkr"
 )
 
 (AVStr.12
-	S:	"SelectAllGraphics"
+	S:	"aButton1"
 )
 
 (AVStr.13
-	S:	"UnselectAllGraphics"
+	S:	"SelectAllGraphics"
 )
 
 (AVStr.14
-	S:	"gpx"
+	S:	"UnselectAllGraphics"
 )
 
 (AVStr.15
-	S:	"ProjectPortable"
+	S:	"gpx"
 )
 
 (AVStr.16
-	S:	"GeoRefImage"
+	S:	"ProjectPortable"
 )
 
 (AVStr.17
-	S:	"Azimuth"
+	S:	"GeoRefImage"
 )
 
 (Numb.18
@@ -211,7 +204,7 @@
 	Child:	40
 	Child:	42
 	Child:	44
-	Child:	45
+	Child:	46
 	Child:	47
 	Child:	49
 	Child:	51
@@ -571,13 +564,114 @@
 )
 
 (Butn.40
-	InternalName:	"points2ascii"
-	Help:	"Export point shape to ASCII file//"
+	InternalName:	"BearingAngle"
+	Help:	"Determine the bearing angle//"
 	Icon:	41
-	Click:	"Util.Points2ASCII"
+	Click:	"Util.Output"
 )
 
 (AVIcon.41
+	Name:	"angle.bmp"
+	Data:	4e442049 6d616765 00010012 00120000 
+	Data:	016affff ffffffff ffffffff ffffffff 
+	Data:	ffffffff 0000ffff ffffffff ffffffff 
+	Data:	ffffffff ffffffff 0000ffff ffffffff 
+	Data:	ffffffff ffffffff ffffffff 00000000 
+	Data:	00000000 08000000 00000000 0000000e 
+	Data:	00001313 13131313 13131313 13131313 
+	Data:	13131313 0000ff13 00ffffff ffffffff 
+	Data:	ffffffff ffffffff 0000ffff 1300ffff 
+	Data:	ffffffff ffffffff ffffffff 0000ffff 
+	Data:	ff1300ff ffffffff ffffffff ffffffff 
+	Data:	0000ffff ffff1300 ffffffff ffffffff 
+	Data:	ffffffff 0000ffff ffffff13 00ffffff 
+	Data:	ffffffff ffffffff 0000ffff ffffffff 
+	Data:	1300ffff ffffffff ffffffff 0000ffff 
+	Data:	ffffffff ff1300ff ffffffff ffffffff 
+	Data:	0100ffff ffffffff ffff1300 ffffffff 
+	Data:	ffffffff 0000ffff ffffffff ffffff13 
+	Data:	00ffffff ffffffff 0000ffff ffffffff 
+	Data:	ffffffff 1300ffff ffffffff 0000ffff 
+	Data:	ffffffff ffffffff ff1300ff ffffffff 
+	Data:	0000ffff ffffffff ffffffff ffff1313 
+	Data:	ffffffff 0000ffff ffffffff ffffffff 
+	Data:	ffffff13 ffffffff 00000000 00000400 
+	Data:	00000000 01010100 02020200 03030300 
+	Data:	04040400 05050500 06060600 07070700 
+	Data:	08080800 09090900 0a0a0a00 0b0b0b00 
+	Data:	0c0c0c00 0d0d0d00 0e0e0e00 0f0f0f00 
+	Data:	10101000 11111100 12121200 13131300 
+	Data:	14141400 15151500 16161600 17171700 
+	Data:	18181800 19191900 1a1a1a00 1b1b1b00 
+	Data:	1c1c1c00 1d1d1d00 1e1e1e00 1f1f1f00 
+	Data:	20202000 21212100 22222200 23232300 
+	Data:	24242400 25252500 26262600 27272700 
+	Data:	28282800 29292900 2a2a2a00 2b2b2b00 
+	Data:	2c2c2c00 2d2d2d00 2e2e2e00 2f2f2f00 
+	Data:	30303000 31313100 32323200 33333300 
+	Data:	34343400 35353500 36363600 37373700 
+	Data:	38383800 39393900 3a3a3a00 3b3b3b00 
+	Data:	3c3c3c00 3d3d3d00 3e3e3e00 3f3f3f00 
+	Data:	40404000 41414100 42424200 43434300 
+	Data:	44444400 45454500 46464600 47474700 
+	Data:	48484800 49494900 4a4a4a00 4b4b4b00 
+	Data:	4c4c4c00 4d4d4d00 4e4e4e00 4f4f4f00 
+	Data:	50505000 51515100 52525200 53535300 
+	Data:	54545400 55555500 56565600 57575700 
+	Data:	58585800 59595900 5a5a5a00 5b5b5b00 
+	Data:	5c5c5c00 5d5d5d00 5e5e5e00 5f5f5f00 
+	Data:	60606000 61616100 62626200 63636300 
+	Data:	64646400 65656500 66666600 67676700 
+	Data:	68686800 69696900 6a6a6a00 6b6b6b00 
+	Data:	6c6c6c00 6d6d6d00 6e6e6e00 6f6f6f00 
+	Data:	70707000 71717100 72727200 73737300 
+	Data:	74747400 75757500 76767600 77777700 
+	Data:	78787800 79797900 7a7a7a00 7b7b7b00 
+	Data:	7c7c7c00 7d7d7d00 7e7e7e00 7f7f7f00 
+	Data:	80808000 81818100 82828200 83838300 
+	Data:	84848400 85858500 86868600 87878700 
+	Data:	88888800 89898900 8a8a8a00 8b8b8b00 
+	Data:	8c8c8c00 8d8d8d00 8e8e8e00 8f8f8f00 
+	Data:	90909000 91919100 92929200 93939300 
+	Data:	94949400 95959500 96969600 97979700 
+	Data:	98989800 99999900 9a9a9a00 9b9b9b00 
+	Data:	9c9c9c00 9d9d9d00 9e9e9e00 9f9f9f00 
+	Data:	a0a0a000 a1a1a100 a2a2a200 a3a3a300 
+	Data:	a4a4a400 a5a5a500 a6a6a600 a7a7a700 
+	Data:	a8a8a800 a9a9a900 aaaaaa00 ababab00 
+	Data:	acacac00 adadad00 aeaeae00 afafaf00 
+	Data:	b0b0b000 b1b1b100 b2b2b200 b3b3b300 
+	Data:	b4b4b400 b5b5b500 b6b6b600 b7b7b700 
+	Data:	b8b8b800 b9b9b900 bababa00 bbbbbb00 
+	Data:	bcbcbc00 bdbdbd00 bebebe00 bfbfbf00 
+	Data:	c0c0c000 c1c1c100 c2c2c200 c3c3c300 
+	Data:	c4c4c400 c5c5c500 c6c6c600 c7c7c700 
+	Data:	c8c8c800 c9c9c900 cacaca00 cbcbcb00 
+	Data:	cccccc00 cdcdcd00 cecece00 cfcfcf00 
+	Data:	d0d0d000 d1d1d100 d2d2d200 d3d3d300 
+	Data:	d4d4d400 d5d5d500 d6d6d600 d7d7d700 
+	Data:	d8d8d800 d9d9d900 dadada00 dbdbdb00 
+	Data:	dcdcdc00 dddddd00 dedede00 dfdfdf00 
+	Data:	e0e0e000 e1e1e100 e2e2e200 e3e3e300 
+	Data:	e4e4e400 e5e5e500 e6e6e600 e7e7e700 
+	Data:	e8e8e800 e9e9e900 eaeaea00 ebebeb00 
+	Data:	ececec00 ededed00 eeeeee00 efefef00 
+	Data:	f0f0f000 f1f1f100 f2f2f200 f3f3f300 
+	Data:	f4f4f400 f5f5f500 f6f6f600 f7f7f700 
+	Data:	f8f8f800 f9f9f900 fafafa00 fbfbfb00 
+	Data:	fcfcfc00 fdfdfd00 fefefe00 ffffff00 
+	Data:	00020008 00070020 00010002 00000000 
+	Data:	00000000 
+)
+
+(Butn.42
+	InternalName:	"points2ascii"
+	Help:	"Export point shape to ASCII file//"
+	Icon:	43
+	Click:	"Util.Points2ASCII"
+)
+
+(AVIcon.43
 	Name:	"to_ascii.bmp"
 	Data:	4e442049 6d616765 00010012 00120000 
 	Data:	03f0ffff ffffffff ffffffff ffffffff 
@@ -647,14 +741,14 @@
 	Data:	00020000 00000000 0000
 )
 
-(Butn.42
+(Butn.44
 	InternalName:	"WorldFile"
 	Help:	"Create world file//"
-	Icon:	43
+	Icon:	45
 	Click:	"Util.WorldFile"
 )
 
-(AVIcon.43
+(AVIcon.45
 	Name:	"tfw.bmp"
 	Data:	4e442049 6d616765 00010020 00200000 
 	Data:	0c00ffff ffffffff ffffffff ffffffff 
@@ -853,47 +947,47 @@
 	Data:	00020000 00000000 0000
 )
 
-(LButn.44
+(LButn.46
 	InternalName:	"Close"
 	Help:	"Close Utilities toolbar//"
 	Label:	"Close"
 	Click:	"Util.Close"
 )
 
-(Butn.45
+(Butn.47
 	InternalName:	"Gridmkr"
 	Help:	"Generate vector grid//"
-	Icon:	46
+	Icon:	48
 	Click:	"Util.Gridmkr"
 )
 
-(AVIcon.46
+(AVIcon.48
 	Name:	"FrameTable"
 	Res:	"Icons.FrameTable"
 
 )
 
-(Butn.47
+(Butn.49
 	InternalName:	"aButton1"
 	Help:	"Pan to the defined coordinates//"
-	Icon:	48
+	Icon:	50
 	Click:	"Util.XYPan"
 )
 
-(AVIcon.48
+(AVIcon.50
 	Name:	"XY"
 	Res:	"Icons.XY"
 
 )
 
-(Butn.49
+(Butn.51
 	InternalName:	"SelectAllGraphics"
 	Help:	"Select all graphic features//"
-	Icon:	50
+	Icon:	52
 	Click:	"Util.SelectAllGraphics"
 )
 
-(AVIcon.50
+(AVIcon.52
 	Name:	"select_all_graphics.bmp"
 	Data:	4e442049 6d616765 00010012 00120000 
 	Data:	0168d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
@@ -987,14 +1081,14 @@
 	Data:	0000
 )
 
-(Butn.51
+(Butn.53
 	InternalName:	"UnselectAllGraphics"
 	Help:	"Unselect all graphic features//"
-	Icon:	52
+	Icon:	54
 	Click:	"Util.UnselectAllGraphics"
 )
 
-(AVIcon.52
+(AVIcon.54
 	Name:	"unselect_all_graphics.bmp"
 	Data:	4e442049 6d616765 00010012 00120000 
 	Data:	0168d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
@@ -1088,14 +1182,14 @@
 	Data:	0000
 )
 
-(Butn.53
+(Butn.55
 	InternalName:	"gpx"
 	Help:	"Click: Converts GPX track to a LV03 point shapefile\nShift-Click: Converts a directory containing GPX files\n//"
-	Icon:	54
+	Icon:	56
 	Click:	"Util.gpx2shp_lv03"
 )
 
-(AVIcon.54
+(AVIcon.56
 	Name:	"gpx.bmp"
 	Data:	4e442049 6d616765 00010013 00130000 
 	Data:	017cd0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
@@ -1190,14 +1284,14 @@
 	Data:	00000000 0000
 )
 
-(Butn.55
+(Butn.57
 	InternalName:	"ProjectPortable"
 	Help:	"Saves project with relative pathnames//"
-	Icon:	56
+	Icon:	58
 	Click:	"Util.ProjectPortable"
 )
 
-(AVIcon.56
+(AVIcon.58
 	Name:	"save_portable.bmp"
 	Data:	4e442049 6d616765 00010015 00130000 
 	Data:	01c8d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
@@ -1297,110 +1391,6 @@
 	Data:	0000
 )
 
-(Tool.57
-	InternalName:	"Azimuth"
-	Help:	"Calculate the azimuth of a straight line//"
-	Update:	"Util.GraphicToolUpdate"
-	Icon:	58
-	Cursor:	"Cursors.CrossHair"
-	Apply:	"Util.LineTool"
-	Click:	"Util.DisplayPenPanel"
-)
-
-(AVIcon.58
-	Name:	"angle.bmp"
-	Data:	4e442049 6d616765 00010012 00120000 
-	Data:	016affff ffffffff ffffffff ffffffff 
-	Data:	ffffffff 0000ffff ffffffff ffffffff 
-	Data:	ffffffff ffffffff 0000ffff ffffffff 
-	Data:	ffffffff ffffffff ffffffff 00000000 
-	Data:	00000000 08000000 00000000 0000000e 
-	Data:	00001313 13131313 13131313 13131313 
-	Data:	13131313 0000ff13 00ffffff ffffffff 
-	Data:	ffffffff ffffffff 0000ffff 1300ffff 
-	Data:	ffffffff ffffffff ffffffff 0000ffff 
-	Data:	ff1300ff ffffffff ffffffff ffffffff 
-	Data:	0000ffff ffff1300 ffffffff ffffffff 
-	Data:	ffffffff 0000ffff ffffff13 00ffffff 
-	Data:	ffffffff ffffffff 0000ffff ffffffff 
-	Data:	1300ffff ffffffff ffffffff 0000ffff 
-	Data:	ffffffff ff1300ff ffffffff ffffffff 
-	Data:	0100ffff ffffffff ffff1300 ffffffff 
-	Data:	ffffffff 0000ffff ffffffff ffffff13 
-	Data:	00ffffff ffffffff 0000ffff ffffffff 
-	Data:	ffffffff 1300ffff ffffffff 0000ffff 
-	Data:	ffffffff ffffffff ff1300ff ffffffff 
-	Data:	0000ffff ffffffff ffffffff ffff1313 
-	Data:	ffffffff 0000ffff ffffffff ffffffff 
-	Data:	ffffff13 ffffffff 00000000 00000400 
-	Data:	00000000 01010100 02020200 03030300 
-	Data:	04040400 05050500 06060600 07070700 
-	Data:	08080800 09090900 0a0a0a00 0b0b0b00 
-	Data:	0c0c0c00 0d0d0d00 0e0e0e00 0f0f0f00 
-	Data:	10101000 11111100 12121200 13131300 
-	Data:	14141400 15151500 16161600 17171700 
-	Data:	18181800 19191900 1a1a1a00 1b1b1b00 
-	Data:	1c1c1c00 1d1d1d00 1e1e1e00 1f1f1f00 
-	Data:	20202000 21212100 22222200 23232300 
-	Data:	24242400 25252500 26262600 27272700 
-	Data:	28282800 29292900 2a2a2a00 2b2b2b00 
-	Data:	2c2c2c00 2d2d2d00 2e2e2e00 2f2f2f00 
-	Data:	30303000 31313100 32323200 33333300 
-	Data:	34343400 35353500 36363600 37373700 
-	Data:	38383800 39393900 3a3a3a00 3b3b3b00 
-	Data:	3c3c3c00 3d3d3d00 3e3e3e00 3f3f3f00 
-	Data:	40404000 41414100 42424200 43434300 
-	Data:	44444400 45454500 46464600 47474700 
-	Data:	48484800 49494900 4a4a4a00 4b4b4b00 
-	Data:	4c4c4c00 4d4d4d00 4e4e4e00 4f4f4f00 
-	Data:	50505000 51515100 52525200 53535300 
-	Data:	54545400 55555500 56565600 57575700 
-	Data:	58585800 59595900 5a5a5a00 5b5b5b00 
-	Data:	5c5c5c00 5d5d5d00 5e5e5e00 5f5f5f00 
-	Data:	60606000 61616100 62626200 63636300 
-	Data:	64646400 65656500 66666600 67676700 
-	Data:	68686800 69696900 6a6a6a00 6b6b6b00 
-	Data:	6c6c6c00 6d6d6d00 6e6e6e00 6f6f6f00 
-	Data:	70707000 71717100 72727200 73737300 
-	Data:	74747400 75757500 76767600 77777700 
-	Data:	78787800 79797900 7a7a7a00 7b7b7b00 
-	Data:	7c7c7c00 7d7d7d00 7e7e7e00 7f7f7f00 
-	Data:	80808000 81818100 82828200 83838300 
-	Data:	84848400 85858500 86868600 87878700 
-	Data:	88888800 89898900 8a8a8a00 8b8b8b00 
-	Data:	8c8c8c00 8d8d8d00 8e8e8e00 8f8f8f00 
-	Data:	90909000 91919100 92929200 93939300 
-	Data:	94949400 95959500 96969600 97979700 
-	Data:	98989800 99999900 9a9a9a00 9b9b9b00 
-	Data:	9c9c9c00 9d9d9d00 9e9e9e00 9f9f9f00 
-	Data:	a0a0a000 a1a1a100 a2a2a200 a3a3a300 
-	Data:	a4a4a400 a5a5a500 a6a6a600 a7a7a700 
-	Data:	a8a8a800 a9a9a900 aaaaaa00 ababab00 
-	Data:	acacac00 adadad00 aeaeae00 afafaf00 
-	Data:	b0b0b000 b1b1b100 b2b2b200 b3b3b300 
-	Data:	b4b4b400 b5b5b500 b6b6b600 b7b7b700 
-	Data:	b8b8b800 b9b9b900 bababa00 bbbbbb00 
-	Data:	bcbcbc00 bdbdbd00 bebebe00 bfbfbf00 
-	Data:	c0c0c000 c1c1c100 c2c2c200 c3c3c300 
-	Data:	c4c4c400 c5c5c500 c6c6c600 c7c7c700 
-	Data:	c8c8c800 c9c9c900 cacaca00 cbcbcb00 
-	Data:	cccccc00 cdcdcd00 cecece00 cfcfcf00 
-	Data:	d0d0d000 d1d1d100 d2d2d200 d3d3d300 
-	Data:	d4d4d400 d5d5d500 d6d6d600 d7d7d700 
-	Data:	d8d8d800 d9d9d900 dadada00 dbdbdb00 
-	Data:	dcdcdc00 dddddd00 dedede00 dfdfdf00 
-	Data:	e0e0e000 e1e1e100 e2e2e200 e3e3e300 
-	Data:	e4e4e400 e5e5e500 e6e6e600 e7e7e700 
-	Data:	e8e8e800 e9e9e900 eaeaea00 ebebeb00 
-	Data:	ececec00 ededed00 eeeeee00 efefef00 
-	Data:	f0f0f000 f1f1f100 f2f2f200 f3f3f300 
-	Data:	f4f4f400 f5f5f500 f6f6f600 f7f7f700 
-	Data:	f8f8f800 f9f9f900 fafafa00 fbfbfb00 
-	Data:	fcfcfc00 fdfdfd00 fefefe00 ffffff00 
-	Data:	00020008 00070020 00010002 00000000 
-	Data:	00000000 
-)
-
 (RectD.59
 	Left:	30.00000000000000
 	Top:	30.00000000000000
@@ -1423,72 +1413,72 @@
 )
 
 (RectD.62
+	Left:	136.00000000000000
+	Top:	30.00000000000000
+	Right:	160.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.63
 	Left:	292.00000000000000
 	Top:	30.00000000000000
 	Right:	316.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.63
+(RectD.64
 	Left:	266.00000000000000
 	Top:	30.00000000000000
 	Right:	290.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.64
+(RectD.65
 	Left:	318.00000000000000
 	Top:	30.00000000000000
 	Right:	363.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.65
+(RectD.66
 	Left:	190.00000000000000
 	Top:	30.00000000000000
 	Right:	214.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.66
+(RectD.67
 	Left:	163.00000000000000
 	Top:	30.00000000000000
 	Right:	187.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.67
+(RectD.68
 	Left:	56.00000000000000
 	Top:	30.00000000000000
 	Right:	80.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.68
+(RectD.69
 	Left:	83.00000000000000
 	Top:	30.00000000000000
 	Right:	107.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.69
+(RectD.70
 	Left:	216.00000000000000
 	Top:	30.00000000000000
 	Right:	240.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.70
+(RectD.71
 	Left:	4.00000000000000
 	Top:	30.00000000000000
 	Right:	28.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.71
-	Left:	136.00000000000000
-	Top:	30.00000000000000
-	Right:	159.00000000000000
 	Bottom:	6.00000000000000
 )
 
@@ -1503,43 +1493,29 @@
 )
 
 (Script.74
-	Name:	"Util.Azimuth"
-	SourceCode:	"' Name:  ReturnLineSegmentAzimuth\n'\n' Title:  \n'\n' Topics:  \n'\n' Description:  Calculates the angle created by two points.\n'\n' Requires:  \n'\n' Self:  See body of script.\n'\n' Results:  Returns the angle (azimuth) formed by the two points as a number from 0 - 360.\n'\n' Author:  David F. Kimball\n\n'--------------------------------------------------------------------------\n'the script must be passed a list containing either 2 points or 4 numbers:\n'Sample script call:    av.Run(\"ReturnLineSegmentAzimuth\",{1,1,6,9}
-)\n'                or     av.Run(\"ReturnLineSegmentAzimuth\",{1@1,6@9})\n'--------------------------------------------------------------------------\nif (SELF.Count = 4) then\n  x1 = SELF.Get(0)                 'xcoord of first (origin) point\n  y1 = SELF.Get(1)                 'ycoord of first (origin) point\n  x2 = SELF.Get(2)                 'xcoord of second point\n  y2 = SELF.Get(3)                 'ycoord of second point\n  p1 = Point.Make(x1,y1)\n  p2 = Point.Make(x2,y2)\nelseif (SELF.Count = 2) then\n  p1 = SE
-LF.Get(0)                 'first (origin) point\n  p2 = SELF.Get(1)                 'second point\n  x1 = p1.GetX\n  y1 = p1.GetY\n  x2 = p2.GetX\n  y2 = p2.GetY\nelse\n  return nil\nend\n'--------------------------------------------------------------------------\n'calculate the angle using simple trig:\n'--------------------------------------------------------------------------\nh = p1.Distance(p2)                'h  = the distance between the two points (hypotenuse)\ndX = x2 - x1                       'dX = difference
- in xcoords\ndY = y2 - y1                       'dY = difference in ycoords\na = 90 - ((dX / h).ACos.AsDegrees) 'a  = the angle made by the two points (angle clockwise from North in degrees)\nif (dX < 0) then\n  if (dY < 0) then\n    a = 180 + a.Negate\n  else\n    a = 360 + a\n  end\nelse\n  if (dY < 0) then\n    a = 180 - a\n  end\nend\n'--------------------------------------------------------------------------\n'return the angle as a number between 0 and 360:\n'-----------------------------------------------------------
----------------\nreturn a\n\n"
-)
-
-(Script.75
 	Name:	"Util.Bearing"
 	SourceCode:	"'# Filename:     Util.Bearing\n\n\nplist = self.get(0)\ni = self.get(1)\np1 = plist.get(i)\np2 = plist.get(i+1)\n\ntheX1 = p1.GetX\ntheY1 = p1.Gety\n \ntheX2 = p2.GetX\ntheY2 = p2.GetY\n \ntheH = theX2 - theX1  '--- where theH is the horizontal difference, or delta x\ntheV = theY2 - theY1  '--- where theV is the vertical difference, or delta y\n\ntheLength = ((theH * theH) + (theV * theV)).SQRT\ntheAngle = (theV/theLength).Abs.Acos.AsDegrees \n\nif ((theH = 0) and (theV > 0 ))  then\n  constant = 0\n  theBearing = constant - the
 Angle\nend\n\nif ((theH > 0 ) and (theV > 0)) then \n  constant = 0 \n  theBearing = theAngle + constant\nend '--- 1st quadrant\n\nif ((theH < 0) and (theV  >= 0)) then '--- 2nd quadrant\n  constant = 360\n  theBearing = constant - theAngle.Abs\nend \n\nif ((theH <= 0) and (theV <= 0)) then '--- 3rd quadrant\n  constant = 180\n  theBearing = theAngle.Abs + constant\nend \n\nif ((theH >= 0) and (theV <= 0)) then \n  constant = 180 '--- 4th quadrantt \n  theBearing = constant - theAngle.abs\nend\n\nreturn thebearing\n\n'--- End of sc
 ript \n\n"
 )
 
-(Script.76
+(Script.75
 	Name:	"Util.Close"
 	SourceCode:	"Self.GetDialog.Close"
 )
 
-(Script.77
+(Script.76
 	Name:	"Util.CopyView"
 	SourceCode:	"'Copies a View to a new View with a new name...\n'Created by Fred J. Calef III, CH2M Hill\n'Date:  12/3/1998\n\n'Gets the View...\nmyProj = av.GetProject\ntheViews = myProj.GetDocswithGui(av.FindGui(\"View\"))\naviewChoice = MsgBox.ChoiceAsString( theViews, \"Choose a View to copy:\", \"Views\")\nif (aviewChoice = nil) then\n  return nil\nend\ntheView = myProj.FindDoc( aviewChoice.AsString )\n\n'Copies the View and renames it...\nnewViewName = MsgBox.Input( \"Enter a new name for the view:\", \"New View Name\", \"New View\" )\nif (ne
 wViewName = nil) then   'Cancels if the there is no View name\n  return nil\nend\nif (av.FindDoc(newViewName).AsString = newViewName.AsString) then\n  'Cancels if the view name already exists\n  MsgBox.Error(\"That View name already exists! Press the Copy View button again...\",\"View Already Exists\")\n  return nil\nelse\n  newView = theView.Clone\n  newView.SetName ( newViewName )\n  myProj.AddDoc ( newView )\n  newView.GetWin.Open\nend\n\n'End of script..."
 )
 
-(Script.78
-	Name:	"Util.DisplayPenPanel"
-	SourceCode:	"' uses the built-in function SymWin.DisplayPenPanel\n\nif ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then\n  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_PEN)\nend"
-)
-
-(Script.79
+(Script.77
 	Name:	"Util.Explode"
 	SourceCode:	"'--- Explode script\n\nplist = self.get(0)\ni = self.get(1)\n\np1 = plist.get(i)\np2 = plist.get(i+1)\nl = polyline.make({{p1, p2}})\n\nreturn l\n\n'--- End of script \n"
 )
 
-(Script.80
+(Script.78
 	Name:	"Util.GeoRefImage"
 	SourceCode:	"'**********************************************************************\n\n'View.GeoRefImage\n\n'**** get image theme and point ***************************************\n\ntheView  = av.GetActiveDoc\nthmImage = theView.GetActiveThemes.Get(0)\np1 = theView.GetDisplay.ReturnUserPoint\n\n' **** if georefpoint is not null, find out if current point is 2nd **\n\ngeorefpoint = Self.GetObjectTag\nif (georefpoint = nil) then\n   resp = false\nelseif (georefpoint.Is(Point)) then\n   resp = MsgBox.YesNo(\"Use current point to complete
  rectangle?\", \"\", false)\nelse\n   resp = false\nend\n\nif (not resp) then\n\n   ' **** store current point *****************************************\n\n   Self.SetObjectTag(p1)\n   MsgBox.Info(\"Point collected\", \"\")\n\nelse\n\n   ' **** retrieve first point ****************************************\n\n   p2 = p1\n   p1 = georefpoint\n   r1 = Rect.MakeXY( p1.GetX, p1.GetY, p2.GetX, p2.GetY)\n\n   ' **** get coordinates for second rectangle ************************\n\n   labels = {\"X1:\", \"Y1:\", \"X2:\", \"Y2:\"}\n   XYlist = MsgBox.Mul
@@ -1547,7 +1523,7 @@ tiInput(\"Enter Map Coordinates\", \"Georeference Points\", labels, {})\n   if (
 ctTag(nil)\n      else\n         Msgbox.warning(\"Invalid coordinate entry\",\"Georeference Points\")\n      end\n   end\nend\n\n'**********************************************************************\n"
 )
 
-(Script.81
+(Script.79
 	Name:	"Util.gpx2shp_lv03"
 	SourceCode:	"'##############################################################\n'#\n'# Filename:     Util.gpx2shp_lv03\n'# Author:       Adrian Boehlen\n'# Date:         13.01.2023\n'# Version:      1.3\n'#\n'# Purpose:      konvertiert ein GPX-File in ein Shapefile\n'#               in CH1903 LV03\n'#               bei gedrueckter Shift-Taste kann ein ganzer\n'#               Ordner mit GPX-Files auf einmal konvertiert\n'#               werden\n'# Note:         benoetigt...\n'#                Util.Sub_gpx2shp\n'#                Util.S
 ub_wgs2ch03\n'#                Util.Sub_prj  ...im gleichen Projekt\n'#                 \n'##############################################################\n\n'# ein View muss aktiv sein\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Warning(\"Start this script from an active View.\",\"\")\n  return nil\nend\n\nif (System.IsShiftKeyDown) then\n\n  '# Filter setzen\n  theFilter = \"*.gpx\"\n  \n  '# Inputverzeichnis definieren\n  inputdir = FileDialog.Put(\"   Select directory - not files\".AsFileName,\n         
@@ -1558,12 +1534,7 @@ led = true\n        break\n      end\n    end\n  end\n  \n  '# Falls Stop button
 ile.Make(gpxName, #FILE_PERM_READ)\n\n  '# zu erstellendes Shapefile definieren\n  outputdir = av.GetProject.GetWorkDir\n  defaultName = FileName.Make(outputdir.AsString + \"\\\" + gpxBaseName + \"_pt.shp\")\n  shpName  = FileDialog.Put(defaultName,\"shp\",\"Output Shape File\")\n  if (shpName = nil) then \n    return nil \n  end\n\n  'av.Run(\"Util.Sub_prj\", {shpName})  'zurzeit nicht benoetigt\n  shpName.SetExtension(\"shp\")\n  \n  av.Run(\"Util.Sub_gpx2shp\", {gpxFile, shpName})\nend"
 )
 
-(Script.82
-	Name:	"Util.GraphicToolUpdate"
-	SourceCode:	"' uses the built-in function View.GraphicToolUpdate\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme = nil) then\n  SELF.SetEnabled(TRUE) \nelse\n  SELF.SetEnabled(FALSE)\nend\n \n"
-)
-
-(Script.83
+(Script.80
 	Name:	"Util.Gridmkr"
 	SourceCode:	"' Name:  milagrdmkr.ave\n' Modifief : by V. Guissard, from ESRI\n' Date : 09/04/2000\n' \n' Title:  Creates arbitrary grid(vector) shapefile\n' \n' Topics:  Views, Geodata\n' \n' Description:  This script is attached to a view button. One attribute is added to this \n' grid shape theme, a label, that is \"A1 A2  B1 B2....\" as you might see on an index map.  The \n' labeling starts at the upper left.\n'  \n' The grid is added to your current view as a theme called \"Grid\" with hollow fill pattern and thick \n' (thickness 2
 ) black lines.  You are prompted as to whether you want to label the grid. If you say yes, \n' it will put the labels in the grid box using the current textsymbol. \n' \n \n\ntheView = av.GetActiveDoc\n\nllx = MsgBox.Input( \"Minimum X coordinate?\", \"UCL-MILA-GridMaker\", \"\" )\nif (llx = nil) then\n  MsgBox.Error(\"Must choose an X coordinate\",\"Aborting\")\n  exit\nend\n\nlly = MsgBox.Input( \"Minimum Y coordinate?\", \"UCL-MILA-GridMaker\", \"\" )\nif (lly = nil) then\n  MsgBox.Error(\"Must choose an Y coordinate\",\"Aborting\")\n  exi
@@ -1575,12 +1546,12 @@ AR_METERS) then\n      'rct=rct.ReturnUnprojected(viewproj)\n    'end\n    newre
 )\nmytheme.Invalidate(true)\ntheview.GetDisplay.Flush\n\nyn=MsgBox.YesNo(\"Label the grid?\",\"Gridmaker\",true)\n\n\nif (yn) then\n  for each thm in theView.GetThemes\n    if (thm <> mytheme) then\n      thm.SetActive(False)\n    end\n  end\n\n  theView.LabelThemes(false)\nend\n\n\n\n\n"
 )
 
-(Script.84
+(Script.81
 	Name:	"Util.ImageThemesUpdate"
 	SourceCode:	"'**********************************************************************\n\n'View.ImageThemesUpdate\n'Update script for View.GeoRefImage\n\ntheView = av.GetActiveDoc\nSELF.SetEnabled((theView.GetActiveThemes.Count > 0) AND\n  (theView.GetActiveThemes.Get(0).Is(ITheme)))\n\n'**********************************************************************\n"
 )
 
-(Script.85
+(Script.82
 	Name:	"Util.LineSquareBuffer"
 	SourceCode:	"' Name: LineSquareBuffer 	\n'\n' Date: 12.10.2000\n' \n' Updated: 07.02.2001\n' \n' Author: Nick Bauer \n'         CRC Freshwater Ecology\n'         University of Canberra\n'         Australia\n'         Please send any comments to email: bauer@lake.canberra.edu.au\n' \n' ** Modified from a script written by BERKI, Zsolt of TRANSMAN Ltd.\n'    Many thanks to him **\n'\n'\n' Title:  Line Square Buffers\n'\n' Topics: Buffer, View, Theme, Square \n'\n' Description: Buffers a PolyLine theme as normal, however it\n'              squ
 ares the buffer at the start and end of the line (or node).\n'              The user is prompted for a field to link the buffer polygon to the\n'              original line theme. If no field is given the script automatically\n'              assigns a uniquue id.\n'    \n' Requires: PolyLine with at least one selected feature. At least MAP UNITS must be set\n'           in the view !!    \n'\n' Know Issues: The script takes some time to buffer polylines. My advice is to be patient, and if\n'              your ArcVie
@@ -1602,22 +1573,14 @@ learStatus\nav.ClearMsg\nftbBuffer.Flush\nav.PurgeObjects\n\n'  CREATE OUTPUT TH
 T\n\n\n"
 )
 
-(Script.86
-	Name:	"Util.LineTool"
-	SourceCode:	"'View.LineTool\n\n'@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n'@@@ This is the system script View.LineTool.\n'@@@ It runs when you apply the Draw Straight Line\n'@@@ tool to the View's display.\n'@@@ It has been modified so that it will\n'@@@ tell the user the azimuth of the line \n'@@@ he or she draws.\n'@@@ See ReturnLineSegmentAzimuth for more details.\n'@@@ \n'@@@ TO MAKE THIS SCRIPT WORK:\n'@@@ Download this script and the ReturnLineSegmentAzimuth script (they come in a .zip file together).\n'@@@ Put each in a Script 
-Editor document (to make a new script editor document, double-click the Scripts icon in the Project window).\n'@@@ Name this one View.LineTool and the other ReturnLineSegmentAzimuth (do this by choosing Script-->Properties and entering the name in the Name: textfield.).\n'@@@ [This script will run instead of the system View.LineTool script if you name it View.LineTool and compile it]\n'@@@ Compile them both (click the Compile button).\n'@@@ Make the View active and use the Draw Straight Line tool (it is in the 
-tool menu under the Draw Point tool).  This will not work if you are editing a theme.\n'@@@ \n'@@@ By David F. Kimball 11/2000\n'@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n' ################################\n' REV: 10.01.2026, A. Boehlen\n' - calculate gon\n' ################################\n\ntheView = av.GetActiveDoc\nl = theView.ReturnUserLine\n\nif (l.IsNull) then\n  return nil\nend\n\n'@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n'@@@ THIS IS THE ADDED PART:\ngeoGrad = av.Run(\"Util.Azimuth\",{l.ReturnStart,l.ReturnEnd})\ngon = 
-geoGrad * 100 / 90\nariGrad = 360 - (geoGrad - 90)\nMsgBox.Info(\"Azimuth:\" + 10.AsChar +\ngeoGrad.AsString ++ \"geographic grads\" + 10.AsChar + \ngon.AsString ++ \"gon/grades\" + 10.AsChar +\nariGrad.AsString ++ \"arithmetic grads\",\"Azimuth of line\")\n'@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n\n"
-)
-
-(Script.87
+(Script.83
 	Name:	"Util.Output"
 	SourceCode:	"'--- Create output script\n\nv = av.getactivedoc\nt = v.getactivethemes.get(0)\nft = t.getftab\ngl = v.getgraphics\n\ndef = av.GetProject.MakeFileName(\"theme\", \"shp\")\ndef = FileDialog.Put(def, \"*.shp\", \"Output Theme\")\nif (def = nil) then return nil end\n\nidfield = msgbox.listasstring(ft.getfields,\n  \"The field must contain unique values\", \n  \"Select Join Field\")\nif (idfield = nil) then return nil end\n\ntbl = FTab.MakeNew(def, polyline)\nfld = idfield.clone\nanglefld = Field.Make(\"bearing\", #FIELD_DECIMAL, 8, 4)\nfld.Se
 tVisible( TRUE )\ntbl.AddFields({fld, anglefld})\ntheTheme = FTheme.Make(tbl)\n\ncountlist = {}\n\nif (ft.getselection.count = 0) then\n  ft.getselection.setall\nend\n\nfor each rec in ft.getselection\n  id = ft.returnvalue(idfield, rec)\n  pl = ft.returnvalue(ft.findfield(\"shape\"),rec)\n  plist = pl.asmultipoint.aslist\n  \n  for each i in 0..(plist.count - 2)\n    tbl.addrecord       \n    l = av.run(\"Util.Explode\", {plist, i})\n    thebearing = av.run(\"Util.Bearing\", {plist, i})\n    gs = graphicshape.make(l)\n    tbl.setva
 lue(tbl.findfield(\"shape\"), countlist.count, l)\n    tbl.setvalue(fld, countlist.count, id)\n    tbl.setvalue(tbl.findfield(\"bearing\"), countlist.count, thebearing)\n    countlist.add(\"added\")\n  end\nend\n\nv.addtheme(thetheme)\n\nthetheme.stopediting(true)\ntbl.seteditable(false)\nv.invalidate\n\n'--- End of script \n"
 )
 
-(Script.88
+(Script.84
 	Name:	"Util.Points2ASCII"
 	SourceCode:	"'Name:  Util.Points2ascii\n \n'Description:  This script automates converting a point shapefile to\n'a comma-delimited textfile that can be used as an event theme or to\n'be imported into other software.  This script adds 2 fields onto the \n'FTab of the active theme (called x_coord and y_coord) and populates \n'them with the coordinates of the features.  It then saves all records \n'to a comma-delimited text file.  \n \n'Requirements:  Active document must be a view with an active point theme\n'whose source is a sha
 pefile.  Designed to be run from either a button\n'or menu choice.  User must have write privileges to the shapefile.\n \n'Author:  Ruth Bowers, Geodynamic Solutions, Inc., Houston, TX\n'rbowers@geodynamic.com\n \nv = av.getActiveDoc\nif (not(v.is(view))) then return nil end\nif (v.getActiveThemes.count < 1) then return nil end\nt = v.getActiveThemes.get(0)\nif (not(t.canEdit)) then return nil end\nif (not(t.getftab.getshapeclass.getclassname.contains(\"point\"))) then\n  av.showmsg(\"Wrong feature type.\")\n  return nil\nen
@@ -1625,7 +1588,7 @@ d\nwhile (true)   'SHOW DIALOG TO LET USER PICK DESTINATION FILENAME\n  afn = fi
  6)\nnf = {}\nf.setEditable(true)\nif (not(t.canEdit)) then return nil end\nnf.add(f1) nf.add(f2)\nf.addFields(nf)\ns = f.findField(\"shape\")\nb = f.getSelection\nb.setAll\nf.calculate(\"([shape].getx)\", f1)\nf.calculate(\"([shape].gety)\", f2)\nf.refresh\nf.setEditable(false)\nb.clearAll\nf.Export(afn, DTXT, FALSE)\nmsgbox.info(\"All records written to\"++afn.Getfullname,\"EXPORT POINT SHAPEFILE TO DELIMITED TEXT FILE.\")\n \n"
 )
 
-(Script.89
+(Script.85
 	Name:	"Util.ProjectPortable"
 	SourceCode:	"' Name:  Project.Save\n' \n' Title:  Replacement save script to save project with pathnames for data sources \n'         which are relative to the project path (e.g. \"../directory/datasource\")\n' \n' Topics:  Miscellaneous \n'\n' Author: Joshua Lieberman, ENSR Consulting and Engineering, May 1999\n'\n' Description:  Saves a project, then uses the ESRI sample script File.FindRepStr to replace all\n'               appropriate pathnames in the project with paths relative to the project path. The\n'               present 
 version also saves an unaltered version of the project for safety. This \n'               can be changed when one has confidence that the script is reliable.\n'\n' Requires:  Self. Save this script in a project as Project.Save so that it gets called instead\n'            of the system script Project.Save .\n'            Probably best to embed the script in a project for delivery.\n'\n\ntheProject = av.GetProject\ntheFileName = theProject.GetFileName\nif (theFileName = nil) then\n  av.Run(\"Project.SaveAs\", nil)\nelse\n  
@@ -1636,17 +1599,17 @@ ore = av.SetWorkingStatus\n        if (not doMore) then\n          File.Copy(the
 table Project :\"++theFileName.AsString++\" \"+NL+\n             \"Fixed Project :\"++theTmpName.AsString++\" \",\" \")\n\n\n\n\n\n"
 )
 
-(Script.90
+(Script.86
 	Name:	"Util.SelectAllGraphics"
 	SourceCode:	"theView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Warning(\"Start this script from an active View.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theView.GetGraphics\ntheGraphicsList.SelectAll"
 )
 
-(Script.91
+(Script.87
 	Name:	"Util.start"
 	SourceCode:	"av.GetProject.FindDialog(\"Utilities\").Open\n"
 )
 
-(Script.92
+(Script.88
 	Name:	"Util.Sub_gpx2shp"
 	SourceCode:	"'##############################################################\n'#\n'# Filename:     Util.Sub_gpx2shp.ave\n'# Author:       Adrian Boehlen\n'# Date:         31.07.2022\n'# Version:      1.2\n'#\n'# Purpose:      Subroutine, welche von Util.gpx2shp aufgerufen\n'#               wird  \n'#               konvertiert GPX-File zu Shape-File (Punkte) \n'#               mit Uebernahme der Hoehe ins Attribut \"Hoehe\"\n'#\n'#               transformiert Koordinaten von WGS1984 nach\n'#               CH1903 LV03\n'#\n'#             
   fuer jeden Punkt wird die Gesamtdistanz\n'#               gegenueber der bisherigen Strecke ermittelt\n'#\n'#               fuer jeden Punkt wird der Auf- und Abstieg\n'#               gegenueber der bisherigen Strecke ermittelt\n'#\n'#               fuer jeden Punkt wird die Zeitdauer in Minuten\n'#               gegenueber der bisherigen Strecke ermittelt\n'#\n'#               fuer jeden Punkt wird die Durchschnitts-\n'#               geschwindigkeit zu diesem Zeitpunkt ermittelt\n'#\n'# Note:         benoetigt Uti
@@ -1663,45 +1626,28 @@ ek - zeitSek_prev)\n      '# bei einem Datumswechsel die Anzahl Sekunden eines T
 ber(bergaufField, rec, bergauf)\n    shpFTab.SetValueNumber(bergabField, rec, bergab)\n    shpFTab.SetValueString(zeitField, rec, zeit)\n    shpFTab.SetValueNumber(dauerField, rec, (dauer / 60))  '# in Minuten speichern\n    shpFTab.SetValueNumber(durchField, rec, (60 * (dist_total / 1000) / (dauer / 60)))\n    shpFTab.SetValue(shpField, rec, thePoint)\n  end\nend\n\ngpxFile.Close\nshpFTab.Flush\n"
 )
 
-(Script.93
+(Script.89
 	Name:	"Util.Sub_prj"
 	SourceCode:	"'######################################################################################\n'#\n'# Filename:         Util.Sub_prj.ave\n'# Author:           Adrian Boehlen\n'# Date:             05.08.2021\n'# Version:          1.0\n'#\n'# Purpose:          erzeugt ein PRJ File mit den Angaben fuer das Koordinatensystem\n'#                   CH1903_LV03\n'#\n'# Based on:         ESRI ArcGIS\n'#               \n'######################################################################################\n\n\nshpName = Self.Get(0)\nshp
 Name.SetExtension(\"prj\")\nprjFile = LineFile.Make(shpName,#FILE_PERM_WRITE)\n\nprjFile.WriteElt(\"PROJCS[\"\"CH1903_LV03\"\",GEOGCS[\"\"GCS_CH1903\"\",DATUM[\"\"D_CH1903\"\",SPHEROID[\"\"Bessel_1841\"\",6377397.155,299.1528128]],PRIMEM[\"\"Greenwich\"\",0.0],UNIT[\"\"Degree\"\",0.0174532925199433]],PROJECTION[\"\"Hotine_Oblique_Mercator_Azimuth_Center\"\"],PARAMETER[\"\"False_Easting\"\",600000.0],PARAMETER[\"\"False_Northing\"\",200000.0],PARAMETER[\"\"Scale_Factor\"\",1.0],PARAMETER[\"\"Azimuth\"\",90.0],PARAMETER[\"\"Longitude_Of_Center\"\",7.439583333333
 333],PARAMETER[\"\"Latitude_Of_Center\"\",46.95240555555556],UNIT[\"\"Meter\"\",1.0]]\")\nprjFile.Close\n\n"
 )
 
-(Script.94
+(Script.90
 	Name:	"Util.UnselectAllGraphics"
 	SourceCode:	"theView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Warning(\"Start this script from an active View.\",\"\")\n  return nil\nend\n\ntheGraphicsList = theView.GetGraphics\ntheGraphicsList.UnselectAll"
 )
 
-(Script.95
+(Script.91
 	Name:	"Util.WorldFile"
-	SourceCode:	"'======================================================================\n\n'View.WorldFile\n\n'Create world file for current georeferenced image theme\n\n'**** get image theme *************************************************\n\nScript.The.SetNumberFormat( \"d.dddddddddddddd\" )\ntheView  = av.GetActiveDoc\nthmImage = theView.GetActiveThemes.Get(0)\n\n\n'**** see if world filename exists ************************************\n\nWFName = ( thmImage.GetImgSrc.GetSrcName.GetFileName.AsString\n           + \"w\" ).AsFilename\nif (Fi
-le.Exists(WFName)) then\n   resp = MsgBox.YesNo(WFName.AsString+\" already exists.  Overwrite?\", \"\", false)\n   if (resp) then\n      File.Delete(WFName)\n   else\n      exit\n   end\nend\n\n'**** create world file parameters ************************************\n\nMapE = thmImage.GetImgSrc.ReturnMapExtent\nnumCol = thmImage.GetImgSrc.GetNumColumns\nnumRow = thmImage.GetImgSrc.GetNumRows\nX0 = MapE.GetLeft\nY0 = MapE.GetTop\nX1 = MapE.GetRight\nY1 = MapE.GetBottom\n\nA = (X1-X0)/numCol\nD = 0\nB = 0\nE = (Y1-Y0)/numRow\nC = X0+(A/
-2)\nF = Y0+(E/2)\n\n'**** write world file ************************************************\n\nwf = LineFile.Make(WFName,#FILE_PERM_WRITE)\nwf.WriteElt(A.AsString)\nwf.WriteElt(D.AsString)\nwf.WriteElt(B.AsString)\nwf.WriteElt(E.AsString)\nwf.WriteElt(C.AsString)\nwf.WriteElt(F.AsString)\nwf.close\n\nMsgBox.Info(\"World File exportet.\",\"\")\n\n'======================================================================\n"
+	SourceCode:	"'======================================================================\n\n'View.WorldFile\n\n'Create world file for current georeferenced image theme\n\n'**** get image theme *************************************************\n\nScript.The.SetNumberFormat( \"d.dddddddddddddd\" )\ntheView  = av.GetActiveDoc\nthmImage = theView.GetActiveThemes.Get(0)\n\n'**** see if world filename exists ************************************\n\nWFName = ( thmImage.GetImgSrc.GetSrcName.GetFileName.AsString\n           + \"w\" ).AsFilename\nif (Fil
+e.Exists(WFName)) then\n   resp = MsgBox.YesNo(WFName.AsString+\" already exists.  Overwrite?\", \"\", false)\n   if (resp) then\n      File.Delete(WFName)\n   else\n      exit\n   end\nend\n\n'**** create world file parameters ************************************\n\nMapE = thmImage.GetImgSrc.ReturnMapExtent\nnumCol = thmImage.GetImgSrc.GetNumColumns\nnumRow = thmImage.GetImgSrc.GetNumRows\nX0 = MapE.GetLeft\nY0 = MapE.GetTop\nX1 = MapE.GetRight\nY1 = MapE.GetBottom\n\nA = (X1-X0)/numCol\nD = 0\nB = 0\nE = (Y1-Y0)/numRow\nC = X0+(A/2
+)\nF = Y0+(E/2)\n\n'**** write world file ************************************************\n\nwf = LineFile.Make(WFName,#FILE_PERM_WRITE)\nwf.WriteElt(A.AsString)\nwf.WriteElt(D.AsString)\nwf.WriteElt(B.AsString)\nwf.WriteElt(E.AsString)\nwf.WriteElt(C.AsString)\nwf.WriteElt(F.AsString)\nwf.close\n\nMsgBox.Info(\"World File exportet.\",\"\")\n\n'======================================================================\n"
 )
 
-(Script.96
+(Script.92
 	Name:	"Util.XYPan"
-	SourceCode:	"'by JP Gallet; jpgallet@dmws.durban.gov.za\n\n' ################################\n' REV: 10.01.2026, A. Boehlen\n' - no error message when click Cancel\n' - no graphic point at the given coordinates\n' ################################\n\ntheView=av.getActiveDoc\ntheDisplay=theView.getDisplay\n\ntheLabs={\"Y Coord:\",\"X Coord:\",\"Scale  1:\"}\ntheVals={\"\",\"\",\"1000\"}\n\ntheInput=msgBox.multiInput(\"Enter Y, X coordinates and scale of zoom...\",\"\",theLabs,theVals)\n\nif (theInput.count = 0) then\n  return nil\nend  \n\nif (theInput=nil
-) then\n  return nil\nelse\n  theYVal=theInput.get(0)\n  theXVal=theInput.get(1)\n  theScale=theInput.get(2)\n\n  theXYPoint=point.make(theYVal.asNumber,theXVal.asNumber)\n  theDisplay.panTo(theXYPoint)\n  theDisplay.zoomToScale(theScale.asNumber)\n \n  'graphicPoint=graphicShape.make(theXYPoint)\n  'theView.getGraphics.unselectAll\n  'graphicPoint.setSelected(TRUE)\n  'theView.getGraphics.add(graphicPoint)\nend\n"
-)
-
-(Script.97
-	Name:	"Ext.Unload"
-	SourceCode:	"Dialog.DetachFromExtension(self)\n\n"
-)
-
-(Script.98
-	Name:	"Ext.Inst"
-	SourceCode:	"'#########################################################################\n'#\n'# Filename:     ExtInst.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      0.4\n'#\n'# Purpose:      installiert die Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nSack=self\n\nSchaltflaeche=Sack.get(0)\nviewGUI = av.GetProject.FindGUI( \"View\" )\nif (viewGUI <> nil) then\n    'prüfen, ob die Schaltfläche schon existie
-rt\n    if(viewGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick)=nil)then\n      viewGUI.GetButtonBar.Add( Schaltflaeche, 100)\n    end\nend\n\nav.getproject.Adddialog( Sack.get(1))\n\n\n\n\n"
-)
-
-(Script.99
-	Name:	"Ext.Unin"
-	SourceCode:	"'#########################################################################\n'#\n'# Filename:     Ext.Unin.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      0.4\n'#\n'# Purpose:      entfernt die Komponenten beim Deaktivieren der Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nif (av.GetProject.IsClosing) then\n  return nil\nend\n\nviewGUI = av.GetProject.FindGUI( \"View\" )\n\nviewGUI.GetButtonBar.re
-move(viewGUI.GetButtonBar.findbyscript( \"Util.start\"))\nav.GetProject.removedialog(\"Util\")\n\n"
+	SourceCode:	"'by JP Gallet; jpgallet@dmws.durban.gov.za\n\ntheView=av.getActiveDoc\ntheDisplay=theView.getDisplay\n\ntheLabs={\"Y Coord:\",\"X Coord:\",\"Scale  1:\"}\ntheVals={\"\",\"\",\"1000\"}\n\ntheInput=msgBox.multiInput(\"Enter Y, X coordinates and scale of zoom...\",\"\",theLabs,theVals)\n\nif (theInput=nil) then\n  return nil\nelse\n  theYVal=theInput.get(0)\n  theXVal=theInput.get(1)\n  theScale=theInput.get(2)\n\n  theXYPoint=point.make(theYVal.asNumber,theXVal.asNumber)\n  theDisplay.panTo(theXYPoint)\n  theDisplay.zoomToScale(theScale.asNumb
+er)\n \n  graphicPoint=graphicShape.make(theXYPoint)\n  theView.getGraphics.unselectAll\n  graphicPoint.setSelected(TRUE)\n  theView.getGraphics.add(graphicPoint)\nend\n\n\n\n"
 )
 

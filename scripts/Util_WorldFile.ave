@@ -10,6 +10,7 @@ Script.The.SetNumberFormat( "d.dddddddddddddd" )
 theView  = av.GetActiveDoc
 thmImage = theView.GetActiveThemes.Get(0)
 
+
 '**** see if world filename exists ************************************
 
 WFName = ( thmImage.GetImgSrc.GetSrcName.GetFileName.AsString

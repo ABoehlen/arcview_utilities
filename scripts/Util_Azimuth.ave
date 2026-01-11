@@ -1,0 +1,62 @@
+' Name:  ReturnLineSegmentAzimuth
+'
+' Title:  
+'
+' Topics:  
+'
+' Description:  Calculates the angle created by two points.
+'
+' Requires:  
+'
+' Self:  See body of script.
+'
+' Results:  Returns the angle (azimuth) formed by the two points as a number from 0 - 360.
+'
+' Author:  David F. Kimball
+
+'--------------------------------------------------------------------------
+'the script must be passed a list containing either 2 points or 4 numbers:
+'Sample script call:    av.Run("ReturnLineSegmentAzimuth",{1,1,6,9})
+'                or     av.Run("ReturnLineSegmentAzimuth",{1@1,6@9})
+'--------------------------------------------------------------------------
+if (SELF.Count = 4) then
+  x1 = SELF.Get(0)                 'xcoord of first (origin) point
+  y1 = SELF.Get(1)                 'ycoord of first (origin) point
+  x2 = SELF.Get(2)                 'xcoord of second point
+  y2 = SELF.Get(3)                 'ycoord of second point
+  p1 = Point.Make(x1,y1)
+  p2 = Point.Make(x2,y2)
+elseif (SELF.Count = 2) then
+  p1 = SELF.Get(0)                 'first (origin) point
+  p2 = SELF.Get(1)                 'second point
+  x1 = p1.GetX
+  y1 = p1.GetY
+  x2 = p2.GetX
+  y2 = p2.GetY
+else
+  return nil
+end
+'--------------------------------------------------------------------------
+'calculate the angle using simple trig:
+'--------------------------------------------------------------------------
+h = p1.Distance(p2)                'h  = the distance between the two points (hypotenuse)
+dX = x2 - x1                       'dX = difference in xcoords
+dY = y2 - y1                       'dY = difference in ycoords
+a = 90 - ((dX / h).ACos.AsDegrees) 'a  = the angle made by the two points (angle clockwise from North in degrees)
+if (dX < 0) then
+  if (dY < 0) then
+    a = 180 + a.Negate
+  else
+    a = 360 + a
+  end
+else
+  if (dY < 0) then
+    a = 180 - a
+  end
+end
+'--------------------------------------------------------------------------
+'return the angle as a number between 0 and 360:
+'--------------------------------------------------------------------------
+return a
+
+

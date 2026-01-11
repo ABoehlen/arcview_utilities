@@ -1,5 +1,11 @@
 'by JP Gallet; jpgallet@dmws.durban.gov.za
 
+' ################################
+' REV: 10.01.2026, A. Boehlen
+' - no error message when click Cancel
+' - no graphic point at the given coordinates
+' ################################
+
 theView=av.getActiveDoc
 theDisplay=theView.getDisplay
 
@@ -7,6 +13,10 @@ theLabs={"Y Coord:","X Coord:","Scale  1:"}
 theVals={"","","1000"}
 
 theInput=msgBox.multiInput("Enter Y, X coordinates and scale of zoom...","",theLabs,theVals)
+
+if (theInput.count = 0) then
+  return nil
+end  
 
 if (theInput=nil) then
   return nil
@@ -19,12 +29,9 @@ else
   theDisplay.panTo(theXYPoint)
   theDisplay.zoomToScale(theScale.asNumber)
  
-  graphicPoint=graphicShape.make(theXYPoint)
-  theView.getGraphics.unselectAll
-  graphicPoint.setSelected(TRUE)
-  theView.getGraphics.add(graphicPoint)
+  'graphicPoint=graphicShape.make(theXYPoint)
+  'theView.getGraphics.unselectAll
+  'graphicPoint.setSelected(TRUE)
+  'theView.getGraphics.add(graphicPoint)
 end
-
-
-
 

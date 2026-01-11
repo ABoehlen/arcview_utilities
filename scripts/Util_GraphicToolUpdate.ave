@@ -1,0 +1,12 @@
+' uses the built-in function View.GraphicToolUpdate
+
+theView = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+
+if (theTheme = nil) then
+  SELF.SetEnabled(TRUE) 
+else
+  SELF.SetEnabled(FALSE)
+end
+ 
+

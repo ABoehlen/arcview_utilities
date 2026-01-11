@@ -1,0 +1,47 @@
+'View.LineTool
+
+'@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+'@@@ This is the system script View.LineTool.
+'@@@ It runs when you apply the Draw Straight Line
+'@@@ tool to the View's display.
+'@@@ It has been modified so that it will
+'@@@ tell the user the azimuth of the line 
+'@@@ he or she draws.
+'@@@ See ReturnLineSegmentAzimuth for more details.
+'@@@ 
+'@@@ TO MAKE THIS SCRIPT WORK:
+'@@@ Download this script and the ReturnLineSegmentAzimuth script (they come in a .zip file together).
+'@@@ Put each in a Script Editor document (to make a new script editor document, double-click the Scripts icon in the Project window).
+'@@@ Name this one View.LineTool and the other ReturnLineSegmentAzimuth (do this by choosing Script-->Properties and entering the name in the Name: textfield.).
+'@@@ [This script will run instead of the system View.LineTool script if you name it View.LineTool and compile it]
+'@@@ Compile them both (click the Compile button).
+'@@@ Make the View active and use the Draw Straight Line tool (it is in the tool menu under the Draw Point tool).  This will not work if you are editing a theme.
+'@@@ 
+'@@@ By David F. Kimball 11/2000
+'@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+' ################################
+' REV: 10.01.2026, A. Boehlen
+' - calculate gon
+' ################################
+
+theView = av.GetActiveDoc
+l = theView.ReturnUserLine
+
+if (l.IsNull) then
+  return nil
+end
+
+'@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+'@@@ THIS IS THE ADDED PART:
+geoGrad = av.Run("Util.Azimuth",{l.ReturnStart,l.ReturnEnd})
+gon = geoGrad * 100 / 90
+ariGrad = 360 - (geoGrad - 90)
+MsgBox.Info("Azimuth:" + 10.AsChar +
+geoGrad.AsString ++ "geographic grads" + 10.AsChar + 
+gon.AsString ++ "gon/grades" + 10.AsChar +
+ariGrad.AsString ++ "arithmetic grads","Azimuth of line")
+'@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
