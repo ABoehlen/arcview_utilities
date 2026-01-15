@@ -2,6 +2,8 @@
 Utilities is an Avenue extension used in ArcView GIS that provides many useful functions for different purposes.
 
 ## Purpose
+![Utilities toolbar](https://github.com/ABoehlen/arcview_utilities/blob/main/utilities_toolbar.png)
+
 Utilities contains the following tools:
 * Save projects with relative pathnames
 * Copy view
